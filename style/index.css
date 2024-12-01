@@ -1,8 +1,39 @@
 section {
-    height: 85vh;
+    height: 100vh;
+    display: flex;
 }
 
 #about,
 #contact {
     background-color: #1C304A;
+}
+
+header{
+    position: fixed;
+    width: 100%;
+    background-color: #130c0b;
+    height: fit-content;
+    display: flex;
+}
+
+.shadows {
+    box-shadow: 0 .1rem 1rem #000 !important;
+}
+
+html::-webkit-scrollbar {
+    border-left: 1px solid black;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #ffc107;
+}
+
+html::-webkit-scrollbar-thumb {
+    border: 3px solid #212529;
+    background-color: #130c0b;
+    border-radius: 1px;
+}
+
+html{
+    scroll-behavior: smooth;
 }
