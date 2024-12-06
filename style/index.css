@@ -1,6 +1,5 @@
 /* General Reset */
 body,
-h1,
 h2,
 h3,
 p,
@@ -27,6 +26,14 @@ section div {
     margin: auto;
 }
 
+.name{
+    color: #fff;
+}
+
+.box-row{
+    margin: auto 5px;
+}
+
 /* Header Styles */
 .header {
     background-color: #130c0b;
@@ -39,6 +46,10 @@ section div {
     z-index: 1000;
     top: 0;
     left: 0;
+}
+
+.flex{
+    display: flex;
 }
 
 .show {
@@ -69,6 +80,47 @@ section div {
 .container {
     width: 90%;
     max-width: 1200px;
+}
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: .25rem;
+    width: 527px;
+    height: 40vh;
+    margin: 10px;
+}
+
+.invincible{
+    opacity: 0;
+}
+
+.card-body {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    padding: 1.25rem;
+
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
 }
 
 .m-zeroA {
@@ -156,6 +208,7 @@ section div {
 .shadows {
     box-shadow: 0 .1rem 1rem #000 !important;
 }
+
 
 html::-webkit-scrollbar {
     border-left: 1px solid black;
