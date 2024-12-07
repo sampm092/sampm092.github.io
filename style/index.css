@@ -48,14 +48,6 @@ section div {
     left: 0;
 }
 
-.flex{
-    display: flex;
-}
-
-.show {
-    transform: translateY(-100%);
-}
-
 .header .name {
     font-size: 2.5rem;
     margin-bottom: 10px;
@@ -75,6 +67,65 @@ section div {
 .nav a:hover {
     text-decoration: underline;
 }
+
+html::-webkit-scrollbar {
+    border-left: 1px solid black;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #415683;
+}
+
+html::-webkit-scrollbar-thumb {
+    border: 3px solid #212529;
+    background-color: #130c0b;
+    border-radius: 1px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Class thing */
+
+.flex{
+    display: flex;
+}
+
+.invincible{
+    opacity: 0;
+}
+
+.m-zeroA {
+    margin: 0 auto;
+}
+
+.shadows {
+    box-shadow: 0 .1rem 1rem #000 !important;
+}
+
+.show {
+    transform: translateY(-100%);
+}
+
+
+/* Spacing */
+.p-3{
+    padding: 1rem;
+}
+
+.mb-3{
+    margin-bottom: 1rem;
+}
+
+.mr-3{
+    margin-right: 1rem;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+
 
 /* Section Styles */
 .container {
@@ -101,9 +152,6 @@ section div {
     margin: 10px;
 }
 
-.invincible{
-    opacity: 0;
-}
 
 .card-body {
     -webkit-box-flex: 1;
@@ -121,10 +169,6 @@ section div {
     flex-wrap: wrap;
     margin-right: -15px;
     margin-left: -15px;
-}
-
-.m-zeroA {
-    margin: 0 auto;
 }
 
 .about-section,
@@ -205,25 +249,6 @@ section div {
     font-size: 0.9rem;
 }
 
-.shadows {
-    box-shadow: 0 .1rem 1rem #000 !important;
-}
 
 
-html::-webkit-scrollbar {
-    border-left: 1px solid black;
-}
 
-html::-webkit-scrollbar-track {
-    background-color: #415683;
-}
-
-html::-webkit-scrollbar-thumb {
-    border: 3px solid #212529;
-    background-color: #130c0b;
-    border-radius: 1px;
-}
-
-html {
-    scroll-behavior: smooth;
-}
