@@ -158,6 +158,10 @@ html {
     margin-bottom: 1rem;
 }
 
+.mr-0-auto{
+    margin: auto 0 auto auto
+}
+
 .mr-3{
     margin-right: 1rem;
 }
@@ -230,10 +234,12 @@ html {
 .projects-section h2,
 .social-section h2,
 .contact-section h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
+    font-size: 3rem;
+    margin-bottom: 4rem;
     text-align: center;
 }
+
+
 
 .about-section p {
     font-size: 1.2rem;
