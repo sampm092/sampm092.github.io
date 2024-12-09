@@ -248,7 +248,9 @@ html {
     text-align: center;
 }
 
-
+.contact-section h3{
+    text-align: center;
+}
 
 .about-section p {
     font-size: 1.2rem;
@@ -257,11 +259,16 @@ html {
     margin: 0 auto;
 }
 
+#projects .container{
+    height: -webkit-fill-available;
+}
+
 .project-list {
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 20px;
+    height: 50%;
 }
 
 .project-card {
@@ -269,7 +276,8 @@ html {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    width: calc(33% - 20px);
+    width: 251px;
+    height: -webkit-fill-available;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
