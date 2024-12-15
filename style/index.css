@@ -8,7 +8,7 @@ a {
     padding: 0;
     text-decoration: none;
     color: inherit;
-    font-family: Arial, sans-serif;
+    font-family: Raleway, Inter, Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -239,7 +239,11 @@ html {
     background-color: #333;
 }
 
-.about-section h2,
+.about-section h2{
+    text-align: left;
+    font-size: 3rem;
+    margin-left: 7rem;
+}
 .projects-section h2,
 .social-section h2,
 .contact-section h2 {
@@ -252,9 +256,9 @@ html {
     text-align: center;
 }
 
-.about-section p {
+.about-section p{
     font-size: 1.2rem;
-    text-align: center;
+    text-align: left;
     max-width: 600px;
     margin: 0 auto;
 }
