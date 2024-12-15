@@ -22,7 +22,7 @@ body {
 }
 
 section {
-    height: 100vh;
+    height: 90vh;
     display: flex;
 }
 
@@ -230,7 +230,8 @@ html {
 
 .about-section,
 .projects-section,
-.contact-section {
+.contact-section,
+.social-section {
     padding: 50px 0;
 }
 
@@ -265,6 +266,11 @@ html {
 
 #projects .container{
     height: -webkit-fill-available;
+}
+
+#projects h3{
+    min-height: 77px;
+    padding: inherit;
 }
 
 .project-list {
