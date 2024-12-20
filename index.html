@@ -37,6 +37,17 @@
 
                 </nav>
             </div>
+            <div class="m-r-auto flex" style="gap: 10px;">                  
+                <p class="m-auto">EN</p>
+                <a class="tooltip">
+                    <span class="tooltiptext">Feature coming soon!</span>
+                    <div class="toggle-container" onclick="toggleTheme()">
+                        <div class="toggle-knob">
+                        </div>
+                    </div>
+                </a>
+                    <p class="m-auto">ID</p>
+            </div>
         </div>
     </header>
 
@@ -168,8 +179,20 @@
                 <h2 data-aos="flip-right"> - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - </h2>
                 <h2>Contact</h2>
                 <div>
-                    <h3>Whatsapp</h3>
-                    <h3>Gmail</h3>
+                    <a class="click" onclick="showAccount('wa-a')">
+                        <h3>
+                            Whatsapp <a href="" id="wa-a" class="acc"><br>
+                                None for now
+                            </a>
+                        </h3>
+                    </a>
+                    <a class="click" onclick="showAccount('gma-a')">
+                        <h3>
+                            Gmail <a href="" id="gma-a" class="acc"><br>
+                                 malaus4294@gmail.com
+                            </a>
+                        </h3>
+                    </a>
                 </div>
         </section>
     </main>

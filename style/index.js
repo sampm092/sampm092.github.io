@@ -20,3 +20,10 @@ function showAccount(elementId) {
         social.classList.toggle('visible'); // hide/show the class to show the box
 
 }
+
+function toggleTheme() {
+    const toggle = document.querySelector('.toggle-container');
+    const knob = document.querySelector('.toggle-knob');
+    toggle.classList.toggle('dark');
+    knob.classList.toggle('darknob');
+  }
