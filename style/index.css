@@ -27,7 +27,7 @@ html::-webkit-scrollbar {
 }
 
 html::-webkit-scrollbar-track {
-    background-color: #415683;
+    background-color: #333333;
 }
 
 html::-webkit-scrollbar-thumb {
@@ -42,7 +42,15 @@ html {
 
 section {
     height: 90vh;
+    width: 98%;
+    margin: auto;
     display: flex;
+    margin-bottom: 1rem;
+    border-radius: 10px;
+}
+
+body{
+    background-color: #130c0b;
 }
 
 section div {
@@ -251,6 +259,11 @@ section div {
 .contact-section,
 .social-section {
     padding: 50px 0;
+}
+
+.about-section,
+.social-section{
+    background-color: white;
 }
 
 .projects-section,
