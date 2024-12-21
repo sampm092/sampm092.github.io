@@ -248,10 +248,15 @@ section div {
     margin-left: -15px;
 }
 
-.about-section h2 {
+.about-section h2{
     text-align: left;
     font-size: 3rem;
     margin-left: 7rem;
+}
+
+.about-section a{
+    text-align: left;
+    margin: 3rem auto auto 7rem;
 }
 
 .about-section,
