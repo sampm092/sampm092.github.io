@@ -1,5 +1,5 @@
 let lastScrollY = window.scrollY;
-const header = document.getElementById('header');   
+const header = document.getElementById('header');
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;
@@ -17,7 +17,7 @@ window.addEventListener('scroll', () => {
 
 function showAccount(elementId) {
     const social = document.getElementById(elementId);
-        social.classList.toggle('visible'); // hide/show the class to show the box
+    social.classList.toggle('visible'); // hide/show the class to show the box
 
 }
 
@@ -26,4 +26,13 @@ function toggleTheme() {
     const knob = document.querySelector('.toggle-knob');
     toggle.classList.toggle('dark');
     knob.classList.toggle('darknob');
-  }
+}
+
+function confirmDelete() {
+    Swal.fire({
+        title: "You sure?",
+        text: "Proceed to gmail?",
+        icon: "question",
+        confirmButtonText: '<a href="https://gmail.com">OK</a>' 
+      });
+}
