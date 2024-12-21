@@ -300,8 +300,9 @@ section div {
 
 #projects h3 {
     min-height: 77px;
-    padding: inherit;
+    align-content: center;
 }
+
 
 .project-list {
     display: flex;
@@ -314,16 +315,21 @@ section div {
 .project-card {
     background: #f4f4f4;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 1px solid #313030;
     border-radius: 8px;
     width: 251px;
     height: -webkit-fill-available;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 10px #6e6969;
 }
 
 .project-card h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+}
+
+.project-card h3, p, a{
+    height: 33%;
+    margin-top: 2px;
 }
 
 .project-card p {
