@@ -1,0 +1,32 @@
+@media only screen and (max-width: 992px) {
+    .mleft-auto {
+        margin-left: 0 !important;
+
+    }
+
+    .background, #welcome{
+        display: block !important;
+    }
+
+    header {
+        position: relative !important;
+    }
+    
+
+    .display-2 {
+        font-size: 3.5rem !important;
+    }
+
+    .welcome1 {
+        margin: auto !important;
+    }
+
+    .about-right{
+        text-align: center !important;
+    }
+
+    .about1{
+        justify-items: center;
+        display: block !important;
+    }
+}
