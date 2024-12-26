@@ -259,6 +259,13 @@ section div {
     margin: 3rem auto auto 7rem;
 }
 
+.about-section p {
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 7rem;
+}
+
 .about-section,
 .projects-section,
 .contact-section,
@@ -286,13 +293,6 @@ section div {
 
 .contact-section h3 {
     text-align: center;
-}
-
-.about-section p {
-    font-size: 1.2rem;
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 #contact h3 {
