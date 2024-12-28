@@ -36,3 +36,11 @@ function confirmDelete() {
         confirmButtonText: '<a href="https://gmail.com">OK</a>' 
       });
 }
+
+function toBio() {
+    const bio = document.getElementById('biodata');
+    const nonbio = document.getElementById('non-bio');
+
+    bio.classList.toggle('none');
+    nonbio.classList.toggle('none');
+}

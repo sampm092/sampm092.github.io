@@ -146,6 +146,7 @@ section div {
 
 .none {
     display: none;
+    transition: transform 0.5s ease;
 }
 
 .shadows {
@@ -248,22 +249,40 @@ section div {
     margin-left: -15px;
 }
 
-.about-section h2{
+.h2about{
     text-align: left;
     font-size: 3rem;
     margin-left: 7rem;
 }
 
-.about-section a{
+.aabout{
     text-align: left;
     margin: 3rem auto auto 7rem;
 }
 
-.about-section p {
+.pabout {
     font-size: 1.2rem;
     text-align: left;
     max-width: 600px;
     margin-left: 7rem;
+}
+
+.h2about2{
+    text-align: right;
+    font-size: 3rem;
+    margin-right: 7rem;
+}
+
+.aabout2{
+    text-align: right;
+    margin: 3rem auto auto 7rem;
+}
+
+.pabout2{
+    font-size: 1.2rem;
+    text-align: right;
+    max-width: 600px;
+    margin-right: 7rem;
 }
 
 .about-section,
