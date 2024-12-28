@@ -275,13 +275,15 @@ section div {
 
 .aabout2{
     text-align: right;
-    margin: 3rem auto auto 7rem;
+    margin: 1rem 0;
+    text-align-last: end;
+    padding-right: 7rem;
+
 }
 
 .pabout2{
     font-size: 1.2rem;
     text-align: right;
-    max-width: 600px;
     margin-right: 7rem;
 }
 
