@@ -1,0 +1,41 @@
+/* General Reset */
+body,
+h2,
+h3,
+p,
+a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: inherit;
+    font-family: Raleway, Inter, Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    cursor: pointer;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+
+html::-webkit-scrollbar {
+    border-left: 1px solid black;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: #333333;
+}
+
+html::-webkit-scrollbar-thumb {
+    border: 3px solid #212529;
+    background-color: #130c0b;
+    border-radius: 1px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
