@@ -33,7 +33,7 @@ function confirmDelete() {
         title: "You sure?",
         text: "Proceed to gmail?",
         icon: "question",
-        confirmButtonText: '<a href="https://gmail.com" target="blank">OK</a>' 
+        confirmButtonText: '<a href="https://gmail.com" target="_blank">OK</a>' 
       });
 }
 
