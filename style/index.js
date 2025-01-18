@@ -33,8 +33,8 @@ function confirmDelete() {
         title: "You sure?",
         text: "Proceed to gmail?",
         icon: "question",
-        confirmButtonText: '<a href="https://gmail.com" target="_blank">OK</a>' 
-      });
+        confirmButtonText: '<a href="https://gmail.com" target="_blank">OK</a>'
+    });
 }
 
 function toBio() {
@@ -44,3 +44,11 @@ function toBio() {
     bio.classList.toggle('none');
     nonbio.classList.toggle('none');
 }
+
+function timeNow() {
+    const timeNow = document.getElementById("time-now");
+    const now = new Date();
+
+    timeNow.textContent = now;
+}
+timeNow();
