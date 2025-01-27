@@ -1,7 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 /* General Reset */
 body,
 h2,
@@ -227,6 +223,10 @@ section div {
     margin-left: 1rem;
 }
 
+.mt-0 {
+    margin-top: 0 !important;
+}
+
 
 /* Section Styles */
 .container {
@@ -332,7 +332,7 @@ section div {
 .social-section h2,
 .contact-section h2 {
     font-size: 3rem;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
