@@ -1,5 +1,14 @@
 let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
+const dropdownButton = document.getElementById('dropdownButton');
+const dropdownContent = document.getElementById('dropdownContent');
+const icon = dropdownButton.querySelector('.icon');
+
+dropdownButton.addEventListener('click', () => {
+  dropdownContent.classList.toggle('show');
+  icon.classList.toggle('open');
+});
+
 
 window.addEventListener('scroll', () => {
     const currentScrollY = window.scrollY;

@@ -152,6 +152,10 @@ section div {
     border-color: #ff026a;
 }
 
+.c-white{
+    color: #fff;
+}
+
 .flex {
     display: flex;
 }
@@ -225,6 +229,11 @@ section div {
 
 .mt-0 {
     margin-top: 0 !important;
+}
+
+.no-wr{
+    display: flex;
+    flex-wrap: nowrap;
 }
 
 
@@ -336,6 +345,10 @@ section div {
     text-align: center;
 }
 
+#citrus{
+    display: block;
+}
+
 .contact-section h3 {
     text-align: center;
 }
@@ -355,7 +368,7 @@ section div {
 
 
 .project-list {
-    display: flex;
+    display: block;
     justify-content: space-around;
     flex-wrap: nowrap;
     gap: 20px;
@@ -524,3 +537,56 @@ section div {
     pointer-events: auto;
     /* Enable interaction when visible */
 }
+
+.dropdown {
+    width: 300px;
+    margin: 0 auto;
+    text-align: left;
+    position: relative;
+  }
+
+  /* "See More" button */
+  .dropdown-toggle {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .dropdown-toggle:hover {
+    background-color: #0056b3;
+  }
+
+  /* Icon */
+  .dropdown-toggle .icon {
+    transition: transform 0.3s ease;
+  }
+
+  /* Rotate icon when open */
+  .dropdown-toggle.open .icon {
+    transform: rotate(180deg);
+  }
+
+  /* Dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    color: white;
+    margin-top: 5rem;
+    width: 80%;
+    border: 1px white solid;
+    padding: 8px;
+    transition: ease-in;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Visible dropdown content */
+  .dropdown-content.show {
+    display: block;
+  }
