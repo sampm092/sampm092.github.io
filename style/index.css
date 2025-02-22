@@ -543,6 +543,8 @@ section div {
     margin: 0 auto;
     text-align: left;
     position: relative;
+  display: block; /* Ensure it takes full width */
+  margin-bottom: 10px; /* Add space below */
   }
 
   /* "See More" button */
@@ -557,7 +559,6 @@ section div {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-left: 5px;
   }
 
   .dropdown-toggle:hover {
@@ -578,7 +579,7 @@ section div {
   .dropdown-content {
     display: none;
     color: white;
-    margin-top: 5rem;
+    margin: 1rem auto;
     width: 80%;
     border: 1px white solid;
     padding: 8px;
@@ -588,6 +589,6 @@ section div {
   }
 
   /* Visible dropdown content */
-  .dropdown-content.show {
+  .dropdown-content.shows {
     display: block;
   }

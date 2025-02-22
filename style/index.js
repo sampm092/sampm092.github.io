@@ -25,11 +25,10 @@ function showAccount(elementId) {
 function projectDesc(elementId) {
     const dropdownButton = document.getElementById(elementId);
     const dropdownContent = document.getElementById(`dropdownContent-${elementId}`);
-    // const icon = dropdownButton.querySelector('.icon');
 
     if (dropdownContent) {
-        dropdownContent.classList.toggle('show');
-        // icon.classList.toggle('open');
+        dropdownContent.classList.toggle('shows');
+        dropdownButton.classList.toggle('open');
     }
 }
 
