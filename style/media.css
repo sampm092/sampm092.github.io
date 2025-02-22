@@ -29,4 +29,8 @@
         justify-items: center;
         display: block !important;
     }
+
+    iframe{
+        height: 320px !important;
+    }
 }
