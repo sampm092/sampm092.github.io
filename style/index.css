@@ -547,7 +547,7 @@ section div {
 
   /* "See More" button */
   .dropdown-toggle {
-    background-color: #007BFF;
+    background-color: transparent;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -557,10 +557,11 @@ section div {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-left: 5px;
   }
 
   .dropdown-toggle:hover {
-    background-color: #0056b3;
+    background-color: #00000040;
   }
 
   /* Icon */

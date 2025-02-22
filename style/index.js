@@ -1,13 +1,5 @@
 let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
-const dropdownButton = document.getElementById('dropdownButton');
-const dropdownContent = document.getElementById('dropdownContent');
-const icon = dropdownButton.querySelector('.icon');
-
-dropdownButton.addEventListener('click', () => {
-  dropdownContent.classList.toggle('show');
-  icon.classList.toggle('open');
-});
 
 
 window.addEventListener('scroll', () => {
@@ -29,6 +21,26 @@ function showAccount(elementId) {
     social.classList.toggle('visible'); // hide/show the class to show the box
 
 }
+
+function projectDesc(elementId) {
+    const dropdownButton = document.getElementById(elementId);
+    const dropdownContent = document.getElementById(`dropdownContent-${elementId}`);
+    // const icon = dropdownButton.querySelector('.icon');
+
+    if (dropdownContent) {
+        dropdownContent.classList.toggle('show');
+        // icon.classList.toggle('open');
+    }
+}
+
+// const dropdownButton2 = document.getElementById('dropdownButton2');
+// const dropdownContent2 = document.getElementById('dropdownContent2');
+// const icon2 = dropdownButton.querySelector('.icon2');
+
+// dropdownButton2.addEventListener('click', () => {
+//   dropdownContent2.classList.toggle('show');
+//   icon2.classList.toggle('open');
+// });
 
 function toggleTheme() {
     const toggle = document.querySelector('.toggle-container');
