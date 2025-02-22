@@ -32,15 +32,6 @@ function projectDesc(elementId) {
     }
 }
 
-// const dropdownButton2 = document.getElementById('dropdownButton2');
-// const dropdownContent2 = document.getElementById('dropdownContent2');
-// const icon2 = dropdownButton.querySelector('.icon2');
-
-// dropdownButton2.addEventListener('click', () => {
-//   dropdownContent2.classList.toggle('show');
-//   icon2.classList.toggle('open');
-// });
-
 function toggleTheme() {
     const toggle = document.querySelector('.toggle-container');
     const knob = document.querySelector('.toggle-knob');
@@ -53,7 +44,7 @@ function confirmDelete() {
         title: "You sure?",
         text: "Proceed to gmail?",
         icon: "question",
-        confirmButtonText: '<a href="https://gmail.com" target="_blank">OK</a>'
+        confirmButtonText: '<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlLWRkCnGkQzgpwngjTLVqBXHWVrLsrGTwRDkQnqfRxwKtrvZzVtjLMbRVrzhRPfvtzDFL" target="_blank">OK</a>'
     });
 }
 
@@ -65,10 +56,26 @@ function toBio() {
     nonbio.classList.toggle('none');
 }
 
-function timeNow() {
-    const timeNow = document.getElementById("time-now");
-    const now = new Date();
+function timeNow1() {
+    const timeNow = document.getElementById("date-now");
+    const now1 = new Date();
+    formattedDate = now1.toLocaleDateString("en-GB", { weekday:"long", year: "numeric", month: "long", day: "numeric" });
 
-    timeNow.textContent = now;
+    timeNow.textContent = "Date: " + formattedDate;
 }
-timeNow();
+timeNow1();
+
+function timeNow() {
+    const timeNowElement = document.getElementById("time-now");
+
+    function updateTime() {
+        const now = new Date();
+        timeNow.textContent = now;
+        timeNowElement.textContent = now.toLocaleTimeString(); // Format time nicely
+    }
+
+    updateTime(); // Run immediately
+    setInterval(updateTime, 1000); // Update every second
+}
+
+timeNow(); // Start ticking

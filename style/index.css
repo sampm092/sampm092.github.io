@@ -134,10 +134,21 @@ section div {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+.prj-border{
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
 .btn-git {
     color: #fff;
     background-color: #000;
     border-color: #000;
+}
+
+.btn-yt {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
 }
 
 .btn-primary {
@@ -379,7 +390,8 @@ section div {
 #projects .dropdown-content .btn{
     justify-self: end;
     display: flex;
-    background-color: black;
+    background-color: #ffffff;
+    color: #333333;
 }
 
 
@@ -597,10 +609,8 @@ section div {
     color: white;
     margin: 1rem auto;
     width: 80%;
-    border: 1px white solid;
     padding: 12px;
     transition: ease-in;
-    border-radius: 5px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   }
 
