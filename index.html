@@ -37,6 +37,8 @@
                     <a href="#projects">Projects</a>
                     <a href="#social">Social</a>
                     <a href="#contact">Contact</a>
+                    <a href="projects/game.html" id="games" class="acc">
+                        Games</a>
 
                 </nav>
             </div>
@@ -62,7 +64,7 @@
                     applications. I enjoy
                     learning something new every day and i hope my work can be useful for the development of
                     technologies nowadays.</p>
-                <a class="btn btn-primary aabout" onclick="toBio()">Bio --></a> <!-- make sliding to reveal bio -->
+                <a class="btn btn-primary aabout" onclick="toBio()">Bio ↠</a> <!-- make sliding to reveal bio -->
             </div>
             <div style="width:50%;  padding-left: 7rem;" class="col col-md-12 card-body m-auto">
                 <img src="image/oda.jpg" style="width: 80%; border-radius: 50%;" class="mt-4 shadows spin">
@@ -70,9 +72,14 @@
             <div id="biodata" class="container none">
                 <h2 class="h2about2">Bio</h2>
                 <p class="pabout2">Samuel Parlindungan Malau </br> Born on January 29, 2002 </br> Residing in North
-                    Sumatra, Indonesia</br>IT Graduate, University of Sumatra Utara (GPA: 3.60)</p>
+                    Sumatra, Indonesia</br>IT Graduate, University of Sumatra Utara (GPA: 3.60)</br> I love playing 
+                    <a class="click" onclick="showAccount('games')">
+                            games  
+                    </a>
+                    and learning something new daily to fill my <a href="#git-a">github</a></p>
                 <div class="aabout2">
-                    <a class="btn btn-primary" onclick="toBio()"><-- About </a>
+                    <a class="btn btn-primary" onclick="toBio()">
+                        ↞ About </a>
                 </div>
             </div>
         </section>
@@ -151,27 +158,6 @@
                             <p>This is the additional content revealed when you click "See More".</p>
                             <p>Feel free to add any content you want here, such as links, images, or text.</p>
                             <a href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Check</a>
-                        </div>
-                    </div>
-                    <div id="mygame">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div>
-                                    <strong style="color: white;">
-                                        Gaming History
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-white">
-                                    <button class="dropdown-toggle" id="pr4" onclick="projectDesc('pr4')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border" id="dropdownContent-pr4" style="color: white;">
-                            <p>This is the additional content revealed when you click "See More".</p>
-                            <p>Feel free to add any content you want here, such as links, images, or text.</p>
-                            <a href="projects/game.html" class="btn">Check</a>
                         </div>
                     </div>
                 </div>
