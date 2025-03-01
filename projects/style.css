@@ -17,16 +17,29 @@
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
-#lists{
-    padding: 50px 0;
-    background-color: #333;
+.fz-3r{
     font-size: 3rem;
+}
+
+.jright{
+    justify-self: right;
+}
+
+.m-a-0{
+    margin: auto 0;
+}
+
+#lists{
+    padding: 50px;
+    background-color: #333;
+    font-size: 2rem;
     margin: 1rem auto;
-    text-align: center;
+    width: 90%;
 }
 
 #lists .container{
     height: -webkit-fill-available;
+    margin: 1rem auto;
 }
 
 #lists h3 {
@@ -58,7 +71,6 @@
     padding: 50px 0;
     background-color: transparent;
     font-size: 3rem;
-    margin: 1rem auto;
     text-align: center;
     min-height: 28vh;
 }
