@@ -34,6 +34,35 @@
     align-content: center;
 }
 
+#steam::after {
+    content: "Steam";
+    color: #39529d;
+    font-weight: bold;
+}
+
+#steam:hover::after {
+    content: "Drecken";
+}
+
+#ytb::after {
+    content: "Youtube";
+    color: #ff0000;
+    font-weight: bold;
+}
+
+#ytb:hover::after {
+    content: "ODA Oda";
+}
+
+.social-section{
+    padding: 50px 0;
+    background-color: transparent;
+    font-size: 3rem;
+    margin: 1rem auto;
+    text-align: center;
+    min-height: 28vh;
+}
+
 .name {
     color: #fff;
 }

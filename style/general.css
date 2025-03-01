@@ -58,3 +58,102 @@ body{
 section div {
     margin: auto;
 }
+
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.big-btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    width: 400px;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.prj-border{
+    border: 3px solid white;
+    border-radius: 10px;
+}
+
+.btn-git {
+    color: #fff;
+    background-color: #000;
+    border-color: #000;
+}
+
+.btn-yt {
+    color: #fff;
+    background-color: #ff0000;
+    border-color: #ff0000;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-ig {
+    color: #fff;
+    background-color: #ff026a;
+    border-color: #ff026a;
+}
+
+.bor-rad{
+    border-radius: 15px;
+}
+
+.c-white{
+    color: #fff;
+}
+
+.flex {
+    display: flex;
+}
+
+.invincible {
+    opacity: 0;
+}
+
+.name {
+    color: #fff;
+}
+
+.none {
+    display: none;
+    transition: transform 0.5s ease;
+}
+
+.shadows {
+    box-shadow: 0 .1rem 1rem #000 !important;
+}
+
+.show {
+    transform: translateY(-100%);
+}
