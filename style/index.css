@@ -332,7 +332,7 @@
 }
 
 .porto-container {
-    width: fit-container;
+    width: fit-content;
     height: 25px;
     background-color: #1c2535;
     border-radius: 15px;
@@ -342,6 +342,10 @@
     justify-content: flex-start;
     padding: 3px 10px;
     cursor: pointer;
+}
+
+.porto-container:hover {
+    background-color:rgb(17, 20, 26);
 }
 
 .toggle-container.dark {
