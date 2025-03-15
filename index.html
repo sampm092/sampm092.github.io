@@ -43,15 +43,30 @@
                 </nav>
             </div>
             <div class="m-r-auto flex" style="gap: 10px;">
-                <p class="m-auto">EN</p>
-                <a class="tooltip">
-                    <span class="tooltiptext">Feature coming soon!</span>
-                    <div class="toggle-container" onclick="toggleTheme()">
-                        <div class="toggle-knob">
+                <div class="m-auto flex">
+                    <a href="/files/porto.pdf" download>
+                        <div class="porto-container">
+                            Portofolio &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                <path
+                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                                <path
+                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                            </svg>
                         </div>
-                    </div>
-                </a>
-                <p class="m-auto">ID</p>
+                    </a>
+                </div>
+                <div class="m-auto flex" style="gap: 10px;">
+                    <p class="m-auto">EN</p>
+                    <a class="tooltip">
+                        <span class="tooltiptext">Feature coming soon!</span>
+                        <div class="toggle-container" onclick="toggleTheme()">
+                            <div class="toggle-knob">
+                            </div>
+                        </div>
+                    </a>
+                    <p class="m-auto">ID</p>
+                </div>
             </div>
         </div>
     </header>
@@ -72,11 +87,12 @@
             <div id="biodata" class="container none">
                 <h2 class="h2about2">Bio</h2>
                 <p class="pabout2">Samuel Parlindungan Malau </br> Born on January 29, 2002 </br> Residing in North
-                    Sumatra, Indonesia</br>IT Graduate, University of Sumatra Utara (GPA: 3.60)</br> I love playing 
+                    Sumatra, Indonesia</br>IT Graduate, University of Sumatra Utara (GPA: 3.60)</br> I love playing
                     <a class="click" onclick="showAccount('games')">
-                            games  
+                        games
                     </a>
-                    and learning something new daily to fill my <a href="#git-a">github</a></p>
+                    and learning something new daily to fill my <a href="#git-a">github</a>
+                </p>
                 <div class="aabout2">
                     <a class="btn btn-primary" onclick="toBio()">
                         ↞ About </a>
