@@ -39,6 +39,14 @@
 
 
 /* Spacing */
+.center{
+    align-items:center;
+}
+
+.gap1r{
+    gap: 1rem;
+}
+
 .w-80 {
     width: 80%;
 }
@@ -213,6 +221,12 @@
     margin-bottom: 2vh;
 }
 
+#mybooklist img{
+    width: 23.5%;
+    height: 150px;
+    border-radius: 15px;
+}
+
 #projects .container {
     height: -webkit-fill-available;
 }
@@ -235,6 +249,9 @@
     color: #333333;
 }
 
+#projects .dropdown-content p{
+    margin-bottom: 1rem;
+}
 
 .project-list {
     display: block;

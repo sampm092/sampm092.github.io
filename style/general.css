@@ -137,6 +137,10 @@ section div {
     display: flex;
 }
 
+.fwrap{
+    flex-wrap: wrap;
+}
+
 .invincible {
     opacity: 0;
 }
