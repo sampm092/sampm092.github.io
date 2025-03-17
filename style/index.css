@@ -95,6 +95,10 @@
     margin-top: 0 !important;
 }
 
+.al-an-c {
+    align-self: anchor-center !important;
+}
+
 .no-wr{
     display: flex;
     flex-wrap: nowrap;
@@ -215,6 +219,11 @@
 
 .contact-section h3 {
     text-align: center;
+}
+
+#contact {
+    height: fit-content !important;
+    min-height: 0;
 }
 
 #contact h3 {
@@ -523,12 +532,17 @@
 /* Close button */
 .close {
     position: absolute;
-    top: 20px;
     right: 35px;
-    color: #f1f1f1;
+    color:rgb(255, 0, 0);
     font-size: 40px;
     font-weight: bold;
     transition: 0.3s;
+    border: solid 1px;
+    border-radius: 100px;
+    width: 70px;
+    height: 70px;
+    text-align: center;
+    font-size: 2.6rem;
 }
 
 .close:hover,

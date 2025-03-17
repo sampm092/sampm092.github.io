@@ -23,12 +23,22 @@ function openPreview(imageSrc) {
 
     modal.style.display = "block";
     modalImg.src = imageSrc;
+
+    document.addEventListener("keydown", handleEscapeKey);
 }
 
 // Function to close the modal
 function closePreview() {
     var modal = document.getElementById("preview");
     modal.style.display = "none";
+
+    document.removeEventListener("keydown", handleEscapeKey);
+}
+
+function handleEscapeKey(event) {
+    if (event.key === "Escape" || event.keyCode === 27) {
+        closePreview();
+    }
 }
 
 function showAccount(elementId) {
