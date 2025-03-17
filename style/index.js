@@ -16,6 +16,21 @@ window.addEventListener('scroll', () => {
     lastScrollY = currentScrollY;
 });
 
+// Function to open the modal and display the clicked image
+function openPreview(imageSrc) {
+    var modal = document.getElementById("preview");
+    var modalImg = document.getElementById("img01");
+
+    modal.style.display = "block";
+    modalImg.src = imageSrc;
+}
+
+// Function to close the modal
+function closePreview() {
+    var modal = document.getElementById("preview");
+    modal.style.display = "none";
+}
+
 function showAccount(elementId) {
     const social = document.getElementById(elementId);
     social.classList.toggle('visible'); // hide/show the class to show the box
