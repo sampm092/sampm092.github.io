@@ -2,7 +2,7 @@ let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
 
 
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => { //menghilangkan header ketika scroll
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
@@ -35,7 +35,7 @@ function closePreview() {
     document.removeEventListener("keydown", handleEscapeKey);
 }
 
-function handleEscapeKey(event) {
+function handleEscapeKey(event) { //menutup section dengan key 'esc'
     if (event.key === "Escape" || event.keyCode === 27) {
         closePreview();
     }

@@ -44,17 +44,7 @@
             </div>
             <div class="m-r-auto flex" style="gap: 10px;">
                 <div class="m-auto flex">
-                    <a href="files/porto.pdf" download>
-                        <div class="porto-container">
-                            Portfolio &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                <path
-                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                                <path
-                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                            </svg>
-                        </div>
-                    </a>
+
                 </div>
                 <div class="m-auto flex" style="gap: 10px;">
                     <p class="m-auto">EN</p>
@@ -79,7 +69,36 @@
                     applications. I enjoy
                     learning something new every day and i hope my work can be useful for the development of
                     technologies nowadays.</p>
-                <a class="btn btn-primary aabout" onclick="toBio()">Bio ↠</a> <!-- make sliding to reveal bio -->
+                <div class="aabout">
+                    <a class="btn btn-primary" onclick="toBio()">Bio ↠</a> <!-- make sliding to reveal bio -->
+                    <a class="btn btn-primary" href="files/porto.pdf">
+                        Portfolio &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                        </svg>
+                    </a>
+                    <a class="btn btn-primary" href="files/EN CV.pdf">
+                        Curriculum Vitae &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                        </svg>
+                    </a>
+                    <a class="btn btn-primary" href="files/Resume.pdf">
+                        Resume &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                            <path
+                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+                            <path
+                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+                        </svg>
+                    </a>
+                </div>
             </div>
             <div style="width:50%;  padding-left: 7rem;" class="col col-md-12 card-body m-auto">
                 <img src="image/oda.jpg" style="width: 80%; border-radius: 50%;" class="mt-4 shadows spin">
@@ -121,7 +140,8 @@
                             </div>
                         </div>
                         <div class="dropdown-content prj-border shows" id="dropdownContent-pr1" style="color: white;">
-                            <p>A Mobile-Based Orange Plant Disease Detection System Utilizing Deep Learning Technique (YOLOv8) and Developed with Kotlin Programming Language.</p>
+                            <p>A Mobile-Based Orange Plant Disease Detection System Utilizing Deep Learning Technique
+                                (YOLOv8) and Developed with Kotlin Programming Language.</p>
                             <iframe class="bor-rad" width="100%" height="534"
                                 src="https://www.youtube.com/embed/VYtrsKjThzM?si=Hzo6NKN_EIs9EN8B"
                                 title="YouTube video player" frameborder="0"
@@ -146,23 +166,34 @@
                             </div>
                         </div>
                         <div class="dropdown-content prj-border" id="dropdownContent-pr4" style="color: white;">
-                            <p>This program is a simple application that I developed as an implementation of my learning of the Laravel framework. The program features user login and registration, where created accounts can be used to manually record a list of books read by the user.</p>
+                            <p>This program is a simple application that I developed as an implementation of my learning
+                                of the Laravel framework. The program features user login and registration, where
+                                created accounts can be used to manually record a list of books read by the user.</p>
                             <div class="flex fwrap gap1r gambar">
                                 <img src="image/image.png" alt="image.png" onclick="openPreview('image/image 14.png')">
-                                <img src="image/image 14.png" alt="image 14.png" onclick="openPreview('image/image 14.png')">
-                                <img src="image/image-1.png" alt="image-1.png"  onclick="openPreview('image/image-1.png')">
-                                <img src="image/image-2.png" alt="image-2.png"  onclick="openPreview('image/image-2.png')">
-                                <img src="image/image-3.png" alt="image-3.png"  onclick="openPreview('image/image-3.png')">
-                                <img src="image/image-4.png" alt="image-4.png"  onclick="openPreview('image/image-4.png')">
-                                <img src="image/image-5.png" alt="image-5.png"  onclick="openPreview('image/image-5.png')">
-                                <img src="image/image-6.png" alt="image-6.png"  onclick="openPreview('image/image-6.png')">
-                                <img src="image/image 17.png" alt="image 17.png" onclick="openPreview('image/image 17.png')">
-                                <img src="image/image 16.png" alt="image 16.png" onclick="openPreview('image/image 16.png')">
+                                <img src="image/image 14.png" alt="image 14.png"
+                                    onclick="openPreview('image/image 14.png')">
+                                <img src="image/image-1.png" alt="image-1.png"
+                                    onclick="openPreview('image/image-1.png')">
+                                <img src="image/image-2.png" alt="image-2.png"
+                                    onclick="openPreview('image/image-2.png')">
+                                <img src="image/image-3.png" alt="image-3.png"
+                                    onclick="openPreview('image/image-3.png')">
+                                <img src="image/image-4.png" alt="image-4.png"
+                                    onclick="openPreview('image/image-4.png')">
+                                <img src="image/image-5.png" alt="image-5.png"
+                                    onclick="openPreview('image/image-5.png')">
+                                <img src="image/image-6.png" alt="image-6.png"
+                                    onclick="openPreview('image/image-6.png')">
+                                <img src="image/image 17.png" alt="image 17.png"
+                                    onclick="openPreview('image/image 17.png')">
+                                <img src="image/image 16.png" alt="image 16.png"
+                                    onclick="openPreview('image/image 16.png')">
                             </div>
                             <div class="preview flex" id="preview">
                                 <span class="close al-an-c" onclick="closePreview()">&times;</span>
                                 <img class="preview-content" id="img01">
-                              </div>
+                            </div>
                             <a href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Check</a>
                         </div>
                     </div>
