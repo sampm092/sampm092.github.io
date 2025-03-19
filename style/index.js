@@ -1,4 +1,5 @@
 let lastScrollY = window.scrollY;
+let cuLang = 'en';
 const header = document.getElementById('header');
 
 
@@ -62,6 +63,14 @@ function toggleTheme() {
     const knob = document.querySelector('.toggle-knob');
     toggle.classList.toggle('dark');
     knob.classList.toggle('darknob');
+
+    cuLang = cuLang === 'en' ? 'id' : 'en';
+    document.querySelectorAll('[data-lang]').forEach(element => {
+        element.style.display = 'none';
+    });
+    document.querySelectorAll(`[data-lang="${cuLang}"]`).forEach(element => {
+        element.style.display = 'block';
+    });
 }
 
 function confirmDelete() {

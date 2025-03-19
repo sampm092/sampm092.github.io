@@ -443,6 +443,10 @@
     opacity: 1;
 }
 
+.none{
+    display:none;
+}
+
 .visible {
     opacity: 1;
     /* Fully visible */
@@ -502,6 +506,10 @@
 
   /* Visible dropdown content */
   .dropdown-content.shows {
+    display: block;
+  }
+
+  .show{
     display: block;
   }
 
