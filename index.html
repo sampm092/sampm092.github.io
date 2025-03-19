@@ -32,14 +32,21 @@
             </div>
             <div class="m-header">
                 <!-- <p class="tagline">Web Developer | Designer | Game Enthusiast</p> -->
-                <nav class="nav">
+                <nav data-lang="en" class="nav">
                     <a href="#about">About</a>
                     <a href="#projects">Projects</a>
                     <a href="#social">Social</a>
                     <a href="#contact">Contact</a>
                     <a href="projects/game.html" id="games" class="acc">
                         Games</a>
-
+                </nav>
+                <nav data-lang="id" class="nav">
+                    <a href="#about">Tentang</a>
+                    <a href="#projects">Projek</a>
+                    <a href="#social">Sosial</a>
+                    <a href="#contact">Kontak</a>
+                    <a href="projects/game.html" id="game" class="acc">
+                        Game</a>
                 </nav>
             </div>
             <div class="m-r-auto flex" style="gap: 10px;">
@@ -65,8 +72,13 @@
         <section id="about" class="about-section">
             <div id="non-bio" class="container">
                 <h2 class="h2about font-bold">Samuel Parlindungan Malau</h2>
-                <p class="pabout" data-lang="en">Hello! I'm a programmer with a passion for building beautiful and functional applications. I enjoy learning something new every day and i hope my work can be useful for the development of technologies nowadays.</p>
-                <p class="pabout" data-lang="id">Halo</p>
+                <p class="pabout" data-lang="en">Hello! I'm a programmer with a passion for building beautiful and
+                    functional applications. I enjoy learning something new every day and i hope my work can be useful
+                    for the development of technologies nowadays.</p>
+                <p class="pabout" data-lang="id">Halo! Saya adalah seorang programmer yang memiliki minat dalam
+                    membangun aplikasi yang tidak hanya indah, tetapi juga fungsional. Saya menyukai proses belajar dan
+                    mengembangkan diri dan berharap pekerjaan saya dapat memberikan kontribusi positif bagi perkembangan
+                    teknologi masa kini.</p>
                 <div class="aabout">
                     <a class="btn btn-primary" onclick="toBio()">Bio ↠</a> <!-- make sliding to reveal bio -->
                     <a class="btn btn-primary" href="files/porto.pdf">
@@ -103,12 +115,21 @@
             </div>
             <div id="biodata" class="container none">
                 <h2 class="h2about2">Bio</h2>
-                <p class="pabout2">Samuel Parlindungan Malau </br> Born on January 29, 2002 </br> Residing in North
+                <p class="pabout2" data-lang="en">Samuel Parlindungan Malau </br> Born on January 29, 2002 </br>
+                    Residing in North
                     Sumatra, Indonesia</br>IT Graduate, University of Sumatra Utara (GPA: 3.60)</br> I love playing
                     <a class="click" onclick="showAccount('games')">
                         games
                     </a>
                     and learning something new daily to fill my <a href="#git-a">github</a>
+                </p>
+                <p class="pabout2" data-lang="id">Samuel Parlindungan Malau </br> Lahir pada 29 January 2002 </br>
+                    Tinggal di Sumatra Utara, Indonesia</br>Lulusan Teknologi Informasi, Universitas Sumatera Utara</br>
+                    Saya suka bermain
+                    <a class="click" onclick="showAccount('game')">
+                        game
+                    </a>
+                    dan mempelajari hal baru.
                 </p>
                 <div class="aabout2">
                     <a class="btn btn-primary" onclick="toBio()">
@@ -120,7 +141,8 @@
         <section id="projects" class="projects-section">
             <div class="container mt-0">
                 <h2 data-aos="flip-right" class="name"> - - - </h2>
-                <h2 class="name">Projects</h2>
+                <h2 class="name" data-lang="en">Projects</h2>
+                <h2 class="name" data-lang="id">Proyek</h2>
                 <div class="project-list no-wr">
                     <div id="citrus">
                         <div class="flex p-3 mb-3 w-80 prj-border">
@@ -138,14 +160,19 @@
                             </div>
                         </div>
                         <div class="dropdown-content prj-border shows" id="dropdownContent-pr1" style="color: white;">
-                            <p>A Mobile-Based Orange Plant Disease Detection System Utilizing Deep Learning Technique
+                            <p data-lang="en">A Mobile-Based Orange Plant Disease Detection System Utilizing Deep
+                                Learning Technique
                                 (YOLOv8) and Developed with Kotlin Programming Language.</p>
+                            <p data-lang="id"> Sistem Deteksi Penyakit Tanaman Jeruk Berbasis Mobile dengan Menggunakan
+                                Teknik Pembelajaran Dalam (YOLOv8) dan Dikembangkan dengan Bahasa Pemrograman Kotlin.
+                            </p>
                             <iframe class="bor-rad" width="100%" height="534"
                                 src="https://www.youtube.com/embed/VYtrsKjThzM?si=Hzo6NKN_EIs9EN8B"
                                 title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <a href="https://github.com/sampm092/Citrus" class="btn">Check</a>
+                            <a href="https://github.com/sampm092/Citrus" data-lang="en" class="btn">Check</a>
+                            <a href="https://github.com/sampm092/Citrus" data-lang="id" class="btn">Cek</a>
                         </div>
                     </div>
                     <div id="mybooklist">
@@ -164,9 +191,13 @@
                             </div>
                         </div>
                         <div class="dropdown-content prj-border" id="dropdownContent-pr4" style="color: white;">
-                            <p>This program is a simple application that I developed as an implementation of my learning
+                            <p data-lang="en">This program is a simple application that I developed as an implementation of my learning
                                 of the Laravel framework. The program features user login and registration, where
                                 created accounts can be used to manually record a list of books read by the user.</p>
+                            <p data-lang="id">Program ini merupakan aplikasi sederhana yang dikembangkan sebagai bagian dari
+                                implementasi pembelajaran saya tentang framework Laravel. Aplikasi ini dilengkapi dengan
+                                fitur autentikasi pengguna, yaitu login dan registrasi, yang memungkinkan pengguna untuk
+                                mencatat dan mengelola daftar buku yang telah dibaca.</p>
                             <div class="flex fwrap gap1r gambar">
                                 <img src="image/image.png" alt="image.png" onclick="openPreview('image/image 14.png')">
                                 <img src="image/image 14.png" alt="image 14.png"
@@ -192,7 +223,8 @@
                                 <span class="close al-an-c" onclick="closePreview()">&times;</span>
                                 <img class="preview-content" id="img01">
                             </div>
-                            <a href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Check</a>
+                            <a data-lang="en" href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Check</a>
+                            <a data-lang="id" href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Cek</a>
                         </div>
                     </div>
                     <div id="newf">
@@ -236,9 +268,10 @@
                             </div>
                         </div>
                         <div class="dropdown-content prj-border" id="dropdownContent-pr2" style="color: white;">
-                            <p>This is the additional content revealed when you click "See More".</p>
-                            <p>Feel free to add any content you want here, such as links, images, or text.</p>
-                            <a href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Check</a>
+                            <p data-lang="en">This is the additional content revealed when you click "See More".</p>
+                            <p data-lang="id">Ini adalah konten tambahan yang ditampilkan saat Anda mengeklik "Lihat Selengkapnya".</p>
+                            <a data-lang="en" href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Check</a>
+                            <a data-lang="id" href="https://github.com/sampm092/laravLearn/tree/main/three" class="btn">Cek</a>
                         </div>
                     </div>
                 </div>
@@ -247,7 +280,8 @@
         <section id="social" class="social-section">
             <div class="container">
                 <h2 data-aos="flip-right">- - - </h2>
-                <h2>Social</h2>
+                <h2 data-lang="en">Social</h2>
+                <h2 data-lang="id">Sosial</h2>
                 <div class="flex p-3 mb-3 w-80" style="border: 3px solid #ff026a;border-radius: 10px;">
                     <div class="flex ml-3">
                         <div>
@@ -357,7 +391,8 @@
         <section id="contact" class="contact-section">
             <div class="container name mt-0">
                 <h2 data-aos="flip-right"> - - - </h2>
-                <h2>Contact</h2>
+                <h2 data-lang="en">Contact</h2>
+                <h2 data-lang="id">Kontak</h2>
                 <div>
                     <a class="click" onclick="showAccount('wa-a')">
                         <h3>

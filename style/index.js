@@ -58,6 +58,10 @@ function projectDesc(elementId) {
     }
 }
 
+document.querySelectorAll('[data-lang="id"]').forEach(element => {
+    element.style.display = 'none';
+});
+
 function toggleTheme() {
     const toggle = document.querySelector('.toggle-container');
     const knob = document.querySelector('.toggle-knob');
