@@ -34,3 +34,23 @@
         height: 320px !important;
     }
 }
+
+@media only screen and (max-width: 633px){
+    header .container {
+        max-height: 1200px !important;
+        height: fit-content;
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    #about p, #about h2, #about div{
+        margin: auto !important;
+        text-align: center !important;
+    }
+
+    .aabout2{
+        padding-right: 0 !important;
+        text-align-last: center !important;
+    }
+}
