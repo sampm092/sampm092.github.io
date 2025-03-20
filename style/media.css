@@ -41,6 +41,14 @@
         height: fit-content;
         display: block;
     }
+    #mybooklist .gambar img {
+        width: fit-content;
+        height: 90px;
+    }
+
+    iframe {
+        height: 200px !important;
+    }
 }
 
 @media only screen and (max-width: 900px){
@@ -52,5 +60,9 @@
     .aabout2{
         padding-right: 0 !important;
         text-align-last: center !important;
+    }
+    #mybooklist .gambar img {
+        width: fit-content;
+        height: 90px;
     }
 }

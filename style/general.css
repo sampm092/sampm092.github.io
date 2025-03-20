@@ -141,6 +141,10 @@ section div {
     flex-wrap: wrap;
 }
 
+.plcont-center{
+    place-content: center;
+}
+
 .invincible {
     opacity: 0;
 }
