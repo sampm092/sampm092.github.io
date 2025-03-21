@@ -51,12 +51,20 @@ section {
     border-radius: 10px;
 }
 
-body{
-    background-color: #130c0b;
-}
-
 section div {
     margin: auto;
+}
+
+.bg333{
+    background-color: #333;
+}
+
+.bgfff{
+    background-color: #fff;
+}
+
+.bg130{
+    background-color: #130c0b
 }
 
 .btn {

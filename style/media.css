@@ -55,6 +55,7 @@
     #about p, #about h2, #about div{
         margin: auto !important;
         text-align: center !important;
+        padding-left: 0 !important;
     }
 
     .aabout2{

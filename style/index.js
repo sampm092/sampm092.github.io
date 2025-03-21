@@ -65,6 +65,8 @@ document.querySelectorAll('[data-lang="id"]').forEach(element => {
 function toggleTheme() {
     const toggle = document.querySelector('.toggle-container');
     const knob = document.querySelector('.toggle-knob');
+    const bgdark = document.querySelectorAll('[class*="bg130"]')
+    const nava = document.querySelectorAll('.nav a,footer, header')
     toggle.classList.toggle('dark');
     knob.classList.toggle('darknob');
 
@@ -72,9 +74,27 @@ function toggleTheme() {
     document.querySelectorAll('[data-lang]').forEach(element => {
         element.style.display = 'none';
     });
+
     document.querySelectorAll(`[data-lang="${cuLang}"]`).forEach(element => {
         element.style.display = 'block';
     });
+
+    if (cuLang == 'id') {
+        bgdark.forEach(element => {
+            element.style.backgroundColor = '#fff';
+        });
+        nava.forEach(element => {
+            element.style.color = '#000';
+        });
+
+    } else {
+        bgdark.forEach(element => {
+            element.style.backgroundColor = '#130c0b';
+        });
+        nava.forEach(element => {
+            element.style.color = '#fff';
+        });
+    }
 }
 
 function confirmDelete() {
@@ -97,7 +117,7 @@ function toBio() {
 function timeNow1() {
     const timeNow = document.getElementById("date-now");
     const now1 = new Date();
-    formattedDate = now1.toLocaleDateString("en-GB", { weekday:"long", year: "numeric", month: "long", day: "numeric" });
+    formattedDate = now1.toLocaleDateString("en-GB", { weekday: "long", year: "numeric", month: "long", day: "numeric" });
 
     timeNow.textContent = "Date: " + formattedDate;
 }
