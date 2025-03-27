@@ -71,12 +71,18 @@ function toggleTheme() {
     knob.classList.toggle('darknob');
 
     cuLang = cuLang === 'en' ? 'id' : 'en';
-    document.querySelectorAll('[data-lang]').forEach(element => {
-        element.style.display = 'none';
-    });
 
-    document.querySelectorAll(`[data-lang="${cuLang}"]`).forEach(element => {
-        element.style.display = 'block';
+    document.querySelectorAll('.class:not(.btn)').forEach(element => {
+        if (element.hasAttribute('data-lang')) {
+            element.style.display = element.getAttribute('data-lang') === cuLang ? 'block' : 'none';
+        }
+    });
+    
+    // Handle buttons
+    document.querySelectorAll('.btn').forEach(element => {
+        if (element.hasAttribute('data-lang')) {
+            element.style.display = element.getAttribute('data-lang') === cuLang ? 'inline-block' : 'none';
+        }
     });
 
     if (cuLang == 'id') {
