@@ -72,26 +72,14 @@ function toggleTheme() {
 
     cuLang = cuLang === 'en' ? 'id' : 'en';
 
-    // document.querySelectorAll('.class:not(.btn)').forEach(element => {
-    //     if (element.hasAttribute('data-lang')) {
-    //         element.style.display = element.getAttribute('data-lang') === cuLang ? 'block' : 'none';
-    //     }
-    // });
-
     document.querySelectorAll('[data-lang]').forEach(element => {
-        element.style.display = 'none';
-    });
-    document.querySelectorAll(`[data-lang="${cuLang}"]`).forEach(element => {
-        element.style.display = 'block';
-    });
-    
-    
-    // Handle buttons
-    document.querySelectorAll('.btn').forEach(element => {
-        if (element.hasAttribute('data-lang')) {
+        if (element.classList.contains('btn')) { //handle button
             element.style.display = element.getAttribute('data-lang') === cuLang ? 'inline-block' : 'none';
+        } else {
+            element.style.display = element.getAttribute('data-lang') === cuLang ? 'block' : 'none';
         }
     });
+
 
     if (cuLang == 'id') {
         bgdark.forEach(element => {
