@@ -44,6 +44,28 @@
     button:hover {
       opacity: 80%;
     }
+
+    @media only screen and (max-width: 505px) {
+      textarea {
+        height: 100px;
+        max-width: 450px;
+      }
+
+      select, button {
+        max-width: 450px;
+      }
+    }
+
+    @media only screen and (max-width: 625px){
+      textarea {
+        height: 100px;
+        max-width: 425px;
+        min-width: 425px !important;
+      }
+      select, button {
+        max-width: 450px;
+      }
+    }
   </style>
 </head>
 
@@ -54,7 +76,7 @@
   <textarea id="inputText" placeholder="Type your text here..."></textarea>
   <button onclick="pasText()" style="margin-bottom: 3rem;">Paste</button>
 
-  <label for="vowel">Replace all vowels with:</label>
+  <p>Replace all vowels with:</p>
   <select id="vowel">
     <option value="a">a</option>
     <option value="e">e</option>
