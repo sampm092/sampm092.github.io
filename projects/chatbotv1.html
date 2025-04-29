@@ -22,22 +22,24 @@
     }
 
     #chatbox {
-      border: 1px solid #000000;
+      border: 2px solid #000000;
       padding: 10px;
       height: 300px;
       overflow-y: scroll;
       margin-bottom: 4px;
       background-color: white;
-      text-align: end;
+
     }
 
     .user {
-      color: blue;
+      color: black;
       margin-bottom: 5px;
+      text-align: start;
     }
 
     .bot {
-      color: green;
+      color: #af7d00;
+      text-align: end;
       margin-bottom: 10px;
     }
 
@@ -48,13 +50,13 @@
     #userInput {
       flex: 1;
       padding: 8px;
-      border: 1px solid black;
+      border: 2px solid black;
       margin-right: 3px;
     }
 
     #sendBtn {
       padding: 8px;
-      border: 1px solid black;
+      border: 2px solid black;
     }
 
     @media only screen and (max-width: 610px){
@@ -105,7 +107,7 @@
     function addMessage(text, sender) {
       const msg = document.createElement('div');
       msg.className = sender;
-      msg.textContent = `${sender === 'user' ? 'You' : 'Bot'}: ${text}`;
+      msg.textContent = ` ${text}`;
       chatbox.appendChild(msg);
       chatbox.scrollTop = chatbox.scrollHeight;
     }
