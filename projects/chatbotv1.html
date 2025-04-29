@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Chatbot</title>
+  <style>
+    body { 
+      font-family: Arial; max-width: 600px; margin: 50px auto; 
+    }
+    
+    #chatbox { 
+      border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; margin-bottom: 10px; 
+    }
+
+    .user { 
+      color: blue; margin-bottom: 5px; 
+    }
+    
+    .bot { 
+      color: green; margin-bottom: 10px; 
+    }
+
+    #inputArea { 
+      display: flex; 
+    }
+
+    #userInput { 
+      flex: 1; padding: 8px; 
+    }
+
+    #sendBtn { 
+      padding: 8px; 
+    }
+
+  </style>
+</head>
+<body>
+
+<h2>Chatbot V1</h2>
+<div id="chatbox"></div>
+
+<div id="inputArea">
+  <input type="text" id="userInput" placeholder="Type something...">
+  <button id="sendBtn">Send</button>
+</div>
+
+<script>
+  const chatbox = document.getElementById('chatbox');
+  const userInput = document.getElementById('userInput');
+  const sendBtn = document.getElementById('sendBtn');
+
+  const replies = [
+    { type: 'and', keywords: ['how', 'you'], reply: "I'm doing great, thanks for asking!" },
+    { type: 'single', keywords: ['how'], reply: "You asked 'how' — can you be more specific?" },
+    { type: 'single', keywords: ['hello'], reply: "Hi there! 👋" },
+    { type: 'single', keywords: ['hi'], reply: "Hello! 👋" },
+    { type: 'single', keywords: ['bye'], reply: "Goodbye! 👋" },
+    { type: 'single', keywords: ['help'], reply: "How can I assist you?" },
+    { type: 'single', keywords: ['thanks'], reply: "You're welcome!" },
+  ];
+
+  function addMessage(text, sender) {
+    const msg = document.createElement('div');
+    msg.className = sender;
+    msg.textContent = `${sender === 'user' ? 'You' : 'Bot'}: ${text}`;
+    chatbox.appendChild(msg);
+    chatbox.scrollTop = chatbox.scrollHeight;
+  }
+
+  function getBotReply(message) {
+    const lowerMsg = message.toLowerCase();
+
+    for (let item of replies) {
+      if (item.type === 'and') {
+        const foundAll = item.keywords.every(word => lowerMsg.includes(word));
+        if (foundAll) return item.reply;
+      } else if (item.type === 'single') {
+        if (item.keywords.some(word => lowerMsg.includes(word))) {
+          return item.reply;
+        }
+      }
+    }
+
+    return "I'm not sure how to respond to that.";
+  }
+
+  sendBtn.addEventListener('click', () => {
+    const text = userInput.value.trim();
+    if (!text) return;
+
+    addMessage(text, 'user');
+    const reply = getBotReply(text);
+    addMessage(reply, 'bot');
+    userInput.value = '';
+  });
+
+  userInput.addEventListener('keypress', e => {
+    if (e.key === 'Enter') sendBtn.click();
+  });
+</script>
+
+</body>
+</html>
