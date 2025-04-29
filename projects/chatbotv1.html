@@ -1,103 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Simple Chatbot</title>
   <style>
-    body { 
-      font-family: Arial; max-width: 600px; margin: 50px auto; 
-    }
-    
-    #chatbox { 
-      border: 1px solid #ccc; padding: 10px; height: 300px; overflow-y: scroll; margin-bottom: 10px; 
-    }
-
-    .user { 
-      color: blue; margin-bottom: 5px; 
-    }
-    
-    .bot { 
-      color: green; margin-bottom: 10px; 
+    body {
+      font-family: Arial;
+      max-width: 600px;
+      margin: 50px auto;
+      text-align: -webkit-center;
+      background-color: goldenrod;
     }
 
-    #inputArea { 
-      display: flex; 
+    h2 {
+      color: white;
     }
 
-    #userInput { 
-      flex: 1; padding: 8px; 
+    .text-with-border {
+      text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     }
 
-    #sendBtn { 
-      padding: 8px; 
+    #chatbox {
+      border: 1px solid #000000;
+      padding: 10px;
+      height: 300px;
+      overflow-y: scroll;
+      margin-bottom: 4px;
+      background-color: white;
+      text-align: end;
     }
 
-  </style>
-</head>
-<body>
+    .user {
+      color: blue;
+      margin-bottom: 5px;
+    }
 
-<h2>Chatbot V1</h2>
-<div id="chatbox"></div>
+    .bot {
+      color: green;
+      margin-bottom: 10px;
+    }
 
-<div id="inputArea">
-  <input type="text" id="userInput" placeholder="Type something...">
-  <button id="sendBtn">Send</button>
-</div>
+    #inputArea {
+      display: flex;
+    }
 
-<script>
-  const chatbox = document.getElementById('chatbox');
-  const userInput = document.getElementById('userInput');
-  const sendBtn = document.getElementById('sendBtn');
+    #userInput {
+      flex: 1;
+      padding: 8px;
+      border: 1px solid black;
+      margin-right: 3px;
+    }
 
-  const replies = [
-    { type: 'and', keywords: ['how', 'you'], reply: "I'm doing great, thanks for asking!" },
-    { type: 'single', keywords: ['how'], reply: "You asked 'how' — can you be more specific?" },
-    { type: 'single', keywords: ['hello'], reply: "Hi there! 👋" },
-    { type: 'single', keywords: ['hi'], reply: "Hello! 👋" },
-    { type: 'single', keywords: ['bye'], reply: "Goodbye! 👋" },
-    { type: 'single', keywords: ['help'], reply: "How can I assist you?" },
-    { type: 'single', keywords: ['thanks'], reply: "You're welcome!" },
-  ];
+    #sendBtn {
+      padding: 8px;
+      border: 1px solid black;
+    }
 
-  function addMessage(text, sender) {
-    const msg = document.createElement('div');
-    msg.className = sender;
-    msg.textContent = `${sender === 'user' ? 'You' : 'Bot'}: ${text}`;
-    chatbox.appendChild(msg);
-    chatbox.scrollTop = chatbox.scrollHeight;
-  }
-
-  function getBotReply(message) {
-    const lowerMsg = message.toLowerCase();
-
-    for (let item of replies) {
-      if (item.type === 'and') {
-        const foundAll = item.keywords.every(word => lowerMsg.includes(word));
-        if (foundAll) return item.reply;
-      } else if (item.type === 'single') {
-        if (item.keywords.some(word => lowerMsg.includes(word))) {
-          return item.reply;
-        }
+    @media only screen and (max-width: 610px){
+      #chatbox{
+        width: 460px;
+      }
+      
+      #inputArea {
+        width: 480px;
       }
     }
+  </style>
+</head>
 
-    return "I'm not sure how to respond to that.";
-  }
+<body>
 
-  sendBtn.addEventListener('click', () => {
-    const text = userInput.value.trim();
-    if (!text) return;
+  <h2 class="text-with-border">Chatbot V1</h2>
+  <div id="chatbox"></div>
 
-    addMessage(text, 'user');
-    const reply = getBotReply(text);
-    addMessage(reply, 'bot');
-    userInput.value = '';
-  });
+  <div id="inputArea">
+    <input type="text" id="userInput" placeholder="Type something...">
+    <button id="sendBtn">Send</button>
+  </div>
 
-  userInput.addEventListener('keypress', e => {
-    if (e.key === 'Enter') sendBtn.click();
-  });
-</script>
+  <script>
+    const chatbox = document.getElementById('chatbox');
+    const userInput = document.getElementById('userInput');
+    const sendBtn = document.getElementById('sendBtn');
+
+    const replies = [
+      { type: 'and', keywords: ['how', 'you'], reply: "I'm doing great, thanks for asking!" },
+      { type: 'and', keywords: ['how', 'your'], reply: "I'm doing great, thanks for asking!" },
+      { type: 'and', keywords: ['help', 'to'], reply: "Sorry, i don't have any capability to solve that" },
+      {
+        type: 'or', keywords: [
+          'fuck', 'shit', 'dumb', 'ass', 'retard', 'slut', 'bitch'
+        ], reply: "Please be mindful of your language."
+      },
+      { type: 'or', keywords: ['thank', 'appreciate', 'grateful'], reply: "You're welcome!" },
+      { type: 'single', keywords: ['how'], reply: "Sorry, i don't have any capability to solve that" },
+      { type: 'single', keywords: ['hello'], reply: "Hi there! 👋" },
+      { type: 'single', keywords: ['hi'], reply: "Hello! 👋" },
+      { type: 'single', keywords: ['bye'], reply: "Goodbye! 👋" },
+      { type: 'single', keywords: ['help'], reply: "How can I assist you?" },
+
+    ];
+
+    function addMessage(text, sender) {
+      const msg = document.createElement('div');
+      msg.className = sender;
+      msg.textContent = `${sender === 'user' ? 'You' : 'Bot'}: ${text}`;
+      chatbox.appendChild(msg);
+      chatbox.scrollTop = chatbox.scrollHeight;
+    }
+
+    function getBotReply(message) {
+      const lowerMsg = message.toLowerCase();
+
+      for (let item of replies) {
+        if (item.type === 'and') {
+          const foundAll = item.keywords.every(word => lowerMsg.includes(word));
+          if (foundAll) return item.reply;
+        } else if (item.type === 'or') {
+          const foundAny = item.keywords.some(word => lowerMsg.includes(word));
+          if (foundAny) return item.reply;
+        } else if (item.type === 'single') {
+          if (item.keywords.some(word => lowerMsg.includes(word))) {
+            return item.reply;
+          }
+        }
+      }
+
+      return "I'm not sure how to respond to that.";
+    }
+
+    sendBtn.addEventListener('click', () => {
+      const text = userInput.value.trim();
+      if (!text) return;
+
+      addMessage(text, 'user');
+      const reply = getBotReply(text);
+      addMessage(reply, 'bot');
+      userInput.value = '';
+    });
+
+    userInput.addEventListener('keypress', e => {
+      if (e.key === 'Enter') sendBtn.click();
+    });
+  </script>
 
 </body>
+
 </html>
