@@ -9,9 +9,10 @@ a {
     padding: 0;
     text-decoration: none;
     color: inherit;
-    font-family: monospace,Raleway, Inter, Arial, sans-serif;
+    font-family:  "Plus Jakarta Sans", monospace,Raleway, Inter, Arial, sans-serif;
     box-sizing: border-box;
 }
+
 
 a {
     cursor: pointer;
