@@ -160,6 +160,7 @@
     text-align: left;
     font-size: 3rem;
     margin-left: 7rem;
+    animation : fontColorChange 3s;
 }
 
 .aabout{
@@ -167,11 +168,16 @@
     margin: 3rem auto auto 7rem;
 }
 
+.aabout .btn-primary{
+    animation: opacityUp 6s;
+}
+
 .pabout {
     font-size: 1.2rem;
     text-align: left;
     max-width: 600px;
     margin-left: 7rem;
+    animation : fontColorChange 6s;
 }
 
 .h2about2{
@@ -208,7 +214,7 @@
 
 .projects-section,
 .contact-section {
-    background-color: #333;
+    background-color: #000;
 }
 
 .projects-section h2,
@@ -564,4 +570,27 @@
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
+}
+
+.spin{
+    animation: spin 3s;
+}
+
+/* keyframes */
+@keyframes fontColorChange {
+    0%   { color: #fff; }   /* red */
+    100% { color: #000; }   /* green */
+  }
+
+@keyframes opacityUp{
+    0% {opacity: 0%}
+    100% {opacity: 100%}
+}
+
+@keyframes spin{
+    from{
+    transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
+    }
 }

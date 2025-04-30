@@ -10,7 +10,8 @@
       max-width: 600px;
       margin: 50px auto;
       text-align: -webkit-center;
-      background-color: goldenrod;
+      animation: bgColorChange 5s infinite alternate;
+      /* background-color: goldenrod; */
     }
 
     h2 {
@@ -72,6 +73,12 @@
       #inputArea {
         width: 480px;
       }
+    }
+
+    @keyframes bgColorChange {
+      0%   { background-color: #af5252; }   /* red */
+      50%  { background-color: #35819b; }   /* blue */
+      100% { background-color: #2fb45b; }   /* green */
     }
   </style>
 </head>

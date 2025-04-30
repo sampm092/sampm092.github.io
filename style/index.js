@@ -91,7 +91,7 @@ function toggleTheme() {
 
     } else {
         bgdark.forEach(element => {
-            element.style.backgroundColor = '#130c0b';
+            element.style.backgroundColor = '#000';
         });
         nava.forEach(element => {
             element.style.color = '#fff';
