@@ -111,15 +111,21 @@ section div {
 }
 
 .btn-git {
-    color: #fff;
-    background-color: #000;
-    border-color: #000;
+    color: #000;
+    background-color: #fff;
+    border-color: #fff;
 }
 
 .btn-yt {
-    color: #fff;
-    background-color: #ff0000;
-    border-color: #ff0000;
+    color: #000;
+    background-color: #ff4500;
+    border-color: #ff4500;
+}
+
+.btn-li{
+    color: #000;
+    background-color: #7fcbfe;
+    border-color: #7fcbfe;    
 }
 
 .btn-primary {
@@ -129,9 +135,9 @@ section div {
 }
 
 .btn-ig {
-    color: #fff;
-    background-color: #ff026a;
-    border-color: #ff026a;
+    color: #000;
+    background-color: #f594bc;
+    border-color: #f594bc;
 }
 
 .bor-rad{

@@ -215,7 +215,14 @@
 
 .about-section,
 .social-section{
-    background-color: #000;
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.85), 
+        rgba(0, 0, 0, 0.85)
+      ),
+      url('../image/wp-bl.jpg'); //https://wallpapercat.com/matte-black-wallpapers#load
+    background-size: cover;
+    background-position: center;
+    color: white;
 }
 
 .projects-section,
@@ -310,7 +317,6 @@
 
 .project-card h3, p, a{
     height: 33%;
-    margin-top: 2px;
 }
 
 .project-card p {
@@ -579,8 +585,8 @@
     cursor: pointer;
 }
 
-.spin{
-    animation: spin 3s;
+.flip{
+    animation: flip 1.5s;
 }
 
 /* keyframes */
@@ -594,10 +600,16 @@
     100% {opacity: 100%}
 }
 
-@keyframes spin{
-    from{
-    transform: rotate(0deg);
-    } to {
-        transform: rotate(360deg);
-    }
+@keyframes flip{
+    0%{transform: scaleX(1);} 
+    10%{transform: scaleX(-1);}
+    20%{transform: scaleY(1);} 
+    30%{transform: scaleY(-1);}
+    40%{transform: scaleX(1);} 
+    50%{transform: scaleX(-1);}
+    60%{transform: scaleY(1);} 
+    70%{transform: scaleY(-1);}
+    80%{transform: scaleX(1);} 
+    90%{transform: scaleY(-1);}
+    100%{transform: scaleY(1);}
 }
