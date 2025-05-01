@@ -106,7 +106,7 @@ section div {
 }
 
 .prj-border{
-    border: 3px solid white;
+    border: 3px solid #000;
     border-radius: 20px;
 }
 
@@ -138,8 +138,8 @@ section div {
     border-radius: 15px;
 }
 
-.c-white{
-    color: #fff;
+.c-black{
+    color: #000;
 }
 
 .flex {
@@ -163,7 +163,7 @@ section div {
 }
 
 .name {
-    color: #fff;
+    color: #000;
 }
 
 .none {
