@@ -169,7 +169,7 @@
     margin: 3rem auto auto 7rem;
 }
 
-.aabout .btn-primary{
+.aabout, .aabout2 .btn-primary{
     animation: opacityUp 6s;
 }
 
