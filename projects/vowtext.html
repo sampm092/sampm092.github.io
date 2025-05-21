@@ -45,6 +45,25 @@
       opacity: 80%;
     }
 
+    #copyNotification {
+      position: fixed;
+      top: 50%;
+      right: 20px;
+      background-color: #4caf50;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      opacity: 0;
+      transition: opacity 0.4s ease-in-out;
+      z-index: 9999;
+      pointer-events: none;
+    }
+
+    #copyNotification.show {
+      opacity: 1;
+    }
+
     @media only screen and (max-width: 505px) {
 
       /*media under 450px got problem*/
@@ -109,6 +128,7 @@
     <h3>Output:</h3>
     <textarea id="outputText" readonly></textarea>
     <button onclick="copText()" style="margin-bottom: 3rem;">Copy</button>
+    <div id="copyNotification">Copied!</div>
   </div>
   <script>
 
@@ -140,7 +160,13 @@
 
     async function copText() {
       const textOutput = document.getElementById("outputText").value;
-      navigator.clipboard.writeText(textOutput);
+      navigator.clipboard.writeText(textOutput).then(() => {
+        const notification = document.getElementById("copyNotification");
+        notification.classList.add("show");
+        setTimeout(() => {
+          notification.classList.remove("show");
+        }, 2000); // 2 seconds
+      });
     }
 
 
