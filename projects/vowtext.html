@@ -45,63 +45,71 @@
       opacity: 80%;
     }
 
-    @media only screen and (max-width: 505px) { /*media under 450px got problem*/
+    @media only screen and (max-width: 505px) {
+
+      /*media under 450px got problem*/
       textarea {
         height: 100px;
         max-width: 450px;
       }
 
-      select, button {
+      select,
+      button {
         max-width: 450px;
       }
     }
 
-    @media only screen and (max-width: 625px){
+    @media only screen and (max-width: 625px) {
       textarea {
         height: 100px;
         max-width: 425px;
         min-width: 425px !important;
       }
-      select, button {
+
+      select,
+      button {
         max-width: 450px;
       }
     }
 
-    @media only screen and (max-width: 450px){
+    @media only screen and (max-width: 450px) {
       textarea {
         height: 100px;
         max-width: 400px;
         min-width: 400px !important;
       }
-      select, button {
+
+      select,
+      button {
         max-width: 424px;
       }
     }
-    
   </style>
 </head>
 
 <body>
+  <div>
 
-  <h1>Vowel Replacer</h1>
+    <h1>Vowel Replacer</h1>
 
-  <textarea id="inputText" placeholder="Type your text here..."></textarea>
-  <button onclick="pasText()" style="margin-bottom: 3rem;">Paste</button>
+    <textarea id="inputText" placeholder="Type your text here..."></textarea>
+    <button onclick="pasText()" style="margin-bottom: 3rem;">Paste</button>
 
-  <p>Replace all vowels with:</p>
-  <select id="vowel">
-    <option value="a">a</option>
-    <option value="e">e</option>
-    <option value="i">i</option>
-    <option value="o">o</option>
-    <option value="u">u</option>
-  </select>
+    <p>Replace all vowels with:</p>
+    <select id="vowel">
+      <option value="a">a</option>
+      <option value="e">e</option>
+      <option value="i">i</option>
+      <option value="o">o</option>
+      <option value="u">u</option>
+    </select>
 
-  <button class="prm-btn" onclick="replaceVowels()">Generate</button>
+    <button class="prm-btn" onclick="replaceVowels()">Generate</button>
 
-  <h3>Output:</h3>
-  <textarea id="outputText" readonly></textarea>
-
+    <h3>Output:</h3>
+    <textarea id="outputText" readonly></textarea>
+    <button onclick="copText()" style="margin-bottom: 3rem;">Copy</button>
+  </div>
   <script>
 
     async function pasText() {
@@ -128,6 +136,11 @@
           confirmButtonText: 'OK'
         });
       }
+    }
+
+    async function copText() {
+      const textOutput = document.getElementById("outputText").value;
+      navigator.clipboard.writeText(textOutput);
     }
 
 
