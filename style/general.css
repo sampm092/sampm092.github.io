@@ -110,6 +110,11 @@ section div {
     border-radius: 20px;
 }
 
+.prj-border-in{
+    border: 3px dashed #000;
+    border-radius: 20px;
+}
+
 .btn-git {
     color: #000;
     background-color: #fff;
