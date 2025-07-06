@@ -112,10 +112,10 @@ section div {
 
 .prj-background{
     background: linear-gradient(
-        rgba(255, 255, 255, 0.5), 
-        rgba(255, 255, 255, 0.5)
+        rgba(255, 255, 255, 0.75), 
+        rgba(255, 255, 255, 0.75)
       ),
-      url('../image/wp-li.jpg'); //https://wallpapercat.com/matte-black-wallpapers#load
+      url('../image/wp-li.jpg'); //https://images.wallpapersden.com/image/download/line-light-background_aGVsZpSZmpqtpaSklGdqa2WtZmtlZQ.jpg
     background-size: cover;
     background-position: center;
 }
