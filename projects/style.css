@@ -1,3 +1,7 @@
+html{
+    font-family:  "Plus Jakarta Sans", monospace,Raleway, Inter, Arial, sans-serif;
+}
+
 .big-btn {
     display: inline-block;
     font-weight: 400;
@@ -75,7 +79,7 @@
     min-height: 28vh;
 }
 
-.name {
+.nameG {
     color: #fff;
 }
 
@@ -85,4 +89,13 @@
     flex-wrap: nowrap;
     gap: 20px;
     height: 50%;
+}
+
+.back{
+    min-width: 100px;
+    background-color: #333333;
+    color: white;
+    position: absolute;
+    left: 15px;
+    top: 15px;
 }
