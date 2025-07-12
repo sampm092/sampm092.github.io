@@ -106,51 +106,49 @@
     </section>
 
     <script>
-        // const items = ['Sir Arthur Conan Doyle - A Study in Scarlet',
-        //     'Sir Arthur Conan Doyle - The Sign of the Four',
-        //     'Sir Arthur Conan Doyle - The Hound of the Baskervilles',
-        //     'Sir Arthur Conan Doyle - The Valley of Fear'
-        // ]
-        fetch('novelist.txt')
-            .then(response => response.text())
-            .then(text => {
-                const items = text.split('\n').map(line => line.trim()).filter(Boolean);
-            })
-        const itemsPerPage = 20;
-        let currentPage = 1;
+    fetch('novelist.txt')
+        .then(response => response.text())
+        .then(text => {
+            const items = text.split('\n').map(line => line.trim()).filter(Boolean);
+            const itemsPerPage = 20;
+            let currentPage = 1;
 
-        function displayItems(page) {
-            const start = (page - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const pageItems = items.slice(start, end);
+            function displayItems(page) {
+                const start = (page - 1) * itemsPerPage;
+                const end = start + itemsPerPage;
+                const pageItems = items.slice(start, end);
 
-            document.getElementById("items").innerHTML = pageItems
-                .map(item => `<div><a href="https://www.google.com/search?q=${item}"> •&nbsp ${item}</a></div>`)
-                .join("");
+                document.getElementById("items").innerHTML = pageItems
+                    .map(item => `<div><a href="https://www.google.com/search?q=${item}"> •&nbsp;${item}</a></div>`)
+                    .join("");
 
-            renderPagination();
-        }
-
-        function renderPagination() {
-            const totalPages = Math.ceil(items.length / itemsPerPage);
-            const pagination = document.getElementById("pagination");
-
-            pagination.innerHTML = "";
-
-            for (let i = 1; i <= totalPages; i++) {
-                const button = document.createElement("span");
-                button.textContent = i;
-                button.className = "page-link" + (i === currentPage ? " active" : "");
-                button.addEventListener("click", () => {
-                    currentPage = i;
-                    displayItems(currentPage);
-                });
-                pagination.appendChild(button);
+                renderPagination();
             }
-        }
 
-        displayItems(currentPage);
-    </script>
+            function renderPagination() {
+                const totalPages = Math.ceil(items.length / itemsPerPage);
+                const pagination = document.getElementById("pagination");
+
+                pagination.innerHTML = "";
+
+                for (let i = 1; i <= totalPages; i++) {
+                    const button = document.createElement("span");
+                    button.textContent = i;
+                    button.className = "page-link" + (i === currentPage ? " active" : "");
+                    button.addEventListener("click", () => {
+                        currentPage = i;
+                        displayItems(currentPage);
+                    });
+                    pagination.appendChild(button);
+                }
+            }
+
+            displayItems(currentPage); // Call it AFTER fetch is complete
+        })
+        .catch(error => {
+            console.error("Failed to load novelist.txt:", error);
+        });
+</script>
 </body>
 
 </html>

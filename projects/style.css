@@ -86,7 +86,7 @@ html{
 #spotify:hover::after {
     content: "Fraux Oda";
 }
-.novel-section{
+.novel-section, .social-section{
     padding: 50px 0;
     background-color: transparent;
     font-size: 3rem;
