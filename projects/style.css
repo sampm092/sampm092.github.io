@@ -34,7 +34,7 @@ html{
     margin: auto 0;
 }
 
-#lists{
+#novel{
     padding: 50px;
     background-color: #333;
     font-size: 2rem;
@@ -42,14 +42,19 @@ html{
     width: 90%;
 }
 
-#lists .container{
+#novel .container{
     height: -webkit-fill-available;
     margin: 1rem auto;
 }
 
-#lists h3 {
+#novel h3 {
     min-height: 77px;
     align-content: center;
+}
+
+#novel h2{
+    color: #ccc;
+    margin: 1.5rem;
 }
 
 #steam::after {
@@ -81,7 +86,7 @@ html{
 #spotify:hover::after {
     content: "Fraux Oda";
 }
-.social-section{
+.novel-section{
     padding: 50px 0;
     background-color: transparent;
     font-size: 3rem;
@@ -98,13 +103,6 @@ html{
     color: #fff;
 }
 
-.project-list {
-    display: block;
-    justify-content: space-around;
-    flex-wrap: nowrap;
-    gap: 20px;
-    height: 50%;
-}
 
 .back{
     min-width: 100px;
@@ -114,3 +112,50 @@ html{
     left: 15px;
     top: 15px;
 }
+
+/* For Novel */
+ #items {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Two equal columns */
+      gap: 10px;
+      font-size: 1.25rem;
+    }
+
+#items div {
+    padding: 12px;
+    border: 1px solid #ddd;
+    background: transparent;
+    border-radius: 4px;
+    width: 95%;
+    color: white;
+    text-align: start;
+
+}
+
+    #pagination {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .page-link {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 8px 12px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s;
+      color: #ccc;
+      min-width: 4%;
+    }
+
+    .page-link:hover {
+      background: #f0f0f0;
+      color: #333;
+    }
+
+    .page-link.active {
+      background-color: #333;
+      color: white;
+      border-color: #333;
+    }

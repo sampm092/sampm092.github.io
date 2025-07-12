@@ -99,17 +99,52 @@
             </div>
         </div>
     </section>
-    <!-- <section id="lists" class="projects-section" style="display: block;">
-        <h2 class="nameG fz-3r">Games</h2>
-        <a width="100%" href="https://steamcommunity.com/profiles/76561199002808105/" target="_blank"><img
-                src="https://www.steamidfinder.com/signature/76561199002808105.png"
-                alt="Drecken Steam Signature, real name SPM" /></a>
-        <h2 class="nameG fz-3r">Music</h2>
-        <iframe data-testid="embed-iframe" style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/0FNB0MYjrUDZCe5ypFJFcR?utm_source=generator" width="100%"
-            height="352" frameBorder="0" allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </section> -->
+    <section id="novel" class="novel-section" style="display: block;">
+        <h2>My Books</h2>
+        <div id="items"></div>
+        <div id="pagination"></div>
+    </section>
+
+    <script>
+        const items = ['Tere Liye - Bulan', 'Bola', 'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c',
+            'Tere Liye - Bulan', 'Bola', 'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c',
+            'Tere Liye - Bulan', 'Bola', 'a', 'b', 'c', 'a', 'b', 'c', 'a', 'b', 'c'
+        ]
+        const itemsPerPage = 20;
+        let currentPage = 1;
+
+        function displayItems(page) {
+            const start = (page - 1) * itemsPerPage;
+            const end = start + itemsPerPage;
+            const pageItems = items.slice(start, end);
+
+            document.getElementById("items").innerHTML = pageItems
+                .map(item => `<div><a href="https://www.google.com/search?q=${item}">${item}</a></div>`)
+                .join("");
+
+            renderPagination();
+        }
+
+        function renderPagination() {
+            const totalPages = Math.ceil(items.length / itemsPerPage);
+            const pagination = document.getElementById("pagination");
+
+            pagination.innerHTML = "";
+
+            for (let i = 1; i <= totalPages; i++) {
+                const button = document.createElement("span");
+                button.textContent = i;
+                button.className = "page-link" + (i === currentPage ? " active" : "");
+                button.addEventListener("click", () => {
+                    currentPage = i;
+                    displayItems(currentPage);
+                });
+                pagination.appendChild(button);
+            }
+        }
+
+        displayItems(currentPage);
+    </script>
 </body>
 
 </html>
