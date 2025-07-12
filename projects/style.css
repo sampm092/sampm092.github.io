@@ -116,7 +116,7 @@ html{
 /* For Novel */
  #items {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Two equal columns */
+      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
       gap: 10px;
       font-size: 1.25rem;
     }
@@ -129,6 +129,8 @@ html{
     width: 95%;
     color: white;
     text-align: start;
+        height: 60px;
+    align-content: center;
 
 }
 
