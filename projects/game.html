@@ -120,7 +120,7 @@
                 const pageItems = items.slice(start, end);
 
                 document.getElementById("items").innerHTML = pageItems
-                    .map(item => `<div class="itemtem"><a href="https://www.google.com/search?q=${item}"> ${item}</a></div>`)
+                    .map(item => `<a href="https://www.google.com/search?q=${item}"><div class="itemtem"> ${item}</div></a>`)
                     .join("");
 
                 renderPagination();
