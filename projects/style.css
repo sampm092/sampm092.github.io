@@ -34,29 +34,6 @@ html{
     margin: auto 0;
 }
 
-#novel{
-    padding: 50px;
-    background-color: #333;
-    font-size: 1.25rem;
-    margin: 1rem auto;
-    width: 90%;
-}
-
-#novel .container{
-    height: -webkit-fill-available;
-    margin: 1rem auto;
-}
-
-#novel h3 {
-    min-height: 77px;
-    align-content: center;
-}
-
-#novel h2{
-    color: #ffffff;
-    margin: 1.5rem;
-}
-
 #steam::after {
     content: "Steam";
     color: #39529d;
@@ -114,11 +91,36 @@ html{
 }
 
 /* For Novel */
+#novel{
+    padding: 50px;
+    background-color: #333;
+    font-size: 1.25rem;
+    margin: 1rem auto;
+    width: 90%;
+}
+
+#novel .container{
+    height: -webkit-fill-available;
+    margin: 1rem auto;
+}
+
+#novel h3 {
+    min-height: 77px;
+    align-content: center;
+}
+
+#novel h2{
+    color: #ffffff;
+    margin: 1.5rem;
+    font-size: 3rem;
+}
+
  #items {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* Two equal columns */
       gap: 10px;
       font-size: 1rem;
+      font-weight: 5px;
     }
 
 #items div {
@@ -132,6 +134,12 @@ html{
         height: 25px;
     align-content: center;
 
+}
+
+#items div:hover{
+    color: black;
+    font-weight: bold;
+    border: 2px solid black;
 }
 
     #pagination {
