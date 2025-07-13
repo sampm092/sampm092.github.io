@@ -37,7 +37,7 @@ html{
 #novel{
     padding: 50px;
     background-color: #333;
-    font-size: 2rem;
+    font-size: 1.25rem;
     margin: 1rem auto;
     width: 90%;
 }
@@ -53,7 +53,7 @@ html{
 }
 
 #novel h2{
-    color: #ccc;
+    color: #ffffff;
     margin: 1.5rem;
 }
 
@@ -118,7 +118,7 @@ html{
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* Two equal columns */
       gap: 10px;
-      font-size: 1.25rem;
+      font-size: 1rem;
     }
 
 #items div {
@@ -129,7 +129,7 @@ html{
     width: 95%;
     color: white;
     text-align: start;
-        height: 60px;
+        height: 25px;
     align-content: center;
 
 }
@@ -148,7 +148,7 @@ html{
       border-radius: 4px;
       transition: background 0.2s;
       color: #ccc;
-      min-width: 4%;
+      min-width: 2%;
     }
 
     .page-link:hover {
