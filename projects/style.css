@@ -68,7 +68,7 @@ html{
     background-color: transparent;
     font-size: 3rem;
     text-align: center;
-    min-height: 82vh;
+    min-height: 82.5vh;
 }
 
 .flex-column{
@@ -88,6 +88,15 @@ html{
     position: absolute;
     left: 15px;
     top: 15px;
+}
+
+.TopSocial{
+    display: flex;
+    gap: 4rem;
+}
+
+.TopSocial a{
+    font-weight: bold;
 }
 
 /* For Novel */
@@ -169,3 +178,10 @@ html{
       color: white;
       border-color: #333;
     }
+
+    @media only screen and (max-width: 633px){
+    .TopSocial{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+}

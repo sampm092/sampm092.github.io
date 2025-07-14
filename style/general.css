@@ -56,6 +56,14 @@ section div {
     margin: auto;
 }
 
+/* Footer Styles */
+.footer {
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
 .bg333{
     background-color: #333;
 }
