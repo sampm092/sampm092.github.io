@@ -159,7 +159,7 @@
         </div>
     </section>
     <section id="novel" class="novel-section" style="display: block;">
-        <h2>My Books</h2>
+        <h2 class="line">Books</h2>
         <div id="items"></div>
         <div id="pagination"></div>
     </section>
@@ -172,11 +172,11 @@
     </footer>
 
     <script>
-        // fetch('novelist.txt')
-        // .then(response => response.text())
-        // .then(text => {
-        // const items = text.split('\n').map(line => line.trim()).filter(Boolean);
-        const items = ['Tere Liye - Bulan', 'Bola']
+        fetch('novelist.txt')
+        .then(response => response.text())
+        .then(text => {
+        const items = text.split('\n').map(line => line.trim()).filter(Boolean);
+        // const items = Array.from({ length: 100 }, (_, i) => `Item ${i + 1}`);
         const itemsPerPage = 20;
         let currentPage = 1;
 
@@ -212,10 +212,10 @@
         }
 
         displayItems(currentPage); // Call it AFTER fetch is complete
-        // })
-        // .catch(error => {
-        //     console.error("Failed to load novelist.txt:", error);
-        // });
+        })
+        .catch(error => {
+            console.error("Failed to load novelist.txt:", error);
+        });
     </script>
     <script src="../style/index.js"></script>
 </body>

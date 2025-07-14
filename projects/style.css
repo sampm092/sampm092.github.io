@@ -67,8 +67,11 @@ html{
     padding: 50px 0;
     background-color: transparent;
     font-size: 3rem;
+    min-height: 85vh;
+}
+
+.social-section{
     text-align: center;
-    min-height: 82.5vh;
 }
 
 .flex-column{
@@ -102,10 +105,9 @@ html{
 /* For Novel */
 #novel{
     padding: 50px;
-    background-color: #333;
+    background-color: #fff;
     font-size: 1.25rem;
     margin: 1rem auto;
-    width: 90%;
 }
 
 #novel .container{
@@ -119,36 +121,51 @@ html{
 }
 
 #novel h2{
-    color: #ffffff;
+    color: #ff0000;
     margin: 1.5rem;
     font-size: 3rem;
 }
+
+.line{
+    display: flex;
+    align-items: center;
+}
+
+.line::after {
+    content: "";
+    flex: 1;
+    height: 4px;
+    background: #ff0000;
+    margin-left: 10px;
+  }
 
  #items {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* Two equal columns */
       gap: 10px;
       font-size: 1rem;
-      font-weight: 5px;
+      margin: 1.5rem;
     }
 
 #items div {
     padding: 12px;
-    border: 1px solid #ddd;
+    border: 2px solid #ff0000;
     background: transparent;
     border-radius: 4px;
     width: 95%;
-    color: white;
+    color: #ff0000;
     text-align: start;
-        height: 25px;
+    font-weight: 600;
+    height: 25px;
     align-content: center;
 
 }
 
 #items div:hover{
-    color: black;
+    color: #ffffff;
     font-weight: bold;
-    border: 2px solid black;
+    border: 2px solid #ff0000;
+    background-color: #ff0000;
 }
 
     #pagination {
@@ -160,23 +177,23 @@ html{
       display: inline-block;
       margin: 0 5px;
       padding: 8px 12px;
-      border: 1px solid #ccc;
+      border: 1px solid #ff0000;
       cursor: pointer;
       border-radius: 4px;
       transition: background 0.2s;
-      color: #ccc;
+      color: #ff0000;
       min-width: 2%;
     }
 
     .page-link:hover {
-      background: #f0f0f0;
-      color: #333;
+      background: #ff0000;
+      color: #ffffff;
     }
 
     .page-link.active {
-      background-color: #333;
-      color: white;
-      border-color: #333;
+      background-color: #ffffff;
+      color: #ff0000;
+      border-color: #ffffff;
     }
 
     @media only screen and (max-width: 633px){
