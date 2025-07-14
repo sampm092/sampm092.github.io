@@ -50,6 +50,10 @@
         height: 200px !important;
     }
 
+    .m-r-auto {
+    margin: 1rem 0;
+}
+
     /* #about h2{
         font-size: 2rem;
     } */

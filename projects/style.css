@@ -108,6 +108,11 @@ html{
     background-color: #fff;
     font-size: 1.25rem;
     margin: 1rem auto;
+    background: linear-gradient(
+        rgba(255, 255, 255, 0.6), 
+        rgba(255, 255, 255, 0.6)
+      ),
+      url('../image/bgame.png'); //https://wallpapercat.com/matte-black-wallpapers#load
 }
 
 #novel .container{
@@ -158,7 +163,12 @@ html{
     font-weight: 600;
     height: 25px;
     align-content: center;
+    overflow: overlay;
+    line-height: 2;
+}
 
+#items div::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 #items div:hover{
@@ -200,5 +210,17 @@ html{
     .TopSocial{
         flex-wrap: wrap;
         gap: 1rem;
+    }
+
+    .items div{
+        line-height:1;
+    }
+
+    #items{
+        grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+    }
+
+    .social-section a{
+        font-size: 2rem;
     }
 }

@@ -176,8 +176,13 @@
         .then(response => response.text())
         .then(text => {
         const items = text.split('\n').map(line => line.trim()).filter(Boolean);
-        // const items = Array.from({ length: 100 }, (_, i) => `Item ${i + 1}`);
-        const itemsPerPage = 20;
+        // const items = Array.from({ length: 100 }, (_, i) => `Itemaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaa aaaaaa aaaaaaaaaa aaaaaaaaaa ${i + 1}`);
+        var itemsPerPage;
+        if (window.innerWidth <= 633) {
+            itemsPerPage = 10; // Mobile
+        } else {
+            itemsPerPage = 20; // Desktop
+        }
         let currentPage = 1;
 
         function displayItems(page) {
