@@ -1,45 +1,46 @@
 A Study in Scarlet - Sir Arthur Conan Doyle
-The Sign of the Four - Sir Arthur Conan Doyle
-The Hound of the Baskervilles - Sir Arthur Conan Doyle
-The Valley of Fear - Sir Arthur Conan Doyle
-Supernova - Dee Lestari
-Kambing Jantan
-Cinta Brontosaurus - Raditya Dika
-Radikus Makankakus - Raditya Dika
-Babi Ngesot - Raditya Dika
-Marmut Merah Jambu - Raditya Dika
-Manusia Setengah Salmon - Raditya Dika
-Koala Kumal - Raditya Dika
-Burlian - Tere Liye
-The Magic Library - Jostein Gaarder
-Laskar Pelangi - Andrea Hirata
-Darkblood - Ashara
-Perahu Kertas - Dee Lestari
-The Lightning Thief - Rick Riordan
-The Sea of Monsters - Rick Riordan
-The Titan's Curse - Rick Riordan
-The Battle of the Labyrinth - Rick Riordan
-The Last Olympian - Rick Riordan
-Heart Shaped Box - Joe Hill
-The Lost Hero - Rick Riordan
-The Son of Neptune - Rick Riordan
-The Mark of Athena - Rick Riordan
-The House of Hades - Rick Riordan
-The Blood of Olympus - Rick Riordan
-The Sword of Summer - Rick Riordan
-The Hammer of Thor - Rick Riordan
 Another World Elmore - Aulia M. Firmundia
-Nagareboshi - Rei Shiori
-Blindness - Saramago
-Harry Potter and the Order of the Phoenix - J. K. Rowling
-Harry Potter and the Half-Blood Prince - J. K. Rowling
-Harry Potter and the Philosopher's Stone - J. K. Rowling
-Harry Potter and the Chamber of Secrets - J. K. Rowling
-Harry Potter and the Prisoner of Azkaban - J. K. Rowling
-Harry Potter and the Goblet of Fire - J. K. Rowling
-Bumi - Tere Liye
-Bulan - Tere Liye
+Babi Ngesot - Raditya Dika
 Bintang - Tere Liye
-Matahari - Tere Liye
+Blindness - Saramago
+Bulan - Tere Liye
+Bumi - Tere Liye
+Burlian - Tere Liye
+Cinta Brontosaurus - Raditya Dika
+Darkblood - Ashara
+Harry Potter and the Chamber of Secrets - J. K. Rowling
+Harry Potter and the Goblet of Fire - J. K. Rowling
+Harry Potter and the Half-Blood Prince - J. K. Rowling
+Harry Potter and the Order of the Phoenix - J. K. Rowling
+Harry Potter and the Philosopher's Stone - J. K. Rowling
+Harry Potter and the Prisoner of Azkaban - J. K. Rowling
+Heart Shaped Box - Joe Hill
+Kambing Jantan
+Koala Kumal - Raditya Dika
+Laskar Pelangi - Andrea Hirata
 Lupus Series - Hilman Hariwijaya
+Manusia Setengah Salmon - Raditya Dika
+Marmut Merah Jambu - Raditya Dika
+Matahari - Tere Liye
+Nagareboshi - Rei Shiori
+Perahu Kertas - Dee Lestari
+Radikus Makankakus - Raditya Dika
+Spellbinder - Helen Stinger
+Supernova - Dee Lestari
+The Battle of the Labyrinth - Rick Riordan
+The Blood of Olympus - Rick Riordan
+The Hammer of Thor - Rick Riordan
 The Hidden Oracle - Rick Riordan
+The Hound of the Baskervilles - Sir Arthur Conan Doyle
+The House of Hades - Rick Riordan
+The Last Olympian - Rick Riordan
+The Lightning Thief - Rick Riordan
+The Lost Hero - Rick Riordan
+The Magic Library - Jostein Gaarder
+The Mark of Athena - Rick Riordan
+The Sea of Monsters - Rick Riordan
+The Sign of the Four - Sir Arthur Conan Doyle
+The Son of Neptune - Rick Riordan
+The Sword of Summer - Rick Riordan
+The Titan's Curse - Rick Riordan
+The Valley of Fear - Sir Arthur Conan Doyle
