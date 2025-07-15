@@ -80,6 +80,32 @@ section{
     margin-left: 10px;
   }
 
+  
+.items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+      gap: 10px;
+      font-size: 1rem;
+      margin: 1.5rem;
+    }
+
+.items div{
+    padding: 12px;
+    background: transparent;
+    border-radius: 4px;
+    width: 95%;
+    text-align: start;
+    font-weight: 600;
+    height: 25px;
+    align-content: center;
+    overflow: overlay;
+    line-height: 2;
+}
+
+.items div::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 /* For Social  */
 
 .social-section{
@@ -156,6 +182,49 @@ section{
 #game .lineB::before{
     background: #ffefca;
 }
+
+#gameitems div {
+    border: 2px solid #ffefca;
+    color: #ffefca;
+    
+}
+
+#gameitems div:hover{
+    color: #39529d;
+    font-weight: bold;
+    border: 2px solid #ffefca;
+    background-color: #ffefca;
+}
+
+#gamepagination {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+.gamepage-link {
+      display: inline-block;
+      margin: 0 5px;
+      padding: 8px 12px;
+      border: 1px solid #ffefca;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background 0.2s;
+      color: #ffefca;
+      min-width: 2%;
+    }
+
+.gamepage-link:hover {
+      background-color: #ffefca;
+      color: #39529d;
+    }
+
+.gamepage-link.active {
+      background-color: #39529d;
+      color: #ffefca;
+      border-color: #39529d;
+    }
+
+
 /* For Novel */
 #novel{
     padding: 50px;
@@ -187,46 +256,25 @@ section{
     background: #ff0000;
 }
 
- #items {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-      gap: 10px;
-      font-size: 1rem;
-      margin: 1.5rem;
-    }
-
-#items div {
-    padding: 12px;
+#novelitems div {
     border: 2px solid #ff0000;
-    background: transparent;
-    border-radius: 4px;
-    width: 95%;
     color: #ff0000;
-    text-align: start;
-    font-weight: 600;
-    height: 25px;
-    align-content: center;
-    overflow: overlay;
-    line-height: 2;
+    
 }
 
-#items div::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
-}
-
-#items div:hover{
+#novelitems div:hover{
     color: #ffffff;
     font-weight: bold;
     border: 2px solid #ff0000;
     background-color: #ff0000;
 }
 
-    #pagination {
+#novelpagination {
       margin-top: 20px;
       text-align: center;
     }
 
-    .page-link {
+.novelpage-link {
       display: inline-block;
       margin: 0 5px;
       padding: 8px 12px;
@@ -238,32 +286,32 @@ section{
       min-width: 2%;
     }
 
-    .page-link:hover {
+.novelpage-link:hover {
       background: #ff0000;
       color: #ffffff;
     }
 
-    .page-link.active {
+.novelpage-link.active {
       background-color: #ffffff;
       color: #ff0000;
       border-color: #ffffff;
     }
 
-    @media only screen and (max-width: 633px){
-    .TopSocial{
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+@media only screen and (max-width: 633px){
+.TopSocial{
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
-    .items div{
-        line-height:1;
-    }
+.items div{
+    line-height:1;
+}
 
-    #items{
-        grid-template-columns: repeat(1, 1fr); /* Two equal columns */
-    }
+#novelitems{
+    grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+}
 
-    .social-section a{
-        font-size: 2rem;
-    }
+.social-section a{
+    font-size: 2rem;
+}
 }
