@@ -162,11 +162,13 @@
     </section>
     <section id="game">
         <h2 class="lineB">&nbspGames</h2>
+        <div id="gameitems"></div>
+        <div id="gamepagination"></div>
     </section>
     <section id="novel" class="novel-section" style="display: block;">
         <h2 class="lineA">Books</h2>
-        <div id="items"></div>
-        <div id="pagination"></div>
+        <div id="novelitems"></div>
+        <div id="novelpagination"></div>
     </section>
     <footer class="footer bg130">
         <div class="container m-zeroA">
@@ -177,55 +179,108 @@
     </footer>
 
     <script>
-        fetch('novelist.txt')
-            .then(response => response.text())
-            .then(text => {
-                const items = text.split('\n').map(line => line.trim()).filter(Boolean);
-                // const items = Array.from({ length: 100 }, (_, i) => `Itemaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaa aaaaaa aaaaaaaaaa aaaaaaaaaa ${i + 1}`);
-                var itemsPerPage;
-                if (window.innerWidth <= 633) {
-                    itemsPerPage = 10; // Mobile
-                } else {
-                    itemsPerPage = 20; // Desktop
-                }
-                let currentPage = 1;
+        // fetch('novelist.txt')
+        //     .then(response => response.text())
+        //     .then(text => {
+        //         const items = text.split('\n').map(line => line.trim()).filter(Boolean);
+        //         // const items = Array.from({ length: 100 }, (_, i) => `Itemaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaa aaaaaa aaaaaaaaaa aaaaaaaaaa ${i + 1}`);
+        //         var itemsPerPage;
+        //         if (window.innerWidth <= 633) {
+        //             itemsPerPage = 10; // Mobile
+        //         } else {
+        //             itemsPerPage = 20; // Desktop
+        //         }
+        //         let currentPage = 1;
 
-                function displayItems(page) {
-                    const start = (page - 1) * itemsPerPage;
-                    const end = start + itemsPerPage;
-                    const pageItems = items.slice(start, end);
+        //         function displayItems(page) {
+        //             const start = (page - 1) * itemsPerPage;
+        //             const end = start + itemsPerPage;
+        //             const pageItems = items.slice(start, end);
 
-                    document.getElementById("items").innerHTML = pageItems
-                        .map(item => `<a href="https://www.google.com/search?q=${item}" target="_blank"><div class="itemtem"> ${item}</div></a>`)
-                        .join("");
+        //             document.getElementById("items").innerHTML = pageItems
+        //                 .map(item => `<a href="https://www.google.com/search?q=${item}" target="_blank"><div class="itemtem"> ${item}</div></a>`)
+        //                 .join("");
 
-                    renderPagination();
+        //             renderPagination();
 
-                }
+        //         }
 
-                function renderPagination() {
-                    const totalPages = Math.ceil(items.length / itemsPerPage);
-                    const pagination = document.getElementById("pagination");
+        //         function renderPagination() {
+        //             const totalPages = Math.ceil(items.length / itemsPerPage);
+        //             const pagination = document.getElementById("pagination");
 
-                    pagination.innerHTML = "";
+        //             pagination.innerHTML = "";
 
-                    for (let i = 1; i <= totalPages; i++) {
-                        const button = document.createElement("span");
-                        button.textContent = i;
-                        button.className = "page-link" + (i === currentPage ? " active" : "");
-                        button.addEventListener("click", () => {
-                            currentPage = i;
-                            displayItems(currentPage);
-                        });
-                        pagination.appendChild(button);
+        //             for (let i = 1; i <= totalPages; i++) {
+        //                 const button = document.createElement("span");
+        //                 button.textContent = i;
+        //                 button.className = "page-link" + (i === currentPage ? " active" : "");
+        //                 button.addEventListener("click", () => {
+        //                     currentPage = i;
+        //                     displayItems(currentPage);
+        //                 });
+        //                 pagination.appendChild(button);
+        //             }
+        //         }
+
+        //         displayItems(currentPage); // Call it AFTER fetch is complete
+        //     })
+        //     .catch(error => {
+        //         console.error("Failed to load novelist.txt:", error);
+        //     });
+        
+
+        function loadAndDisplay(filename, target) {
+            fetch(filename)
+                .then(response => response.text())
+                .then(text => {
+                    const items = text.split('\n').map(line => line.trim()).filter(Boolean);
+                    var itemsPerPage;
+                    if (window.innerWidth <= 633) {
+                        itemsPerPage = 10; // Mobile
+                    } else {
+                        itemsPerPage = 20; // Desktop
                     }
-                }
+                    let currentPage = 1;
 
-                displayItems(currentPage); // Call it AFTER fetch is complete
-            })
-            .catch(error => {
-                console.error("Failed to load novelist.txt:", error);
-            });
+                    function displayItems(page) {
+                        const start = (page - 1) * itemsPerPage;
+                        const end = start + itemsPerPage;
+                        const pageItems = items.slice(start, end);
+
+                        document.getElementById(target + "items").innerHTML = pageItems
+                            .map(item => `<a href="https://www.google.com/search?q=${item}" target="_blank"><div class="itemtem"> ${item}</div></a>`)
+                            .join("");
+
+                        renderPagination();
+                    }
+
+                    function renderPagination() {
+                        const totalPages = Math.ceil(items.length / itemsPerPage);
+                        const pagination = document.getElementById(target + "pagination");
+
+                        pagination.innerHTML = "";
+
+                        for (let i = 1; i <= totalPages; i++) {
+                            const button = document.createElement("span");
+                            button.textContent = i;
+                            button.className = "page-link" + (i === currentPage ? " active" : "");
+                            button.addEventListener("click", () => {
+                                currentPage = i;
+                                displayItems(currentPage);
+                            });
+                            pagination.appendChild(button);
+                        }
+                    }
+                    displayItems(currentPage); // Call it AFTER
+                })
+                .catch(error => {
+                    console.error("Failed to load novelist.txt:", error);
+                });
+        }
+
+
+        loadAndDisplay('novelist.txt', 'novel');
     </script>
     <script src="../style/index.js"></script>
 </body>
