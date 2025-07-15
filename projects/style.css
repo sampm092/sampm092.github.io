@@ -307,7 +307,7 @@ section{
     line-height:1;
 }
 
-#novelitems{
+#novelitems, #gameitems{
     grid-template-columns: repeat(1, 1fr); /* Two equal columns */
 }
 
