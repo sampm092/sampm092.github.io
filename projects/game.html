@@ -162,12 +162,12 @@
     </section>
     <section id="game">
         <h2 class="lineB">&nbspGames</h2>
-        <div id="gameitems"></div>
+        <div id="gameitems" class="items gameitems"></div>
         <div id="gamepagination"></div>
     </section>
     <section id="novel" class="novel-section" style="display: block;">
         <h2 class="lineA">Books</h2>
-        <div id="novelitems"></div>
+        <div id="novelitems" class="items novelitems"></div>
         <div id="novelpagination"></div>
     </section>
     <footer class="footer bg130">
@@ -198,7 +198,7 @@
                         const pageItems = items.slice(start, end);
 
                         document.getElementById(target + "items").innerHTML = pageItems
-                            .map(item => `<a href="https://www.google.com/search?q=${item}" target="_blank"><div class="items"> ${item}</div></a>`)
+                            .map(item => `<a href="https://www.google.com/search?q=${item}" target="_blank"><div"> ${item}</div></a>`)
                             .join("");
 
                         renderPagination();
