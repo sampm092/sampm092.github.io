@@ -3,6 +3,13 @@ html{
     background-color: #000;
 }
 
+section{
+    padding: 50px 0;
+    background-color: transparent;
+    font-size: 3rem;
+    min-height: 85vh;
+}
+
 .big-btn {
     display: inline-block;
     font-weight: 400;
@@ -34,6 +41,51 @@ html{
     margin: auto 0;
 }
 
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.nameG {
+    color: #fff;
+}
+
+
+.back{
+    min-width: 100px;
+    background-color: #333333;
+    color: white;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+}
+
+
+.lineA, .lineB{
+    display: flex;
+    align-items: center;
+}
+
+.lineA::after {
+    content: "";
+    flex: 1;
+    height: 4px;
+    margin-left: 10px;
+  }
+
+.lineB::before {
+    content: "";
+    flex: 1;
+    height: 4px;
+    margin-left: 10px;
+  }
+
+/* For Social  */
+
+.social-section{
+    text-align: center;
+}
+
 #steam::after {
     content: "Steam";
     color: #39529d;
@@ -63,56 +115,56 @@ html{
 #spotify:hover::after {
     content: "Fraux Oda";
 }
-.novel-section, .social-section{
-    padding: 50px 0;
-    background-color: transparent;
-    font-size: 3rem;
-    min-height: 85vh;
-}
-
-.social-section{
-    text-align: center;
-}
-
-.flex-column{
-    display: flex;
-    flex-direction: column;
-}
-
-.nameG {
-    color: #fff;
-}
-
-
-.back{
-    min-width: 100px;
-    background-color: #333333;
-    color: white;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-}
 
 .TopSocial{
     display: flex;
     gap: 4rem;
 }
 
-.TopSocial a{
+.SocialGrid{
+     display: grid;
+      grid-template-columns: repeat(2, 1fr); 
+}
+
+#social a{
     font-weight: bold;
 }
 
+/* For Games */
+
+#game{
+    padding: 50px;
+    font-size: 1.25rem;
+    background: linear-gradient(
+        rgba(57, 82, 157, 0.9), 
+        rgba(57, 82, 157, 0.9)
+      ),
+      url('../image/gameb.png');
+}
+
+#game h3 {
+    min-height: 77px;
+    align-content: center;
+}
+
+#game h2{
+    color: #ffefca;
+    margin: 1.5rem;
+    font-size: 3rem;
+}
+
+#game .lineB::before{
+    background: #ffefca;
+}
 /* For Novel */
 #novel{
     padding: 50px;
-    background-color: #fff;
     font-size: 1.25rem;
-    margin: 1rem auto;
     background: linear-gradient(
         rgba(255, 255, 255, 0.6), 
         rgba(255, 255, 255, 0.6)
       ),
-      url('../image/bgame.png'); //https://wallpapercat.com/matte-black-wallpapers#load
+      url('../image/bgame.png');
 }
 
 #novel .container{
@@ -131,18 +183,9 @@ html{
     font-size: 3rem;
 }
 
-.line{
-    display: flex;
-    align-items: center;
-}
-
-.line::after {
-    content: "";
-    flex: 1;
-    height: 4px;
+#novel .lineA::after{
     background: #ff0000;
-    margin-left: 10px;
-  }
+}
 
  #items {
       display: grid;
