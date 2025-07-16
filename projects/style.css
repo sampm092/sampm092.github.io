@@ -267,8 +267,7 @@ section{
 /* === Movies === */
 
 #movie {
-   /* background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)); */
-   background-color: white;
+background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../image/mvbg.png);
   color: #95873e;
 }
 
@@ -277,14 +276,14 @@ section{
 }
 
 #movie .page-link.active {
-  background-color: #39529d;
+  background-color: #95873e;
   color: #ffefca;
-  border-color: #39529d;
+  border-color: #95873e;
 }
 
 #movie .content-items div:hover {
-  color: #39529d;
-  background-color: #ffefca;
+  color: #ffefca;
+  background-color: #95873e;
 }
 
 /* === Songs === */
