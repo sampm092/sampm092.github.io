@@ -119,12 +119,18 @@ function toBio() {
 function scrollToTop(duration = 1000) { // duration in ms
   const start = window.scrollY;
   const startTime = performance.now();
+  
+  function easeInOutQuad(t) {
+    return t < 0.5
+      ? 2 * t * t
+      : -1 + (4 - 2 * t) * t;
+  }
 
   function animateScroll(currentTime) {
     const elapsed = currentTime - startTime;
     const progress = Math.min(elapsed / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 4); // Ease-out effect
-    window.scrollTo(0, start * (1 - ease));
+    const eased = easeInOutQuad(progress);
+    window.scrollTo(0, start * (1 - eased));
 
     if (progress < 1) {
       requestAnimationFrame(animateScroll);
