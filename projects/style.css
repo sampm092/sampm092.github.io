@@ -162,8 +162,8 @@ section{
     padding: 50px;
     font-size: 1.25rem;
     background: linear-gradient(
-        rgba(57, 82, 157, 0.9), 
-        rgba(57, 82, 157, 0.9)
+        rgba(0, 35, 141, 0.9), 
+        rgba(0, 35, 141, 0.9)
       ),
       url('../image/gameb.png');
 }
@@ -203,7 +203,7 @@ section{
 
 .gamepage-link {
       display: inline-block;
-      margin: 0 5px;
+      margin: 5px;
       padding: 8px 12px;
       border: 1px solid #ffefca;
       cursor: pointer;
@@ -298,20 +298,25 @@ section{
     }
 
 @media only screen and (max-width: 633px){
-.TopSocial{
-    flex-wrap: wrap;
-    gap: 1rem;
-}
+    .TopSocial{
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
 
-.items div{
-    line-height:1;
-}
+    .items div{
+        line-height:1;
+        width: auto;
+    }
 
-#novelitems, #gameitems{
-    grid-template-columns: repeat(1, 1fr); /* Two equal columns */
-}
+    #novelitems, #gameitems{
+        grid-template-columns: repeat(1, 1fr); /* Two equal columns */
+    }
 
-.social-section a{
-    font-size: 2rem;
+    .social-section a{
+        font-size: 2rem;
+    }
+    .SocialGrid{
+     display: grid;
+      grid-template-columns: repeat(1, 1fr); 
 }
 }
