@@ -184,15 +184,11 @@ section{
 
 /* Shared item box styles */
 .content-items div {
-  border: 2px solid currentColor;
-  color: currentColor;
   transition: all 0.2s;
 }
 
 .content-items div:hover {
   font-weight: bold;
-  background-color: currentColor;
-  color: white;
 }
 
 /* Pagination container */
@@ -208,22 +204,10 @@ section{
   padding: 8px 12px;
   cursor: pointer;
   border-radius: 4px;
-  border: 1px solid currentColor;
-  color: currentColor;
   transition: background 0.2s;
   min-width: 2%;
 }
 
-.page-link:hover {
-  background-color: currentColor;
-  color: white;
-}
-
-.page-link.active {
-  background-color: white;
-  color: currentColor;
-  border-color: white;
-}
 
 /* Section-specific styles */
 
@@ -243,13 +227,28 @@ section{
   border-color: #39529d;
 }
 
+#game .page-link {
+    border: 1px solid #ffefca;
+    border-radius: 4px;
+    color: #ffefca;
+}
+
 #game .page-link:hover{
-    color: #39529d;
+   background-color: #ffefca;
+  color: #39529d;
+  border-color: #ffefca;
 }
 
 #game .content-items div:hover {
-  color: #39529d;
-  background-color: #ffefca;
+    color: #39529d;
+    border: 2px solid #ffefca;
+    background-color: #ffefca;
+}
+
+#game .content-items div {
+    border: 2px solid #ffefca;
+    color: #ffefca;
+    
 }
 
 /* === Novel === */
@@ -258,44 +257,75 @@ section{
   color: #ff0000;
 }
 
+#novel .content-items div:hover{
+    color: #ffffff;
+    border: 2px solid #ff0000;
+    background-color: #ff0000;
+}
+
+#novel .content-items div {
+    border: 2px solid #ff0000;
+    color: #ff0000;
+    
+}
+
 #novel .lineA::after {
   background: #ff0000;
 }
 
+#novel .page-link{
+    border: 1px solid #ff0000;
+    color: #ff0000;
+}
+
 #novel .page-link.active {
-  background-color: white;
-  color: #ff0000;
-  border-color: white;
+  background-color: #ffffff;
+      color: #ff0000;
+      border-color: #ffffff;
 }
 
 #novel .page-link:hover{
-    color: #ff0000;
+  background: #ff0000;
+      color: #ffffff;
 }
 
 /* === Movies === */
 
 #movie {
-background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url(../image/mvbg.png);
+background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../image/mvbg.png);
   color: #95873e;
 }
 
-#movie .lineB::before {
+#movie .content-items div:hover{
+    color: #ffffff;
+    border: 2px solid #95873e;
+    background-color: #95873e;
+}
+
+#movie .content-items div {
+    border: 2px solid #95873e;
+    color: #95873e;
+    
+}
+
+#movie .lineA::after {
   background: #95873e;
 }
 
-#movie .page-link.active {
-  background-color: #95873e;
-  color: #ffefca;
-  border-color: #95873e;
+#movie .page-link{
+    border: 1px solid #95873e;
+    color: #95873e;
 }
 
-#movie .content-items div:hover {
-  color: #95873e;
-  background-color: #ffefca;
+#movie .page-link.active {
+  background-color: #ffffff;
+      color: #95873e;
+      border-color: #ffffff;
 }
 
 #movie .page-link:hover{
-    color: #95873e;
+  background: #95873e;
+      color: #ffffff;
 }
 
 /* === Songs === */
@@ -304,7 +334,7 @@ background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
   color: #ffffff;
 }
 
-#song .lineA::after {
+#song .lineB::before {
   background: #ffffff;
 }
 
