@@ -163,167 +163,138 @@ section{
     font-weight: bold;
 }
 
-/* For Games */
-
-#game{
-    padding: 50px;
-    font-size: 1.25rem;
-    background: linear-gradient(
-        rgba(0, 35, 141, 0.9), 
-        rgba(0, 35, 141, 0.9)
-      ),
-      url('../image/gameb.png');
+/* Shared base styles */
+.content-section {
+  padding: 50px;
+  font-size: 1.25rem;
+  background-size: cover;
+  background-position: center;
 }
 
-#game h3 {
-    min-height: 77px;
-    align-content: center;
+/* Headings */
+.content-section h2 {
+  margin: 1.5rem;
+  font-size: 3rem;
 }
 
-#game h2{
-    color: #ffefca;
-    margin: 1.5rem;
-    font-size: 3rem;
+.content-section h3 {
+  min-height: 77px;
+  align-content: center;
 }
 
-#game .lineB::before{
-    background: #ffefca;
+/* Shared item box styles */
+.content-items div {
+  border: 2px solid currentColor;
+  color: currentColor;
+  transition: all 0.2s;
 }
 
-#gameitems div {
-    border: 2px solid #ffefca;
-    color: #ffefca;
-    
+.content-items div:hover {
+  font-weight: bold;
+  background-color: currentColor;
+  color: white;
 }
 
-#gameitems div:hover{
-    color: #39529d;
-    font-weight: bold;
-    border: 2px solid #ffefca;
-    background-color: #ffefca;
+/* Pagination container */
+.content-pagination {
+  margin-top: 20px;
+  text-align: center;
 }
 
-#gamepagination {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-.gamepage-link {
-      display: inline-block;
-      margin: 5px;
-      padding: 8px 12px;
-      border: 1px solid #ffefca;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background 0.2s;
-      color: #ffefca;
-      min-width: 2%;
-    }
-
-.gamepage-link:hover {
-      background-color: #ffefca;
-      color: #39529d;
-    }
-
-.gamepage-link.active {
-      background-color: #39529d;
-      color: #ffefca;
-      border-color: #39529d;
-    }
-
-
-/* For Novel */
-#novel{
-    padding: 50px;
-    font-size: 1.25rem;
-    background: linear-gradient(
-        rgba(255, 255, 255, 0.6), 
-        rgba(255, 255, 255, 0.6)
-      ),
-      url('../image/bgame.png');
+/* Shared pagination link style */
+.page-link {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid currentColor;
+  color: currentColor;
+  transition: background 0.2s;
+  min-width: 2%;
 }
 
-#novel .container{
-    height: -webkit-fill-available;
-    margin: 1rem auto;
+.page-link:hover {
+  background-color: currentColor;
+  color: white;
 }
 
-#novel h3 {
-    min-height: 77px;
-    align-content: center;
+.page-link.active {
+  background-color: white;
+  color: currentColor;
+  border-color: white;
 }
 
-#novel h2{
-    color: #ff0000;
-    margin: 1.5rem;
-    font-size: 3rem;
+/* Section-specific styles */
+
+/* === Game === */
+#game {
+  background: linear-gradient(rgba(0, 35, 141, 0.9), rgba(0, 35, 141, 0.9)), url('../image/gameb.png');
+  color: #ffefca;
 }
 
-#novel .lineA::after{
-    background: #ff0000;
+#game .lineB::before {
+  background: #ffefca;
 }
 
-#novelitems div {
-    border: 2px solid #ff0000;
-    color: #ff0000;
-    
+#game .page-link.active {
+  background-color: #39529d;
+  color: #ffefca;
+  border-color: #39529d;
 }
 
-#novelitems div:hover{
-    color: #ffffff;
-    font-weight: bold;
-    border: 2px solid #ff0000;
-    background-color: #ff0000;
+#game .content-items div:hover {
+  color: #39529d;
+  background-color: #ffefca;
 }
 
-#novelpagination {
-      margin-top: 20px;
-      text-align: center;
-    }
-
-.novelpage-link {
-      display: inline-block;
-      margin: 0 5px;
-      padding: 8px 12px;
-      border: 1px solid #ff0000;
-      cursor: pointer;
-      border-radius: 4px;
-      transition: background 0.2s;
-      color: #ff0000;
-      min-width: 2%;
-    }
-
-.novelpage-link:hover {
-      background: #ff0000;
-      color: #ffffff;
-    }
-
-.novelpage-link.active {
-      background-color: #ffffff;
-      color: #ff0000;
-      border-color: #ffffff;
-    }
-
-
-/* For Songs */
-#songs{
-    padding: 50px;
-    font-size: 1.25rem;
-    background: linear-gradient(
-        rgba(13, 13, 13, 0.5), 
-        rgba(13, 13, 13, 0.5)
-      ),
-      url('../image/spobg.png');
+/* === Novel === */
+#novel {
+  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../image/bgame.png');
+  color: #ff0000;
 }
 
-#songs h2{
-    color: #ffffff;
-    margin: 1.5rem;
-    font-size: 3rem;
+#novel .lineA::after {
+  background: #ff0000;
 }
 
-#songs .lineA::after{
-    background: #ffffff;
+#novel .page-link.active {
+  background-color: white;
+  color: #ff0000;
+  border-color: white;
+}
+
+/* === Movies === */
+
+#movie {
+   /* background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)); */
+   background-color: white;
+  color: #95873e;
+}
+
+#movie .lineB::before {
+  background: #95873e;
+}
+
+#movie .page-link.active {
+  background-color: #39529d;
+  color: #ffefca;
+  border-color: #39529d;
+}
+
+#movie .content-items div:hover {
+  color: #39529d;
+  background-color: #ffefca;
+}
+
+/* === Songs === */
+#song {
+  background: linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.5)), url('../image/spobg.png');
+  color: #ffffff;
+}
+
+#song .lineA::after {
+  background: #ffffff;
 }
 
 @media only screen and (max-width: 1010px){
