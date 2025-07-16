@@ -304,6 +304,28 @@ section{
       border-color: #ffffff;
     }
 
+
+/* For Songs */
+#songs{
+    padding: 50px;
+    font-size: 1.25rem;
+    background: linear-gradient(
+        rgba(13, 13, 13, 0.5), 
+        rgba(13, 13, 13, 0.5)
+      ),
+      url('../image/spobg.png');
+}
+
+#songs h2{
+    color: #ffffff;
+    margin: 1.5rem;
+    font-size: 3rem;
+}
+
+#songs .lineA::after{
+    background: #ffffff;
+}
+
 @media only screen and (max-width: 1010px){
     .TopSocial{
         flex-wrap: wrap;
