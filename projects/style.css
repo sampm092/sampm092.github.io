@@ -297,7 +297,7 @@ section{
       border-color: #ffffff;
     }
 
-@media only screen and (max-width: 633px){
+@media only screen and (max-width: 1010px){
     .TopSocial{
         flex-wrap: wrap;
         gap: 1rem;
@@ -318,32 +318,8 @@ section{
     .SocialGrid{
      display: grid;
       grid-template-columns: repeat(1, 1fr); 
-}
-}
-
-/* @media only screen and (max-width: 1040px){
-    #tttop{
-        right: -6%;
+    }
+    .back{
+    min-width: 50px;
     }
 }
-
-@media only screen and (max-width: 900px){
-    #tttop{
-        right: -7%;
-    }
-}
-@media only screen and (max-width: 700px){
-    #tttop{
-        right: -8%;
-    }
-}
-@media only screen and (max-width: 600px){
-    #tttop{
-        right: -9%;
-    }
-}
-@media only screen and (max-width: 500px){
-    #tttop{
-        right: -10%;
-    }
-} */
