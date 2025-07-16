@@ -243,6 +243,10 @@ section{
   border-color: #39529d;
 }
 
+#game .page-link:hover{
+    color: #39529d;
+}
+
 #game .content-items div:hover {
   color: #39529d;
   background-color: #ffefca;
@@ -264,6 +268,10 @@ section{
   border-color: white;
 }
 
+#novel .page-link:hover{
+    color: #ff0000;
+}
+
 /* === Movies === */
 
 #movie {
@@ -282,8 +290,12 @@ background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
 }
 
 #movie .content-items div:hover {
-  color: #ffefca;
-  background-color: #95873e;
+  color: #95873e;
+  background-color: #ffefca;
+}
+
+#movie .page-link:hover{
+    color: #95873e;
 }
 
 /* === Songs === */
