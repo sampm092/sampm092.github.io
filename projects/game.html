@@ -179,7 +179,7 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
     <section id="movie" class="content-section">
-        <h2 class="lineB">&nbspMovies</h2>
+        <h2 class="lineB">&nbspMovies & Shows</h2>
     </section>
     <footer class="footer bg130">
         <div class="container m-zeroA">
@@ -224,7 +224,7 @@
                         for (let i = 1; i <= totalPages; i++) {
                             const button = document.createElement("span");
                             button.textContent = i;
-                            button.className = target + "page-link" + (i === currentPage ? " active" : "");
+                            button.className = "page-link" + (i === currentPage ? " active" : "");
                             button.addEventListener("click", () => {
                                 currentPage = i;
                                 displayItems(currentPage);
@@ -240,6 +240,7 @@
         }
         loadAndDisplay('novelist.txt', 'novel');
         loadAndDisplay('gamelist.txt', 'game');
+        loadAndDisplay('movielist.txt', 'movie')
     </script>
     <script src="../style/index.js"></script>
 </body>
