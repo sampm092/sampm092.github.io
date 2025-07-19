@@ -352,6 +352,12 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
     border: 2px solid #95873e;
 }
 
+#TheContainer {
+  display: flex;
+  width: 300%; /* 3 sections */
+  transition: transform 0.5s ease-in-out;
+}
+
 /* === Songs === */
 #song {
   background: linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.5)), url('../image/spobg.png');
