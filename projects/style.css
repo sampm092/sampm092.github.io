@@ -328,6 +328,30 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
       color: #ffffff;
 }
 
+.c-header_theme-switcher {
+    align-items: center;
+    gap: .5rem;
+    display: flex
+;
+}
+
+.c-header_theme-swatch {
+    background-color: #fff;
+    cursor: pointer;
+    border: 2px solid #95873e;
+    border-radius: 50%;
+    width: .75rem;
+    height: .75rem;
+    transition: width .4s cubic-bezier(.23,1,.32,1), height .4s cubic-bezier(.23,1,.32,1), border-color .4s cubic-bezier(.23,1,.32,1);
+    position: relative;
+}
+
+.c-header_theme-active{
+    background-color: #95873e;
+    cursor: pointer;
+    border: 2px solid #95873e;
+}
+
 /* === Songs === */
 #song {
   background: linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.5)), url('../image/spobg.png');
@@ -337,6 +361,8 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 #song .lineB::before {
   background: #ffffff;
 }
+
+
 
 @media only screen and (max-width: 1010px){
     .TopSocial{
