@@ -312,18 +312,18 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
   background: #95873e;
 }
 
-#movie .page-link{
+#movieSect .page-link, #tvSect .page-link{
     border: 1px solid #95873e;
     color: #95873e;
 }
 
-#movie .page-link.active {
+#movieSect .page-link.active, #tvSect .page-link.active {
   background-color: #ffffff;
       color: #95873e;
       border-color: #ffffff;
 }
 
-#movie .page-link:hover{
+#movieSect .page-link:hover, #tvSect .page-link:hover{
   background: #95873e;
       color: #ffffff;
 }
@@ -358,6 +358,17 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
   width: 300%; /* 3 sections */
   transition: transform 0.5s ease-in-out;
 }
+
+.wrapper {
+            overflow: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+#TheContainer .containment {
+            width: 100%;
+            flex-shrink: 0;
+        }
 
 /* === Songs === */
 #song {
