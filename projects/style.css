@@ -369,6 +369,7 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
             width: 100%;
             flex-shrink: 0;
             max-width: 1200px;
+            margin: 0 10% auto auto;
         }
 
 /* === Songs === */
@@ -381,36 +382,41 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
   background: #ffffff;
 }
 
+@media only screen and (max-width: 1010px) {
+  .TopSocial {
+      flex-wrap: wrap;
+      gap: 1rem;
+  }
 
+  .items div {
+      line-height: 1;
+      width: auto;
+  }
 
-@media only screen and (max-width: 1010px){
-    .TopSocial{
-        flex-wrap: wrap;
-        gap: 1rem;
-    }
+  #novelitems,
+  #gameitems,
+  #movieitems,
+  #tvitems {
+      grid-template-columns: repeat(1, 1fr);
+      /* Two equal columns */
+  }
 
-    .items div{
-        line-height:1;
-        width: auto;
-    }
+  .social-section a {
+      font-size: 2rem;
+  }
 
-    #novelitems, #gameitems, #movieitems, #tvitems{
-        grid-template-columns: repeat(1, 1fr); /* Two equal columns */
-    }
+  .SocialGrid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+  }
 
-    .social-section a{
-        font-size: 2rem;
-    }
-    .SocialGrid{
-     display: grid;
-      grid-template-columns: repeat(1, 1fr); 
-    }
-    .back{
-    min-width: 50px;
-    }
+  .back {
+      min-width: 50px;
+  }
 
-    #TheContainer .containment {
-       margin: 0 auto auto auto;
-       max-width: 300px;
-      }
+  #TheContainer .containment {
+      margin: 0 auto auto auto;
+      max-width: 300px;
+  }
 }
+
