@@ -369,6 +369,7 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
             width: 100%;
             flex-shrink: 0;
             max-width: 1200px;
+            margin: 0 auto auto auto;
         }
 
 /* === Songs === */
@@ -394,7 +395,7 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
         width: auto;
     }
 
-    #novelitems, #gameitems, #movieitems{
+    #novelitems, #gameitems, #movieitems, #tvitems{
         grid-template-columns: repeat(1, 1fr); /* Two equal columns */
     }
 
@@ -408,4 +409,11 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
     .back{
     min-width: 50px;
     }
+
+    }
+#TheContainer .containment {
+    width: 100%;
+    flex-shrink: 0;
+    max-width: 300px;
+}
 }
