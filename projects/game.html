@@ -179,28 +179,30 @@
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
     </section>
     <section id="movie" class="content-section">
-        <div class="c-header_theme-switcher">
-            <div class="c-header_theme-swatch c-header_theme-active" onclick="moveMovie('movieSect',this)"></div>
-            <div class="c-header_theme-swatch" onclick="moveMovie('tvSect'),this"></div>
-            <div class="c-header_theme-swatch" onclick="moveMovie('animeSect'),this"></div>
-        </div>
-        </div>
-        <div class="wrapper">
-            <div id="TheContainer" class="TheContainer">
-                <div id="movieSect" class="containment">
-                    <h2 class="lineA">Movies</h2>
-                    <div id="movieitems" class="items content-items"></div>
-                    <div id="moviepagination" class="content-pagination"></div>
+        <div class="mcontainer">
+            <div class="slider-wrapper">
+                <div class="c-header_theme-switcher">
+                    <a href="#movieSect" class="c-header_theme-swatch c-header_theme-active"
+                        onclick="moveMovie('movieSect')"></a>
+                    <a href="#tvSect" class="c-header_theme-swatch" onclick="moveMovie('tvSect')"></a>
+                    <a href="#animeSect" class="c-header_theme-swatch" onclick="moveMovie('animeSect')"></a>
                 </div>
-                <div id="tvSect" class="containment">
-                    <h2 class="lineA">TV Shows</h2>
-                    <div id="tvitems" class="items content-items"></div>
-                    <div id="tvpagination" class="content-pagination"></div>
-                </div>
-                <div id="animeSect" class="containment">
-                    <h2 class="lineA">Asian Animation</h2>
-                    <div id="" class="items content-items"></div>
-                    <div id="" class="content-pagination"></div>
+                <div class="slider">
+                    <div id="movieSect" class="containment">
+                        <h2 class="lineA">Movies</h2>
+                        <div id="movieitems" class="items content-items"></div>
+                        <div id="moviepagination" class="content-pagination"></div>
+                    </div>
+                    <div id="tvSect" class="containment">
+                        <h2 class="lineA">TV Shows</h2>
+                        <div id="tvitems" class="items content-items"></div>
+                        <div id="tvpagination" class="content-pagination"></div>
+                    </div>
+                    <div id="animeSect" class="containment">
+                        <h2 class="lineA">Animations</h2>
+                        <div id="tvitems" class="items content-items"></div>
+                        <div id="tvpagination" class="content-pagination"></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -263,37 +265,25 @@
                 });
         }
 
-        function moveMovie(targetSect, button) {
-            const TheC = document.getElementById("TheContainer");
-            const ThemeSwatch = document.getElementsByClassName("c-header_theme-swatch");
-
-            if (!TheC) {
-                console.error("Element with ID 'TheContainer' not found.");
-                return;
-            }
-
+        function moveMovie(targetSect) {
+            const ThemeSwatch = document.querySelectorAll(".c-header_theme-swatch");
             const sections = ['movieSect', 'tvSect', 'animeSect'];
             const index = sections.indexOf(targetSect);
 
-            if (index === -1) {
-                console.error("Invalid section:", targetSect);
-                return;
+            if (index !== -1) {
+                ThemeSwatch.forEach((el, i) => {
+                    el.classList.toggle('c-header_theme-active', i === index);
+                });
+            } else {
+                console.error('Invalid section:', targetSect);
             }
-
-            // Slide the container
-            TheC.style.transform = `translateX(-${index * 110}%)`;
-
-            // Update active theme swatch
-            [...ThemeSwatch].forEach((el, i) => {
-                el.classList.toggle("c-header_theme-active", i === index);
-            });
         }
 
 
         loadAndDisplay('novelist.txt', 'novel');
         loadAndDisplay('gamelist.txt', 'game');
         loadAndDisplay('movielist.txt', 'movie')
-        loadAndDisplay('tvlist.txt','tv')
+        loadAndDisplay('tvlist.txt', 'tv')
     </script>
     <script src="../style/index.js"></script>
 </body>

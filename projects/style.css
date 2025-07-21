@@ -290,6 +290,31 @@ section{
 }
 
 /* === Movies === */
+.mcontainer{
+    padding: 2rem;
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.slider{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider .containment{
+    flex: 1 0 100%;
+    /* scroll-snap-align: start; */
+}
 
 #movie {
 background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../image/mvbg.png);
