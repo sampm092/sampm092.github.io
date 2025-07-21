@@ -369,7 +369,6 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
             width: 100%;
             flex-shrink: 0;
             max-width: 1200px;
-            margin: 0 auto auto auto;
         }
 
 /* === Songs === */
@@ -410,10 +409,8 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
     min-width: 50px;
     }
 
-    }
-#TheContainer .containment {
-    width: 100%;
-    flex-shrink: 0;
-    max-width: 300px;
-}
+    #TheContainer .containment {
+       margin: 0 auto auto auto;
+       max-width: 300px;
+      }
 }
