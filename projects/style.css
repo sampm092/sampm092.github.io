@@ -314,6 +314,7 @@ section{
 .slider .containment{
     flex: 1 0 100%;
     /* scroll-snap-align: start; */
+    margin: 0 auto;
 }
 
 #movie {
@@ -343,7 +344,6 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 }
 
 #movieSect .page-link.active, #tvSect .page-link.active {
-  background-color: #ffffff;
       color: #95873e;
       border-color: #ffffff;
 }
@@ -366,8 +366,8 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
     cursor: pointer;
     border: 2px solid #95873e;
     border-radius: 50%;
-    width: .75rem;
-    height: .75rem;
+    width: 1rem;
+    height: 1rem;
     transition: width .4s cubic-bezier(.23,1,.32,1), height .4s cubic-bezier(.23,1,.32,1), border-color .4s cubic-bezier(.23,1,.32,1);
     position: relative;
 }
