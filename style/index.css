@@ -239,9 +239,11 @@ section {
     color: white;
 }
 
+
 .projects-section,
 .contact-section {
-    background-color: #fff;
+    background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../image/bgfwhite.png);
+  color: #95873e;
 }
 
 .projects-section h2,
