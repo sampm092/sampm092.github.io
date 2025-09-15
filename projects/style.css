@@ -96,18 +96,6 @@ section{
       margin: 1.5rem;
     }
 
-.items div{
-    padding: 12px;
-    background: transparent;
-    border-radius: 4px;
-    width: 95%;
-    text-align: start;
-    font-weight: 600;
-    height: 25px;
-    align-content: center;
-    overflow: overlay;
-    line-height: 2;
-}
 
 .items div::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
@@ -322,35 +310,91 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
   color: #95873e;
 }
 
-#movie .content-items div:hover{
-    color: #ffffff;
-    border: 2px solid #95873e;
-    background-color: #95873e;
-}
-
-#movie .content-items div {
-    border: 2px solid #95873e;
-    color: #95873e;
-    
-}
 
 #movie .lineA::after {
   background: #95873e;
 }
 
-#movieSect .page-link, #tvSect .page-link{
+#movieSect .content-items div {
+    border: 2px solid #95873e;
+    color: #95873e;
+    
+}
+
+#movieSect .content-items div:hover{
+    color: #ffffff;
+    border: 2px solid #95873e;
+    background-color: #95873e;
+}
+
+#movieitems div{
+    padding: 12px;
+    background: transparent;
+    border-radius: 4px;
+    width: 95%;
+    text-align: start;
+    font-weight: 600;
+    height: 25px;
+    align-content: center;
+    overflow: overlay;
+    line-height: 2;
+}
+
+#tvSect .content-items div {
+    border: 2px solid #95873e;
+    color: #ffffffff;
+    
+}
+
+#tvSect .content-items div:hover{
+    color: #95873e;
+    border: 2px solid #95873e;
+    background-color: #ffffff;
+}
+
+#tvitems div{
+    padding: 12px;
+    background: #95873e;
+    border-radius: 4px;
+    width: 95%;
+    text-align: start;
+    font-weight: 600;
+    height: 25px;
+    align-content: center;
+    overflow: overlay;
+    line-height: 2;
+}
+
+#movieSect .page-link{
     border: 1px solid #95873e;
     color: #95873e;
 }
 
-#movieSect .page-link.active, #tvSect .page-link.active {
-      color: #95873e;
-      border-color: #ffffff;
+#tvSect .page-link{
+    border: 1px solid #95873e;
+    color: #ffffffff;
+    background-color: #95873e;
 }
 
-#movieSect .page-link:hover, #tvSect .page-link:hover{
+#movieSect .page-link.active, #tvSect .page-link.active{
+      color: #95873e;
+      border-color: #ffffff;
+      background: #ffffff;
+}
+#movieSect .page-link.active:hover, #tvSect .page-link.active:hover{
+       background: #ffffff;
+      color: #95873e;
+      border: 1px dashed #95873e;
+}
+#movieSect .page-link:hover{
   background: #95873e;
       color: #ffffff;
+}
+
+#tvSect .page-link:hover{
+  background: #ffffff;
+      color: #95873e;
+      border: 1px solid #95873e;
 }
 
 .c-header_theme-switcher {
