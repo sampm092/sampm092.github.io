@@ -291,7 +291,7 @@ section{
 
 /* === Movies === */
 .mcontainer{
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .slider::-webkit-scrollbar{
