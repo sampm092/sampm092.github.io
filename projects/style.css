@@ -50,6 +50,19 @@ section{
     color: #fff;
 }
 
+.items div{
+    padding: 12px;
+    background: transparent;
+    border-radius: 4px;
+    width: 95%;
+    text-align: start;
+    font-weight: 600;
+    height: 25px;
+    align-content: center;
+    overflow: overlay;
+    line-height: 2;
+}
+
 
 #back{
     min-width: 100px;
