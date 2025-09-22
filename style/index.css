@@ -279,6 +279,8 @@ section {
 
 }
 
+/* Project Section  */
+
 #projects .container {
     height: -webkit-fill-available;
 }
@@ -337,6 +339,16 @@ section {
 
 .project-card p {
     font-size: 1rem;
+}
+
+.tag {
+    padding-bottom: 4px;
+}
+
+.tag a{
+    font-size: 12px;
+    background-color: #00ff4c2b;
+    margin-left: 5px;
 }
 
 /* Contact Section */
