@@ -126,6 +126,10 @@ section div {
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 .prj-border{
     border: 3px solid #000;
     border-radius: 20px;
