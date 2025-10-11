@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" onclick="showCoords(event)" id="body">
 
 <head>
   <meta charset="UTF-8">
@@ -101,7 +101,7 @@
       }
     }
 
-        @media only screen and (max-width: 340px) {
+    @media only screen and (max-width: 340px) {
       textarea {
         max-width: 300px;
         /* min-width: 400px !important; */
@@ -134,8 +134,19 @@
     <textarea id="outputText" readonly></textarea>
     <button onclick="copText()" style="margin-bottom: 3rem;">Copy</button>
     <div id="copyNotification">Copied!</div>
+
+    <p id="demo">Coordinate: </p>
   </div>
   <script>
+    function showCoords(event) {
+      let x = Math.round((event.clientX/1365)*999);
+      let y = Math.round((event.clientY/630)*999);
+      bodyCont = document.getElementById("body");
+
+      let text =  x.toString() + y.toString();
+      document.getElementById("demo").innerHTML = text;
+      bodyCont.style.backgroundColor = '#' + text;
+    }
 
     async function pasText() {
       try {
