@@ -11,7 +11,8 @@
       max-width: 600px;
       margin: 50px auto;
       text-align: center;
-      background-color: gainsboro;
+      /* background-color: gainsboro; */
+      /* border-radius: 30px; */
     }
 
     input,
@@ -34,6 +35,11 @@
       max-width: 548px;
       /* min-width: 576px; */
     }
+/* 
+    .container {
+      border-radius: 30px;
+      border: 1px solid;
+    } */
 
     .prm-btn {
       color: #fff;
@@ -112,7 +118,7 @@
 </head>
 
 <body>
-  <div>
+  <div class="container">
 
     <h1>Vowel Replacer</h1>
 
@@ -139,11 +145,17 @@
   </div>
   <script>
     function showCoords(event) {
-      let x = Math.round((event.clientX/1365)*999);
-      let y = Math.round((event.clientY/630)*999);
+      let x = Math.round((event.clientX / 1365) * 999);
+      let y = Math.round((event.clientY / 630) * 999);
+      if (x > 999) {
+        x = 999
+      }
+      if (y > 999) {
+        y = 999
+      }
       bodyCont = document.getElementById("body");
 
-      let text =  x.toString() + y.toString();
+      let text = x.toString() + y.toString();
       document.getElementById("demo").innerHTML = text;
       bodyCont.style.backgroundColor = '#' + text;
     }
