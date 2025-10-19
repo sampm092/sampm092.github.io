@@ -196,6 +196,12 @@ section div {
     flex-wrap: wrap;
 }
 
+.grid2{
+    grid-template-columns: repeat(2, 1fr);
+    display: grid
+;
+}
+
 .plcont-center{
     place-content: center;
 }

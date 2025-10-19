@@ -333,8 +333,9 @@ section {
     margin-bottom: 10px;
 }
 
-.project-card h3, p, a{
-    height: 33%;
+.grid2 a{
+    width: 90%;
+    place-self: center;
 }
 
 .project-card p {
