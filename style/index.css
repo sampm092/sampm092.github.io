@@ -370,6 +370,25 @@ section {
     text-decoration: underline;
 }
 
+#wa-a{
+    color: #000000;
+    background-color: #0dc143;
+    font-weight: bold;
+}
+
+#wa-a:hover{
+    opacity: 100%;
+font-style: normal;
+}
+
+#wa-a::after{
+content: "Whatsapp";
+}
+
+#wa-a:hover::after{
+content: "+62 88xxxxx";
+}
+
 /* Action */
 
 .acc {
