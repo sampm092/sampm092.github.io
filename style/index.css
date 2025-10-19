@@ -370,23 +370,43 @@ section {
     text-decoration: underline;
 }
 
-#wa-a{
-    color: #000000;
-    background-color: #0dc143;
+#wa-a {
+    background-color: #000;
+    color: #fff;
     font-weight: bold;
 }
 
-#wa-a:hover{
+#wa-a:hover {
     opacity: 100%;
-font-style: normal;
+    font-style: normal;
 }
 
-#wa-a::after{
-content: "Whatsapp";
+#wa-a::after {
+    content: "Whatsapp";
 }
 
-#wa-a:hover::after{
-content: "+62 88xxxxx";
+#wa-a:hover::after {
+    content: "+62 88xxxxx";
+}
+
+
+#gma-a {
+    background-color: #000;
+    color: #fff;
+    font-weight: bold;
+}
+
+#gma-a:hover {
+    opacity: 100%;
+    font-style: normal;
+}
+
+#gma-a::after {
+    content: "Gmail";
+}
+
+#gma-a:hover::after {
+    content: "malaus4294@gmail.com";
 }
 
 /* Action */
