@@ -362,7 +362,6 @@ section {
     padding: 12px;
     border-radius: 4px;
     width: 95%;
-    font-weight: 600;
     align-content: center;
 }
 
@@ -400,7 +399,6 @@ section {
 #gma-a:hover{
     background-color: #ee4436;
 }
-
 
 #gma-a::after {
     content: "Gmail";

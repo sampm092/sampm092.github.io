@@ -66,7 +66,7 @@ function toggleTheme() {
     const toggle = document.querySelector('.toggle-container');
     const knob = document.querySelector('.toggle-knob');
     const bgdark = document.querySelectorAll('[class*="bg130"]')
-    const nava = document.querySelectorAll('.nav a,footer, header')
+    const nava = document.querySelectorAll('.nav a, header')
     toggle.classList.toggle('dark');
     knob.classList.toggle('darknob');
 
