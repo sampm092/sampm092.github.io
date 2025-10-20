@@ -370,10 +370,15 @@ section {
     text-decoration: underline;
 }
 
-#wa-a {
+#wa-a, #gma-a {
     background-color: #000;
     color: #fff;
     font-weight: bold;
+    padding: 12px;
+    border-radius: 4px;
+    width: 95%;
+    font-weight: 600;
+    align-content: center;
 }
 
 #wa-a:hover {
@@ -390,11 +395,11 @@ section {
 }
 
 
-#gma-a {
+/* #gma-a {
     background-color: #000;
     color: #fff;
     font-weight: bold;
-}
+} */
 
 #gma-a:hover {
     opacity: 100%;
