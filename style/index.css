@@ -333,11 +333,6 @@ section {
     margin-bottom: 10px;
 }
 
-.grid2 a{
-    width: 90%;
-    place-self: center;
-}
-
 .project-card p {
     font-size: 1rem;
 }
@@ -358,6 +353,19 @@ section {
     text-align: center;
 }
 
+.grid2 a{
+    place-self: center;
+    background-color: #000;
+    margin:5px auto;
+    color: #fff;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 4px;
+    width: 95%;
+    font-weight: 600;
+    align-content: center;
+}
+
 .email-link {
     display: block;
     text-align: center;
@@ -370,18 +378,7 @@ section {
     text-decoration: underline;
 }
 
-#wa-a, #gma-a {
-    background-color: #000;
-    color: #fff;
-    font-weight: bold;
-    padding: 12px;
-    border-radius: 4px;
-    width: 95%;
-    font-weight: 600;
-    align-content: center;
-}
-
-#wa-a:hover, #gma-a:hover {
+.grid2 a:hover {
     opacity: 100%;
     font-style: normal;
     color: #000;
@@ -392,11 +389,6 @@ section {
     background-color: #04bd3b;
 }
 
-
-#gma-a:hover{
-    background-color: #4285F4;
-}
-
 #wa-a::after {
     content: "Whatsapp";
 }
@@ -405,12 +397,9 @@ section {
     content: "+62 88xxxxx";
 }
 
-
-/* #gma-a {
-    background-color: #000;
-    color: #fff;
-    font-weight: bold;
-} */
+#gma-a:hover{
+    background-color: #ee4436;
+}
 
 
 #gma-a::after {
@@ -420,6 +409,34 @@ section {
 #gma-a:hover::after {
     content: "malaus4294@gmail.com";
 }
+
+#dc-a:hover{
+    background-color: #5966f4;
+}
+
+#dc-a::after {
+    content: "Discord";
+}
+
+#dc-a:hover::after {
+    content: "lorem ipsum";
+}
+
+#tl-a:hover{
+    background-color: #308fec;
+}
+
+
+#tl-a::after {
+    content: "Telegram";
+}
+
+#tl-a:hover::after {
+    content: "lorem ipsum";
+}
+
+
+
 
 /* Action */
 
