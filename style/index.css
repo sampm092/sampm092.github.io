@@ -381,9 +381,20 @@ section {
     align-content: center;
 }
 
-#wa-a:hover {
+#wa-a:hover, #gma-a:hover {
     opacity: 100%;
     font-style: normal;
+    color: #000;
+    border: 1px solid #000;
+}
+
+#wa-a:hover{
+    background-color: #04bd3b;
+}
+
+
+#gma-a:hover{
+    background-color: #4285F4;
 }
 
 #wa-a::after {
@@ -401,10 +412,6 @@ section {
     font-weight: bold;
 } */
 
-#gma-a:hover {
-    opacity: 100%;
-    font-style: normal;
-}
 
 #gma-a::after {
     content: "Gmail";
