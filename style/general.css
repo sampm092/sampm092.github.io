@@ -214,10 +214,6 @@ section div {
     place-content: center;
 }
 
-.hovr-blue:hover{
-    color: #afeeee;
-}
-
 .invincible {
     opacity: 0;
 }
