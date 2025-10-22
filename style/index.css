@@ -417,7 +417,7 @@ section {
 }
 
 #dc-a:hover::after {
-    content: "lorem ipsum";
+    content: "jhodanaga";
 }
 
 #tl-a:hover{
@@ -430,7 +430,7 @@ section {
 }
 
 #tl-a:hover::after {
-    content: "lorem ipsum";
+    content: "sm092";
 }
 
 
