@@ -10,6 +10,10 @@
             margin: 3px;
         }
 
+        html{
+            background-color: white;
+        }
+
         .main {
             justify-items: center;
             border: 1px solid black;
@@ -36,6 +40,7 @@
         <div>Step<input id="stepNum" type="number"></input></div>
         <div>
             <button onclick="reset()">Reset</button>
+            <button onclick="random()">Random</button>
         </div>
     </div>
 
@@ -69,6 +74,16 @@
             mainNum.innerHTML = MNum;
             stepNum.value = SNum;
         }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function random() {
+            SNum = getRandomInt(100);
+            stepNum.value = SNum;
+        }
+
 
     </script>
 </body>
