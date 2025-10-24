@@ -10,11 +10,13 @@ Aquaman
 Avengers: Age of Ultron
 Avengers: Endgame
 Avengers: Infinity War
+Bee Movie
 Big Hero 6
 Black Adam
 Black Panther
 Black Panther: Wakanda Forever
 Black Widow
+Bolt
 Brave
 Bullet Train
 Captain America: Civil War
@@ -23,6 +25,7 @@ Captain America: The Winter Soldier
 Captain Marvel
 Cars
 Charlie and the Chocolate Factory
+Cloudy with a Chance of Meatballs
 Coco
 Deadpool
 Deadpool 2
@@ -37,6 +40,7 @@ Everything Everywhere All at Once
 Fantastic Beasts and Where to Find Them
 Fantastic Beasts: The Crimes of Grindelwald
 Fantastic Beasts: The Secrets of Dumbledore
+Finding Dorry
 Finding Nemo
 Forrest Gump
 Free Guy
@@ -44,6 +48,7 @@ Guardians of the Galaxy
 Guardians of the Galaxy Vol. 2
 Guardians of the Galaxy Vol. 3
 Guns Akimbo
+Happy Feet
 Harry Potter and the Sorcerer's Stone
 Harry Potter and the Chamber of Secrets 
 Harry Potter and the Prisoner of Azkaban 
@@ -57,6 +62,7 @@ Hotel Transylvania
 How to Train Your Dragon
 Hulk (2003)
 Ice Age 
+In Time (2011)
 Inside Out
 Iron Man
 Iron Man 2
@@ -65,7 +71,7 @@ John Wick
 John Wick: Chapter 2
 John Wick: Chapter 3 - Parabellum
 John Wick: Chapter 4
-Joker
+Joker (2019)
 Jumanji: Welcome to the Jungle
 Kung Fu Panda
 Logan
@@ -88,7 +94,10 @@ Pirates of the Caribbean: At World's End
 Pirates of the Caribbean: On Stranger Tides
 Pirates of the Caribbean: Dead Men Tell No Tales
 PK
+Puss in Boots
 Puss in Boots: The Last Wish
+Ralph Breaks the Internet
+Ratatouille
 Rush Hour
 Rush Hour 2
 Rush Hour 3
@@ -103,11 +112,11 @@ Spider-Man
 Spider-Man 2
 Spider-Man 3
 Spider-Man: Across the Spider-Verse
-Spider-Man: Beyond the Spider-Verse (TBA)
 Spider-Man: Far From Home
 Spider-Man: Homecoming
 Spider-Man: Into the Spider-Verse
 Spider-Man: No Way Home
+Spirited Away
 Star Wars: Episode IV - A New Hope
 Suicide Squad
 Swing Kids
@@ -116,9 +125,11 @@ The Amazing Spider-Man (2012)
 The Amazing Spider-Man 2 (2014)
 The Ballad of Buster Scruggs
 The Batman
+The Boss Baby
 The Car: Road to Revenge
 The Chronicles of Narnia: The Lion, the Witch and the Wardrobe
 The Conjuring
+The Croods
 The Hobbit: An Unexpected Journey
 The Hobbit: The Battle of the Five Armies
 The Hobbit: The Desolation of Smaug
@@ -140,6 +151,7 @@ Thor: The Dark World
 Thor: Ragnarok
 Thor: Love and Thunder
 Top Gun: Maverick
+Toy Story
 Turning Red
 Up
 Venom
@@ -153,3 +165,4 @@ X-Men: Dark Phoenix (2019)
 X-Men: Days of Future Past (2014)
 X-Men: First Class (2011)
 X-Men: The Last Stand (2006)
+Zootopia	
