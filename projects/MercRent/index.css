@@ -9,7 +9,7 @@ a {
     padding: 0;
     text-decoration: none;
     color: inherit;
-    font-family:  "Plus Jakarta Sans", monospace,Raleway, Inter, Arial, sans-serif;
+    font-family:  Raleway, Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -50,6 +50,7 @@ section {
     display: flex;
     margin-bottom: 1rem;
     border-radius: 10px;
+    border-bottom: 1px dashed #005511;
 }
 
 section div {
@@ -58,6 +59,36 @@ section div {
 
 
 /* GENERAL */
+.btn {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+}
+
+.btn-booking, .btn-call:hover{
+    background-color: #fff;
+    border: 1px solid #005511;
+    color: #005511;
+}
+
+.btn-call, .btn-booking:hover{
+    border: 1px solid #005511;
+    color: #fff;
+    background-color: #005511;
+}
+
 .container {
     width: 90%;
     max-width: 1200px;
@@ -79,11 +110,16 @@ section div {
     box-shadow: 0 .1rem 1rem #000 !important;
 }
 
+.show{
+    display: block;
+    transform: translateY(-100%);
+  }
+
 
  /* HEADER */
 
 .header {
-    color: #fff;
+    color: #000;
     padding: 20px 0;
     text-align: center;
     position: fixed;
@@ -99,6 +135,13 @@ section div {
     background-color: #1c4c6c;
     border-radius: 2rem;
     border: 1px solid #ffffff;
+}
+
+.header .btn{
+    padding: 8px 30px;
+    font-size: 18px;
+    border-radius: 30px;
+    margin: 0 5px;
 }
 
 .header .name {
