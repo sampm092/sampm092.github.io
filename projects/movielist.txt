@@ -23,9 +23,9 @@ Captain America: Civil War
 Captain America: The First Avenger
 Captain America: The Winter Soldier
 Captain Marvel
-Cars
+Cars 1, 2
 Charlie and the Chocolate Factory
-Cloudy with a Chance of Meatballs
+Cloudy with a Chance of Meatballs 1, 2
 Coco
 Deadpool
 Deadpool 2
@@ -57,16 +57,15 @@ Harry Potter and the Order of Phoenix
 Harry Potter and the Half-Blood Prince 
 Harry Potter and the Deathly Hallows - Part 1
 Harry Potter and the Deathly Hallows - Part 2
-Home Alone
-Hotel Transylvania
-How to Train Your Dragon
+Home Alone 1, 2, 3
+Hotel Transylvania 1, 2
+How to Train Your Dragon 1,2
 Hulk (2003)
-Ice Age 
+Ice Age 1, 2, 3, 4
 In Time (2011)
+Incredibles 2
 Inside Out
-Iron Man
-Iron Man 2
-Iron Man 3
+Iron Man 1, 2, 3
 John Wick
 John Wick: Chapter 2
 John Wick: Chapter 3 - Parabellum
@@ -80,8 +79,8 @@ Man of Steel
 Minions
 Missing Home
 Moana
-Monsters University
 Monsters Inc.
+Monsters University
 Morbius
 Mulan
 Oppenheimer
@@ -98,19 +97,16 @@ Puss in Boots
 Puss in Boots: The Last Wish
 Ralph Breaks the Internet
 Ratatouille
-Rush Hour
-Rush Hour 2
-Rush Hour 3
+Rush Hour 1, 2, 3
 Shang-Chi and the Legend of the Ten Rings
 Shazam
 Sherlock Holmes: A Game of Shadows
-Shrek
-Sing
-Sing 2
+Shrek 1, 2
+Shrek Forever After
+Shrek the Third
+Sing 1, 2
 Soul
-Spider-Man 
-Spider-Man 2
-Spider-Man 3
+Spider-Man 1, 2, 3
 Spider-Man: Across the Spider-Verse
 Spider-Man: Far From Home
 Spider-Man: Homecoming
@@ -121,8 +117,7 @@ Star Wars: Episode IV - A New Hope
 Suicide Squad
 Swing Kids
 Tangled
-The Amazing Spider-Man (2012)
-The Amazing Spider-Man 2 (2014)
+The Amazing Spider-Man 1, 2
 The Ballad of Buster Scruggs
 The Batman
 The Boss Baby
@@ -134,7 +129,6 @@ The Hobbit: An Unexpected Journey
 The Hobbit: The Battle of the Five Armies
 The Hobbit: The Desolation of Smaug
 The Incredibles
-The Incredibles 2
 The Lord of the Rings: The Fellowship of the Ring
 The Lord of the Rings: The Return of the King
 The Lord of the Rings: The Two Towers
@@ -145,13 +139,13 @@ The SpongeBob Movie: Sponge on the Run
 The Super Mario Bros. Movie
 The Theory of Everything
 The Truman Show
-The Wolverine (2013)
+The Wolverine
 Thor
 Thor: The Dark World
 Thor: Ragnarok
 Thor: Love and Thunder
 Top Gun: Maverick
-Toy Story
+Toy Story 1, 2, 3
 Turning Red
 Up
 Venom
