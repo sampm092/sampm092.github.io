@@ -51,6 +51,7 @@ section {
     margin-bottom: 1rem;
     border-radius: 10px;
     border-bottom: 1px dashed #005511;
+    padding: 50px 0;
 }
 
 section div {
@@ -166,4 +167,27 @@ section div {
 
 .nav a:hover {
     text-decoration: underline;
+}
+
+/* ABOUT  */
+.aboutext{
+    width: 40%;
+    max-height: 550px;
+}
+
+.pabout {
+    color: #000;
+    font-size: 1.2rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: 7rem;
+    animation : fontColorChange 6s;
+}
+
+.h2about{
+    color: #005511;
+    text-align: left;
+    font-size: 3rem;
+    margin-left: 7rem;
+    animation : fontColorChange 3s;
 }
