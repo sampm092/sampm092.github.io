@@ -50,18 +50,26 @@ section {
     display: flex;
     margin-bottom: 1rem;
     border-radius: 10px;
-    border-bottom: 1px dashed #005511;
     padding: 50px 0;
+    color: #4b4235;
 }
 
 section div {
     margin: auto;
 }
 
+svg{
+    vertical-align: middle;
+}
+
 
 /* GENERAL */
 .alignC-Center{
     align-content: center;
+}
+
+.bold{
+    font-weight: bold;
 }
 
 .btn {
@@ -78,7 +86,6 @@ section div {
     padding: .375rem .75rem;
     font-size: 1rem;
     line-height: 1.5;
-    border-radius: .25rem;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
@@ -103,12 +110,20 @@ section div {
     display: flex;
 }
 
+.gap-15{
+    gap:15px;
+}
+
 .jus-c-center{
     justify-content: center;
 }
 
 .m-zeroA {
     margin: 0 auto;
+}
+
+.min-width100{
+    min-width: 100px;
 }
 
 .shadows {
@@ -125,7 +140,8 @@ section div {
 
 .header {
     color: #191612;
-    padding: 20px 0;
+    padding: 10px 0;
+    background-color: #ffffff6b;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -142,9 +158,9 @@ section div {
 }
 
 .header .btn{
-    padding: 8px 30px;
+    padding: 6px 30px;
     font-size: 18px;
-    border-radius: 30px;
+    border-radius: 5px;
     margin: 0 5px;
 }
 
@@ -179,21 +195,125 @@ section div {
 }
 
 .pabout {
-    color: #000;
+    color: #5e584f;
     font-size: 1.2rem;
     text-align: left;
     max-width: 600px;
     margin-left: 7rem;
     animation : fontColorChange 6s;
+    line-height: 4vh;
 }
 
 .h2about{
-    color: #4b4235;
     text-align: left;
     font-size: 2.5rem;
     max-width: 20rem;
+    letter-spacing: 3px;
     margin-left: 7rem;
     margin-bottom: 1rem;
     animation : fontColorChange 3s;
     line-height: normal;
+}
+
+.pabout::selection, .h2about::selection, header::selection{
+    color: #fff;
+    background-color: #4b4235;
+}
+
+/* FIGHTERS */
+.fighters{
+    margin: 0 auto;
+    width: 100%;
+}
+
+.h2fighters{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.pfighters {
+    color: #5e584f;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 20rem;
+    animation : fontColorChange 6s;
+    line-height: 4vh;
+    margin: auto;
+}
+
+.card-body{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    font-size: 1rem;
+    margin: 5rem 10rem;
+}
+
+.card{
+    border: 1px solid black;
+    height: 470px;
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: left;
+}
+
+.card-detail{
+    display: grid;
+    margin: 10px 0;
+    gap: 20px;
+}
+
+.card-detail div{
+    display: flex;
+}
+
+.card-name-div{
+    padding: 0 30px;
+    margin: 0;
+}
+
+.card-button{
+    margin: 10px auto;
+}
+
+.card-image{
+    height: 270px;
+    width: 240px;
+}
+
+.card-image img{
+    width: 100%;
+}
+
+.gap-divider{
+    gap: 20px;
+}
+
+.divider div{
+    flex-direction: column;
+    line-height: normal;
+    gap: 0;
+}
+
+.detail-texts span:first-of-type{
+    color: #4b4235;
+    font-weight: bold;
+}
+
+.detail-texts span:nth-of-type(2){
+    color: #736654;
+}
+
+
+.detail-texts{
+    flex-direction: column;
+    line-height: normal;
+    gap: 0;
+}
+
+.top-divider div, .bot-divider div{
+    max-width: 100px;
+    margin: auto 0;
 }
