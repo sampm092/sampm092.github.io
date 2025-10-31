@@ -251,12 +251,13 @@ svg{
 
 .card{
     border: 1px solid black;
-    height: 470px;
+    height: 500px;
     width: 300px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
     text-align: left;
+    background-color: #4b423512;
 }
 
 .card-detail{
@@ -304,6 +305,7 @@ svg{
 
 .detail-texts span:nth-of-type(2){
     color: #736654;
+    font-size: smaller;
 }
 
 
