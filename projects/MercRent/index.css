@@ -80,14 +80,14 @@ section div {
 
 .btn-booking, .btn-call:hover{
     background-color: #fff;
-    border: 1px solid #005511;
-    color: #005511;
+    border: 1px solid #4b4235;
+    color: #4b4235;
 }
 
 .btn-call, .btn-booking:hover{
-    border: 1px solid #005511;
+    border: 1px solid #4b4235;
     color: #fff;
-    background-color: #005511;
+    background-color: #4b4235;
 }
 
 .container {
@@ -120,7 +120,7 @@ section div {
  /* HEADER */
 
 .header {
-    color: #000;
+    color: #191612;
     padding: 20px 0;
     text-align: center;
     position: fixed;
@@ -161,7 +161,7 @@ section div {
 
 .nav a {
     margin: 0 15px;
-    color: #000;
+    color: #191612;
     font-size: 1.2rem;
 }
 
@@ -185,7 +185,7 @@ section div {
 }
 
 .h2about{
-    color: #005511;
+    color: #4b4235;
     text-align: left;
     font-size: 3rem;
     margin-left: 7rem;
