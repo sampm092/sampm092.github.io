@@ -141,7 +141,7 @@ svg{
 .header {
     color: #191612;
     padding: 10px 0;
-    background-color: #ffffff6b;
+    background-color: #ffffff99;
     text-align: center;
     position: fixed;
     width: 100%;
@@ -155,6 +155,7 @@ svg{
     height: 65px;
     border-radius: 2rem;
     display: inherit;
+    transform: rotateY(180deg);
 }
 
 .header .btn{
@@ -250,7 +251,6 @@ svg{
 }
 
 .card{
-    border: 1px solid black;
     height: 500px;
     width: 300px;
     display: flex;
