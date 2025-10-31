@@ -60,6 +60,10 @@ section div {
 
 
 /* GENERAL */
+.alignC-Center{
+    align-content: center;
+}
+
 .btn {
     display: inline-block;
     font-weight: 400;
@@ -132,10 +136,9 @@ section div {
 }
 
 .header img{
-    height: 60px;
-    background-color: #1c4c6c;
+    height: 65px;
     border-radius: 2rem;
-    border: 1px solid #ffffff;
+    display: inherit;
 }
 
 .header .btn{
@@ -187,7 +190,10 @@ section div {
 .h2about{
     color: #4b4235;
     text-align: left;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    max-width: 20rem;
     margin-left: 7rem;
+    margin-bottom: 1rem;
     animation : fontColorChange 3s;
+    line-height: normal;
 }
