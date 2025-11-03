@@ -189,9 +189,9 @@ svg{
     font-size: 1.2rem;
 }
 
-.nav a:hover {
+/* .nav a:hover {
     text-decoration: underline;
-}
+} */
 
 /* ABOUT  */
 .aboutext{
@@ -204,9 +204,11 @@ svg{
     font-size: 1.2rem;
     text-align: left;
     max-width: 600px;
-    margin-left: 7rem;
-    animation : fontColorChange 6s;
     line-height: 4vh;
+}
+
+#dashboard .pabout{
+    margin-left: 7rem;
 }
 
 .h2about{
@@ -214,11 +216,15 @@ svg{
     font-size: 2.5rem;
     max-width: 20rem;
     letter-spacing: 3px;
-    margin-left: 7rem;
     margin-bottom: 1rem;
-    animation : fontColorChange 3s;
     line-height: normal;
 }
+
+#dashboard .h2about{
+    margin-left: 7rem;
+}
+
+
 
 .pabout::selection, .h2about::selection, header::selection{
     color: #fff;
