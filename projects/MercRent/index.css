@@ -135,6 +135,10 @@ svg{
     transform: translateY(-100%);
   }
 
+.text-a-center{
+    text-align: center;
+}
+
 
  /* HEADER */
 
@@ -247,7 +251,7 @@ svg{
     grid-template-columns: repeat(3,1fr);
     gap: 10px;
     font-size: 1rem;
-    margin: 5rem 10rem;
+    margin: 5rem 10rem 2rem 10rem;
 }
 
 .card{
@@ -276,7 +280,11 @@ svg{
 }
 
 .card-button{
-    margin: 10px auto;
+    width: 80%;
+    text-align: center;
+    color: #fff;
+    background-color: #4b4235;
+    margin-bottom: 3rem;
 }
 
 .card-image{
@@ -308,7 +316,6 @@ svg{
     font-size: smaller;
 }
 
-
 .detail-texts{
     flex-direction: column;
     line-height: normal;
@@ -318,4 +325,15 @@ svg{
 .top-divider div, .bot-divider div{
     max-width: 100px;
     margin: auto 0;
+}
+
+.fullfighters{
+    width: 100%; 
+    display: block;
+    padding: 10px 0;
+}
+
+.fullfighters:hover{
+    border-top: 1px dashed #736654;
+    border-bottom: 1px dashed #736654;
 }
