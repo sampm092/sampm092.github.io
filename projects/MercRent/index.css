@@ -198,7 +198,7 @@ svg{
 
 .nav a {
     margin: 0 15px;
-    color: #191612;
+    color: #4b4235;
     font-size: 1.2rem;
 }
 
@@ -406,7 +406,68 @@ svg{
     color: #736654;
 }
 
+.service-card h2{
+    background-color: #4b4235;
+    color: #fff;
+    padding: 0 10px;
+    width: fit-content;
+    margin-bottom: 10px;
+}
+
 .service-card h3{
     letter-spacing: 2px;
     font-size: 1.5rem;
+}
+
+/* Testimoni */
+#testimony{
+    width:100%;
+    color: #fff;
+    border-radius: 0;
+    background: linear-gradient(
+        rgba(75, 66, 53, 0.95), 
+        rgba(75, 66, 53, 0.95)
+      ),
+      url('image/mercTest.jpg'); //https://wallpapers.com/wallpapers/brave-mordhau-mercenary-force-in-battle-9p1nolhqs7kdf3z6.html
+      background-position: center;
+      background-size: cover;
+}
+
+#testimony h2{
+    font-size: 2.5rem;
+    margin: 3rem auto;
+}
+
+.slider{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.slider .containment{
+    flex: 1 0 100%;
+    /* scroll-snap-align: start; */
+    margin: 0 auto;
+    font-size: 1.2rem;
+    line-height: 4vh;
+}
+
+.mcontainer{
+    padding: 1rem;
+}
+
+.slider::-webkit-scrollbar{
+    display: none;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.containment p{
+    width: 50%;
+    place-self: center;
 }
