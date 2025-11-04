@@ -48,7 +48,7 @@ html {
 
 section {
     height: 100%;
-    min-height: 90vh;
+    min-height: 60vh;
     width: 98%;
     margin: auto;
     display: flex;
@@ -367,4 +367,46 @@ svg{
 .fullfighters:hover{
     border-top: 1px dashed #736654;
     border-bottom: 1px dashed #736654;
+}
+
+/* Service */
+.h2service, .service-card h2{
+    font-size: 2.5rem;
+}
+
+.h2service{
+    text-align: center;
+}
+
+.pservice {
+    color: #5e584f;
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 25rem;
+    animation : fontColorChange 6s;
+    line-height: 4vh;
+    margin: auto;
+}
+
+.service-cards{
+    justify-content: center;
+    margin:4rem auto;
+}
+
+.service-card{
+    max-width: 230px;
+    max-height: 320px;
+    margin: 0;
+    padding: 10px;
+}
+
+.service-card p{
+    font-size: 1.2rem;
+    line-height: 4vh;
+    color: #736654;
+}
+
+.service-card h3{
+    letter-spacing: 2px;
+    font-size: 1.5rem;
 }
