@@ -453,6 +453,12 @@ svg{
     line-height: 4vh;
 }
 
+.slider img{
+    height: 65px;
+    border-radius: 2rem;
+    display: inherit;
+}
+
 .mcontainer{
     padding: 1rem;
 }
@@ -471,3 +477,24 @@ svg{
     width: 50%;
     place-self: center;
 }
+
+.testi-user{
+    margin: 3rem;
+}
+
+.testi-pict{
+    margin-right: 0;
+}
+
+.testi-texts{
+    color: #fff;
+    flex-direction: column;
+    line-height: normal;
+    gap: 5px;
+    margin-left: 0;
+    text-align: left;
+}
+
+.testi-texts span:nth-of-type(2){
+    font-size: small;
+} 
