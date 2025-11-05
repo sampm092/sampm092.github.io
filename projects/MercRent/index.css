@@ -66,7 +66,6 @@ svg{
     vertical-align: middle;
 }
 
-
 /* GENERAL */
 .alignC-Center{
     align-content: center;
@@ -162,6 +161,14 @@ svg{
 
 .width-100{
     width: 100%;
+}
+
+.animation-tleft{
+    animation: aos-left 2s;
+}
+
+.animation-tup{
+    animation: aos-up 2s;
 }
 
  /* HEADER */
@@ -629,7 +636,7 @@ svg{
 
 .footer-body{
     gap:20rem;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 .socialmed div{
@@ -651,3 +658,13 @@ svg{
       width: 300px;
       text-align: center;
     }
+
+    @keyframes aos-left{
+    0%{transform: translate3d(100px, 0, 0);}
+    100%{transform: translate3d(0px, 0, 0);}
+}
+
+@keyframes aos-up{
+    0%{transform: translate3d(0, 100px, 0);}
+    100%{transform: translate3d(0, 0, 0);}
+}
