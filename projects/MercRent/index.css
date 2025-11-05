@@ -565,10 +565,11 @@ svg{
     font-weight: bold;
     align-content: center;
     cursor: pointer;
+    margin: 0;
 }
 
 .answer{
-    width: 40%;
+    width: 85%;
     max-height: 550px;
 }
 
@@ -576,4 +577,8 @@ svg{
     border: 1px solid #4b4235;
     color: #fff;
     background-color: #4b4235;
+}
+
+#help .hidden{
+    display: none;
 }

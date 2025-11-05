@@ -45,7 +45,6 @@ function handleEscapeKey(event) { //menutup section dengan key 'esc'
 function showAccount(elementId) {
     const social = document.getElementById(elementId);
     social.classList.toggle('visible'); // hide/show the class to show the box
-
 }
 
 function projectDesc(elementId) {

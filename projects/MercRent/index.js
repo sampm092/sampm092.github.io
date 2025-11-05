@@ -1,3 +1,4 @@
+
 let lastScrollY = window.scrollY;
 const header = document.getElementById('header');
 
@@ -21,7 +22,6 @@ const cards = document.querySelectorAll('.card');
 // Loop through each card and fill in data
 cards.forEach(card => {
     const data = JSON.parse(card.getAttribute('data-card'));
-    console.log(data);
 
     card.querySelector('.name').textContent = data.name;
     card.querySelector('.duration').textContent = data.duration;
@@ -71,3 +71,35 @@ document.addEventListener('DOMContentLoaded', () => {
     // initial UI
     goTo(0);
 });
+
+function showAnswer(x) {
+    const questions = Array.from(document.querySelectorAll('.question'));
+    const answers = Array.from(document.querySelectorAll('.answer'));
+
+    questions.forEach((question, index) => {
+        if (index === x) {
+            question.classList.add('active');
+        } else {
+            question.classList.remove('active');
+        }
+    });
+
+    answers.forEach((answer, index) => {
+        if (index === x) {
+            answer.classList.remove('hidden');
+        } else {
+            answer.classList.add('hidden');
+        }
+    });
+
+    //This code is showing my overthinking
+    // console.log(cards);
+    // cards[x].classList.add('active');
+    // const result = Object.fromEntries(
+    //     Object.entries(cards).filter((_, index) => index !== x)
+    // );
+
+    // result.forEach(other => {
+    //     other.classList.remove('active');
+    // });
+}
