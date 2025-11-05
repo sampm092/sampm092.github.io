@@ -30,6 +30,25 @@ cards.forEach(card => {
     card.querySelector('.member').textContent = data.member;
 });
 
+function openModal(event) {
+    const card = event.currentTarget;
+    const data = JSON.parse(card.getAttribute('data-card'));
+
+    // Fill modal content
+    document.getElementById('name').textContent = data.name;
+    document.getElementById('duration').textContent = data.duration;
+    document.getElementById('price').textContent = data.price;
+    document.getElementById('rating').textContent = data.rating;
+    document.getElementById('member').textContent = data.member;
+
+    // Show modal
+    document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
 // For slider 
 document.addEventListener('DOMContentLoaded', () => {
     //Run the code inside this block only after the HTML document has finished loading.
@@ -91,15 +110,4 @@ function showAnswer(x) {
             answer.classList.add('hidden');
         }
     });
-
-    //This code is showing my overthinking
-    // console.log(cards);
-    // cards[x].classList.add('active');
-    // const result = Object.fromEntries(
-    //     Object.entries(cards).filter((_, index) => index !== x)
-    // );
-
-    // result.forEach(other => {
-    //     other.classList.remove('active');
-    // });
 }
