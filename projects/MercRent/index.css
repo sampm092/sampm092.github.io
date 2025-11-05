@@ -431,7 +431,7 @@ svg{
         rgba(75, 66, 53, 0.95), 
         rgba(75, 66, 53, 0.95)
       ),
-      url('image/mercTest.jpg'); //https://wallpapers.com/wallpapers/brave-mordhau-mercenary-force-in-battle-9p1nolhqs7kdf3z6.html
+      url('image/mercTest.webp'); //https://wallpapers.com/wallpapers/brave-mordhau-mercenary-force-in-battle-9p1nolhqs7kdf3z6.html
       background-position: center;
       background-size: cover;
 }
@@ -449,7 +449,7 @@ svg{
     overflow: hidden;
     color: white;
     border-radius: 12px;
-    padding: 36px 18px;
+    padding: 36px 18px 0;
     justify-self: center;
 }
 
