@@ -46,7 +46,7 @@ html {
     scroll-behavior: smooth;
 }
 
-section {
+section, footer {
     height: 100%;
     min-height: 60vh;
     width: 98%;
@@ -581,4 +581,35 @@ svg{
 
 #help .hidden{
     display: none;
+}
+
+/* Contact  */
+#contact{
+    height: fit-content;
+    min-height: 0;
+}
+
+#contact div{
+    height: fit-content;
+}
+
+.contact-body{
+    background-color: #4b4235;
+    color: #fff;
+    padding: 2rem 4rem;
+    width: 71%;
+    border-radius: 5px;
+}
+.contact-body div:first-of-type{
+    margin-left: 0;
+}
+
+.contact-body div:nth-of-type(2){
+    margin-right: 0;
+}
+
+#contact .btn{
+    border: 1px solid #fff;
+    border-radius: 5px;
+    padding: ;
 }
