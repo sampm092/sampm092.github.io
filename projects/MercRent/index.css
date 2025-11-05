@@ -114,6 +114,11 @@ svg{
     display: flex;
 }
 
+.flex-col{
+    display:flex;
+    flex-direction: column;
+}
+
 .gap-15{
     gap:15px;
 }
@@ -527,4 +532,48 @@ svg{
 
 .dots button.active { 
     background: #fff; 
+}
+
+/* HELP */
+.h2help{
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.help-body h3{
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    text-align: start;
+}
+
+.help-body{
+    margin: 1rem;
+}
+
+.questions{
+    gap: 1rem;
+    padding: 10px 0;
+}
+
+.question{
+    padding: 10px 15px;
+    border: 1px solid #736654;
+    border-radius: 6px;
+    min-height: 50px;
+    width:410px;
+    text-align: start;
+    font-weight: bold;
+    align-content: center;
+    cursor: pointer;
+}
+
+.answer{
+    width: 40%;
+    max-height: 550px;
+}
+
+#help .active{
+    border: 1px solid #4b4235;
+    color: #fff;
+    background-color: #4b4235;
 }
