@@ -118,12 +118,20 @@ svg{
     flex-direction: column;
 }
 
+.gap-10{
+    gap: 10px;
+}
+
 .gap-15{
     gap:15px;
 }
 
 .jus-c-center{
     justify-content: center;
+}
+
+.m-0{
+    margin: 0;
 }
 
 .m-zeroA {
@@ -178,7 +186,6 @@ svg{
     padding: 10px 0;
     background-color: #ffffff99;
     backdrop-filter: blur(10px);
-    text-align: center;
     position: fixed;
     width: 100%;
     transition: transform 0.3s ease-in-out;
@@ -282,14 +289,12 @@ svg{
 }
 
 .h2fighters{
-    text-align: center;
     font-size: 2rem;
 }
 
 .pfighters {
     color: #5e584f;
     font-size: 1.2rem;
-    text-align: center;
     max-width: 20rem;
     animation : fontColorChange 6s;
     line-height: 4vh;
@@ -299,7 +304,6 @@ svg{
 .card-body{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    gap: 10px;
     font-size: 1rem;
     margin: 5rem 10rem 2rem 10rem;
 }
@@ -393,14 +397,9 @@ svg{
     font-size: 2.5rem;
 }
 
-.h2service{
-    text-align: center;
-}
-
 .pservice {
     color: #5e584f;
     font-size: 1.2rem;
-    text-align: center;
     max-width: 25rem;
     animation : fontColorChange 6s;
     line-height: 4vh;
@@ -415,7 +414,6 @@ svg{
 .service-card{
     max-width: 230px;
     max-height: 320px;
-    margin: 0;
     padding: 10px;
 }
 
@@ -464,7 +462,6 @@ svg{
     position: relative;
     width: 90%;
     max-width: 900px;
-    margin: 0;
     overflow: hidden;
     color: white;
     border-radius: 12px;
@@ -527,12 +524,6 @@ svg{
 } 
 
 /* dots */
-.dots { 
-    margin: 0;
-    display: flex;
-    text-align: center;
-}
-
 .dots button {
     width: 100%;
     height: 3px;
@@ -579,7 +570,6 @@ svg{
     font-weight: bold;
     align-content: center;
     cursor: pointer;
-    margin: 0;
 }
 
 .answer{
@@ -599,12 +589,7 @@ svg{
 
 /* Contact  */
 #contact{
-    height: fit-content;
     min-height: 0;
-}
-
-#contact div{
-    height: fit-content;
 }
 
 .contact-body{
@@ -644,23 +629,27 @@ svg{
     grid-template-columns: repeat(3,1fr);
 }
 
-   .modal {
-      display: none;
-      position: fixed;
-      top: 0; left: 0; width: 100%; height: 100%;
-      background: rgba(0,0,0,0.5);
-      align-items: center; justify-content: center;
-    }
-    .modal-content {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      width: 300px;
-      text-align: center;
-    }
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    align-items: center; 
+    justify-content: center;
+}
 
-.nama{
-    gap: 10px;
+.modal p{
+    text-align: start;
+}
+
+.modal-content {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    width: 300px;
 }
 
 .nama, .navigate, .socialmed{
