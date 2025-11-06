@@ -168,7 +168,7 @@ svg{
 }
 
 .animation-tup{
-    animation: aos-up 2s;
+    animation: aos-up 1s;
 }
 
  /* HEADER */
@@ -188,7 +188,7 @@ svg{
 }
 
 .header img{
-    height: 65px;
+    height: 80px;
     border-radius: 2rem;
     display: inherit;
     transform: rotateY(180deg);
@@ -212,7 +212,7 @@ svg{
 }
 
 .m-header {
-    margin: auto 10vh;
+    margin: auto 6vh;
 }
 
 .nav a {
@@ -635,7 +635,7 @@ svg{
 }
 
 .footer-body{
-    gap:20rem;
+    gap:19rem;
     margin-bottom: 3rem;
 }
 
@@ -659,12 +659,21 @@ svg{
       text-align: center;
     }
 
+.nama{
+    gap: 10px;
+}
+
+.nama, .navigate, .socialmed{
+    border-left: 1px solid;
+    padding: 1rem;
+}
+
     @keyframes aos-left{
     0%{transform: translate3d(100px, 0, 0);}
     100%{transform: translate3d(0px, 0, 0);}
 }
 
 @keyframes aos-up{
-    0%{transform: translate3d(0, 100px, 0);}
-    100%{transform: translate3d(0, 0, 0);}
+    0%{transform: translate3d(0, 200px, 0);opacity: 0;}
+    100%{transform: translate3d(0, 0, 0);opacity: 1;}
 }
