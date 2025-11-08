@@ -315,7 +315,6 @@ svg{
     flex-wrap: wrap;
     flex-direction: column;
     text-align: left;
-    background-color: #4b423512;
 }
 
 .card-detail{
