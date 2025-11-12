@@ -1,7 +1,8 @@
 let lastScrollY = window.scrollY;
 let cuLang = 'en';
-const header = document.getElementById('header');
-
+const header = document.getElementById('header'); const play_button = document.getElementById('play-m');
+const stop_button = document.getElementById('stop-m');
+const music = document.getElementById('back-m');
 
 window.addEventListener('scroll', () => { //menghilangkan header ketika scroll
     const currentScrollY = window.scrollY;
@@ -18,15 +19,15 @@ window.addEventListener('scroll', () => { //menghilangkan header ketika scroll
 });
 
 // Initialize Lenis FOR SMOOTH SCROLLL
-        const lenis = new Lenis();
+const lenis = new Lenis();
 
-        // Use requestAnimationFrame to continuously update the scroll
-        function raf(time) {
-            lenis.raf(time);
-            requestAnimationFrame(raf);
-        }
+// Use requestAnimationFrame to continuously update the scroll
+function raf(time) {
+    lenis.raf(time);
+    requestAnimationFrame(raf);
+}
 
-        requestAnimationFrame(raf);
+requestAnimationFrame(raf);
 
 // Function to open the modal and display the clicked image
 function openPreview(imageSrc) {
@@ -127,21 +128,21 @@ function toBio() {
 }
 
 function scrollToTop(duration) { // duration in ms
-  const start = window.scrollY;
-  const startTime = performance.now();
+    const start = window.scrollY;
+    const startTime = performance.now();
 
-  function animateScroll(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    const ease = 1 - Math.pow(1 - progress, 4); // Ease-out effect
-    window.scrollTo(0, start * (1 - ease));
+    function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 4); // Ease-out effect
+        window.scrollTo(0, start * (1 - ease));
 
-    if (progress < 1) {
-      requestAnimationFrame(animateScroll);
+        if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+        }
     }
-  }
 
-  requestAnimationFrame(animateScroll);
+    requestAnimationFrame(animateScroll);
 }
 
 function timeNow1() {
@@ -167,3 +168,16 @@ function timeNow() {
 }
 
 timeNow(); // Start ticking
+
+function playMusic() {
+    music.play();
+    play_button.classList.add("none");
+    stop_button.classList.remove("none");
+}
+
+function stopMusic() {
+    music.pause();
+    stop_button.classList.add("none");
+    play_button.classList.remove("none");
+}
+
