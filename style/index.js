@@ -17,6 +17,17 @@ window.addEventListener('scroll', () => { //menghilangkan header ketika scroll
     lastScrollY = currentScrollY;
 });
 
+// Initialize Lenis FOR SMOOTH SCROLLL
+        const lenis = new Lenis();
+
+        // Use requestAnimationFrame to continuously update the scroll
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+
 // Function to open the modal and display the clicked image
 function openPreview(imageSrc) {
     var modal = document.getElementById("preview");
