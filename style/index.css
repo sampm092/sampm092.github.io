@@ -28,6 +28,11 @@
     color: #bbb;
 }
 
+/* .header .container div{
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+} */
+
 .nav a {
     margin: 0 15px;
     color: #fff;
