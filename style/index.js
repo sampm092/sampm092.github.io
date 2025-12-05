@@ -1,6 +1,7 @@
 let lastScrollY = window.scrollY;
 let cuLang = 'en';
-const header = document.getElementById('header'); const play_button = document.getElementById('play-m');
+const header = document.getElementById('header'); 
+const play_button = document.getElementById('play-m');
 const stop_button = document.getElementById('stop-m');
 const music = document.getElementById('back-m');
 
