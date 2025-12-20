@@ -92,8 +92,23 @@ function toggleTheme() {
     }
 }
 
+function openNavigation() {
+    const navDiv = document.querySelectorAll('#navi div');
+    const open = document.getElementById('open-b');
+    const close = document.getElementById('close-b');
 
+    navDiv.forEach(element => {
+        if (!element.id.includes('eo')) {
+            element.style.transform =
+                element.style.transform == 'translateX(100%)'
+                    ? 'translateX(0)'
+                    : 'translateX(100%)';
+        }
+    });
 
+    open.classList.toggle('none');
+    close.classList.toggle('none');
+}
 
 function timeNow1() {
     const timeNow = document.getElementById("date-now");
