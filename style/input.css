@@ -75,6 +75,10 @@ footer::selection {
   background-color: var(--color-greenBG);
 }
 
+#navi {
+  display: none;
+}
+
 a {
   cursor: pointer;
 }
