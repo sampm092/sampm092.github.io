@@ -44,7 +44,7 @@ body {
 }
 
 body {
-  background: var(--primary);
+  background: var(--color-greenBG);
   color: var(--secondary);
   font-family: "Plus Jakarta Sans", sans-serif, BGrotesque, monospace;
 }
@@ -375,4 +375,71 @@ header {
   flex: 1;
   height: 4px;
   margin-left: 10px;
+}
+
+
+/* MEDIA QUERRY */
+@media only screen and (max-width: 650px) {
+  header {
+    position: relative;
+    justify-self: end;
+  }
+
+  header .container {
+    max-height: 1200px !important;
+    height: fit-content;
+    display: block;
+    justify-items: center;
+  }
+
+  header .container div {
+    display: none;
+  }
+
+  #image {
+    width: fit-content;
+    display: block;
+    justify-self: end;
+    margin-right: 1rem;
+  }
+
+  header nav a:hover {
+    background-color: transparent;
+    color: #000;
+    border-bottom: 0;
+  }
+
+  #navi {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dropdown-content {
+    max-height: 0;
+    opacity: 0;
+    padding-bottom: 16px;
+    overflow: hidden;
+    transform: translateY(0%);
+    transition: max-height 1s ease, opacity 1s ease, transform 1s ease;
+  }
+
+  .dropdown-content.shows {
+    max-height: 2000px; /* max-height: fit-content cannot animate in CSS. */
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .dropdown-bot {
+    display: block;
+  }
+
+  #projects .erase{
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .sm\:opacity-100 {
+    opacity: 0.65 !important;
+  }
 }
