@@ -5,33 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio | Sam P. M.</title>
-    <link rel="stylesheet" href="style/general.css">
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="style/output.css">
     <link rel="canonical" href="https://sampm092.github.io/">
-    <!-- <link rel="stylesheet" href="style/output.css"> -->
-    <link rel="stylesheet" href="style/media.css">
     <!-- Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body class="bg130">
-    <a class="tttop" onclick="scrollToTop(50)">↑</a>
-    <header id="header" class="header shadows bg130">
-        <div class="container m-zeroA flex" style="max-height: 60px;">
+<body>
+    <!-- <a class="tttop" onclick="scrollToTop(50)">↑</a> -->
+    <header id="header" class=" py-5 text-center fixed w-full z-50 top-0 left-0 backdrop-blur-sm text-greenText">
+        <div class="container mx-auto flex max-h-[60px] w-11/12">
             <div class="">
-                <img src="image/logowhite1.png">
+                <img src="image/logowhite1.png" class="h-10 rounded-4xl border-primary">
             </div>
-            <div class="m-header">
+            <div class="m-auto mr-4">
                 <nav data-lang="en" class="nav">
-                    <a href="#about">About</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#social">Social</a>
-                    <a href="#contact">Contact</a>
-                    <a href="projects/game.html" id="entertainment">
+                    <a href="#about" class="my-0 mx-3.5 text-lg">About</a>
+                    <a href="projects.html" class="my-0 mx-3.5 text-lg">Projects</a>
+                    <a href="#social" class="my-0 mx-3.5 text-lg">Social</a>
+                    <a href="#contact" class="my-0 mx-3.5 text-lg">Contact</a>
+                    <a href="projects/game.html" id="entertainment" class="my-0 mx-3.5 text-lg">
                         Entertainment</a>
                 </nav>
                 <nav data-lang="id" class="nav">
@@ -43,834 +41,343 @@
                         Hiburan</a>
                 </nav>
             </div>
-            <div class="m-auto">
-                <a id="play-m" class="btn" onclick="playMusic()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                        class="bi bi-volume-mute-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M6.717 3.55A.5.5 0 0 1 7 4v8a.5.5 0 0 1-.812.39L3.825 10.5H1.5A.5.5 0 0 1 1 10V6a.5.5 0 0 1 .5-.5h2.325l2.363-1.89a.5.5 0 0 1 .529-.06m7.137 2.096a.5.5 0 0 1 0 .708L12.207 8l1.647 1.646a.5.5 0 0 1-.708.708L11.5 8.707l-1.646 1.647a.5.5 0 0 1-.708-.708L10.793 8 9.146 6.354a.5.5 0 1 1 .708-.708L11.5 7.293l1.646-1.647a.5.5 0 0 1 .708 0" />
-                    </svg>
-                </a>
-                <a id="stop-m" class="btn none" onclick="stopMusic()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
-                        class="bi bi-volume-up" viewBox="0 0 16 16">
-                        <path
-                            d="M11.536 14.01A8.47 8.47 0 0 0 14.026 8a8.47 8.47 0 0 0-2.49-6.01l-.708.707A7.48 7.48 0 0 1 13.025 8c0 2.071-.84 3.946-2.197 5.303z" />
-                        <path
-                            d="M10.121 12.596A6.48 6.48 0 0 0 12.025 8a6.48 6.48 0 0 0-1.904-4.596l-.707.707A5.48 5.48 0 0 1 11.025 8a5.48 5.48 0 0 1-1.61 3.89z" />
-                        <path
-                            d="M10.025 8a4.5 4.5 0 0 1-1.318 3.182L8 10.475A3.5 3.5 0 0 0 9.025 8c0-.966-.392-1.841-1.025-2.475l.707-.707A4.5 4.5 0 0 1 10.025 8M7 4a.5.5 0 0 0-.812-.39L3.825 5.5H1.5A.5.5 0 0 0 1 6v4a.5.5 0 0 0 .5.5h2.325l2.363 1.89A.5.5 0 0 0 7 12zM4.312 6.39 6 5.04v5.92L4.312 9.61A.5.5 0 0 0 4 9.5H2v-3h2a.5.5 0 0 0 .312-.11" />
-                    </svg>
-                </a>
-            </div>
-            <div class="m-r-auto flex" style="gap: 10px;">
-                <div class="m-auto flex" style="gap: 10px;">
-                    <p class="m-auto">EN</p>
-                    <a id="language-select" class="tooltip">
-                        <span class="tooltiptext">Change Overall Language</span>
-                        <div class="toggle-container" onclick="toggleTheme()">
-                            <div class="toggle-knob">
+            <div class="inline-block my-auto mx-1 w-fit text-xl text-greenText">
+                <el-dropdown teleported>
+                    <button
+                        class="flex w-[150px] justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 hover:bg-greenText hover:border-greenBG hover:text-greenBG cursor-pointer border-greenText border-2 rounded-lg">
+                        <span class="">
+                            Docs
+                        </span>
+                    </button>
+
+                    <el-menu anchor="bottom end" popover
+                        class="w-[200px] origin-top-right divide-y divide-black/10 rounded-md bg-black/20 outline-1 -outline-offset-1 outline-black/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in text-greenText text-sm border">
+                        <div class="py-1">
+                            <div class="flex px-4 py-2 border-b">
+                                <h4 class="text-left">Resume</h4>
+                                <div class="flex m-auto mr-0 gap-2">
+                                    <a href="files/ResumeEN.pdf" target="_blank" style="text-decoration: underline;">EN</a>
+                                    <a href="files/Resume.pdf" target="_blank" style="text-decoration: underline;">ID</a>
+                                </div>
+                            </div>
+                            <div class="flex px-4 py-2 border-b">
+                                <h4 class="text-left">Portfolio</h4>
+                                <div class="flex m-auto mr-0 gap-2">
+                                    <a href="files/portfolio.pdf" target="_blank" style="text-decoration: underline;">EN</a>
+                                    <a href="files/portofolio.pdf" target="_blank" style="text-decoration: underline;">ID</a>
+                                </div>
+                            </div>
+                            <div class="flex px-4 py-2">
+                                <h4 class="text-left">Curriculum Vitae</h4>
+                                <div class="flex m-auto mr-0 gap-2">
+                                    <a href="files/EN CV.pdf" target="_blank" style="text-decoration: underline;">EN</a>
+                                    <a href="files/CV.pdf" target="_blank" style="text-decoration: underline;">ID</a>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                    <p class="m-auto">ID</p>
-                </div>
+                    </el-menu>
+                </el-dropdown>
             </div>
         </div>
     </header>
     <main>
-        <audio id="back-m" class="none" controls loop>
-            <source src="files/one.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <section id="about" class="about-section">
-            <div id="non-bio" class="container">
-                <h2 class="h2about font-bold" data-lang="id">Samuel Parlindungan Malau</h2>
-                <h2 class="h2about font-bold" data-lang="en">Samuel Parlindungan Malau</h2>
-                <p class="pabout" data-lang="en">Hello! I'm a programmer with a passion for building beautiful and
-                    functional applications. I enjoy learning something new every day and i hope my work can be useful
-                    for the development of technologies nowadays.</p>
-                <p class="pabout" data-lang="id">Halo! Saya adalah seorang programmer yang memiliki minat dalam
-                    membangun aplikasi yang tidak hanya indah, tetapi juga fungsional. Saya menyukai proses belajar dan
-                    mengembangkan diri dan berharap pekerjaan saya dapat memberikan kontribusi positif bagi perkembangan
-                    teknologi masa kini.</p>
-                <div class="aabout">
-                    <a class="btn btn-primary" onclick="toBio()" data-lang="en">Bio ↠</a>
-                    <!-- make sliding to reveal bio -->
-                    <a class="btn btn-primary" onclick="toBio()" data-lang="id">Bio ↠</a>
-                    <!-- make sliding to reveal bio -->
-                    <!-- Porto -->
-                    <a data-lang="en" class="btn btn-primary" href="files/portfolio.pdf">
-                        Portfolio &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                            <path
-                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                            <path
-                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                        </svg>
-                    </a>
-                    <a data-lang="id" class="btn btn-primary" href="files/portofolio.pdf">
-                        Portfolio &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                            <path
-                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                            <path
-                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                        </svg>
-                    </a>
-                    <!-- CV -->
-                    <a data-lang="en" class="btn btn-primary" href="files/EN CV.pdf">
-                        Curriculum Vitae &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                            <path
-                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                            <path
-                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                        </svg>
-                    </a>
-                    <a data-lang="id" class="btn btn-primary" href="files/CV.pdf">
-                        Curriculum Vitae &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                            fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                            <path
-                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                            <path
-                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                        </svg>
-                    </a>
-                    <!-- Resume -->
-                    <a data-lang="en" class="btn btn-primary" href="files/ResumeEN.pdf">
-                        Resume &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-download" viewBox="0 0 16 16">
-                            <path
-                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                            <path
-                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                        </svg>
-                    </a>
-                    <a data-lang="id" class="btn btn-primary" href="files/Resume.pdf">
-                        Resume &nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-download" viewBox="0 0 16 16">
-                            <path
-                                d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                            <path
-                                d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                        </svg>
-                    </a>
-                </div>
-            </div>
-            <div style="width:50%;  padding-left: 7rem;" class="col col-md-12 card-body m-auto">
-                <img src="image/oda.png" style="width: 80%; border-radius: 25%;" class="mt-4 shadows flip">
-            </div>
-            <div id="biodata" class="container none">
-                <h2 class="h2about2">Bio</h2>
-                <p class="pabout2" data-lang="en">Samuel Parlindungan Malau </br> Born on January 29, 2002 </br>
-                    Residing in North
-                    Sumatera, Indonesia</br>IT Graduate, University of Sumatera Utara (GPA: 3.60)</br> I love playing
-                    <a class="click" onclick="showAccount('games')">
-                        games
-                    </a>
-                    and learning something new each day to expand my horizons.
-                </p>
-                <p class="pabout2" data-lang="id">Samuel Parlindungan Malau </br> Lahir pada 29 January 2002 </br>
-                    Tinggal di Sumatera Utara, Indonesia</br>Lulusan Teknologi Informasi, Universitas Sumatera
-                    Utara</br>
-                    Saya suka bermain
-                    <a class="click" onclick="showAccount('game')">
-                        game
-                    </a>
-                    dan mempelajari hal-hal baru.
-                </p>
-                <div class="aabout2">
-                    <a class="btn btn-primary" onclick="toBio()">
-                        ↞ About </a>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="projects-section">
-            <div class="container mt-0">
-                <h2 data-aos="flip-right" class="name"> - - - </h2>
-                <h2 class="name" data-lang="en">Projects</h2>
-                <h2 class="name" data-lang="id">Proyek</h2>
-                <div class="project-list no-wr">
-                    <!-- pr1 -->
-                    <div id="citrus">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr1')">
-                                    <strong class="name">
-                                        Citridx
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle" id="pr1" onclick="projectDesc('pr1')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#mobile</a>
-                                    <a>#kotlin</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border-in prj-background" id="dropdownContent-pr1"
-                            class="name">
-                            <div data-lang="en">
-                                <h3>Citridx</h3>
-                                <p>A Mobile-Based Orange Plant Disease Detection System Utilizing Deep
-                                    Learning Technique (YOLOv8) and Developed with Kotlin Programming Language.</p>
-                                <p>
-                                    Programming language : Kotlin, Python </br> Machine Learning : YOLOv8
-                                    </br>
-                                    Programming tools: Jupyter Lab, Android Studio, Github
-                                </p>
-
-                                <p>Feature:</p>
-                                <ul>
-                                    <li>Detect three kind of citrus diseases</li>
-                                    <li>Real time detection</li>
-                                    <li>Diseases short explanation</li>
-                                </ul>
-                            </div>
-                            <div data-lang="id">
-                                <h3>Citridx</h3>
-                                <p> Sistem Deteksi Penyakit Tanaman Jeruk Berbasis Mobile dengan Menggunakan
-                                    Teknik Pembelajaran Dalam (YOLOv8) dan Dikembangkan dengan Bahasa Pemrograman
-                                    Kotlin.</p>
-                                <p>
-                                    Bahasa Pemrograman : Kotlin, Python </br> Machine Learning : YOLOv8
-                                    </br>
-                                    Aplikasi pemrograman: Jupyter Lab, Android Studio, Github
-                                </p>
-
-                                <p>Fitur:</p>
-                                <ul>
-                                    <li>Mendeteksi tiga jenis penyakit daun jeruk</li>
-                                    <li>Deteksi secara langsung</li>
-                                    <li>Penjelasan singkat ketiga penyakit tanaman jeruk</li>
-                                </ul>
-                            </div>
-                            <iframe class="bor-rad" width="100%" height="534"
-                                src="https://www.youtube.com/embed/VYtrsKjThzM?si=Hzo6NKN_EIs9EN8B"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <a href="https://github.com/sampm092/Citrus" data-lang="en" class="btn">Check</a>
-                            <a href="https://github.com/sampm092/Citrus" data-lang="id" class="btn">Cek</a>
-                        </div>
+        <div class="absolute w-full h-full overflow-hidden min-h-[80vh] sm:min-h-screen" data-aos="fade-up"
+            data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000">
+            <img src="image/logo 2.png" class="mt-[-140px] opacity-60" alt="3D PICTURE">
+        </div>
+        <section id="top"
+            class="bg-greenBG bg-linear-270 from-greenBG to-[#000c08] text-greenText m-auto mt-0 pb-10 pt-10 flex dark-select min-h-[80vh] sm:min-h-screen ">
+            <div class="container w-full mx-auto content-center z-10 text-center">
+                <div class="flex flex-col gap-8">
+                    <h2 class="text-6xl sm:text-[95px]/20 font-extrabold" data-aos="fade-up" data-aos-offset="100"
+                        data-aos-delay="50" data-aos-duration="1000" data-aos-mirror="true">
+                        Webcraft & Gamedev
+                    </h2>
+                    <div class="text-4xl font-bold" data-aos="fade-up" data-aos-offset="100" data-aos-delay="250"
+                        data-aos-duration="1000" data-aos-mirror="true">Blending creativity and code for impactful
+                        digital work.
                     </div>
-                    <!-- pr7 -->
-                    <div id="ufolappy">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr7')">
-                                    <strong class="name">
-                                        UFO-lappy
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle" id="pr7" onclick="projectDesc('pr7')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#unity2d</a>
-                                    <a>#gamedev</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border-in prj-background" id="dropdownContent-pr7"
-                            class="name">
-                            <div data-lang="id">
-                                <h3>UFO-lappy</h3>
-                                <p>Flappy bird tetapi dengan UFO dan beberapa modifikasi</p>
-                                <p>
-                                    Bahasa Pemrograman : C#, Shaderlab (Unity) </br> Aplikasi pembuatan musik : LMMS
-                                    </br>
-                                    Aplikasi pemrograman: Unity Lab, VS Code, GIT
-                                </p>
-
-                                <p>Fitur:</p>
-                                <ul>
-                                    <li>Menu Utama</li>
-                                    <li>Sistem skor</li>
-                                    <li>Avatar yang dapat bergerak melompat</li>
-                                    <li>Avatar yang dapat bergerak maju dan diam sementara</li>
-                                    <li>Avatar yang dapat menembakkan peluru</li>
-                                    <li>Objek yang dapat hancur dan yang tidak dapat hancur ketika terkena peluru</li>
-                                    <li>Musik latar dan efek suara</li>
-                                    <li>Layar jeda dan layar selesai</li>
-                                    <li>Dua jenis permainan</li>
-                                </ul>
-                            </div>
-                            <div data-lang="en">
-                                <h3>UFO-lappy</h3>
-                                <p>Flappy bird but with UFO instead and some modification</p>
-                                <p>
-                                    Programming language : C#, Shaderlab (Unity) </br> Music making application : LMMS
-                                    </br>
-                                    Programming tools: Unity Lab, VS Code, GIT
-                                </p>
-
-                                <p>Feature:</p>
-                                <ul>
-                                    <li>Main menu</li>
-                                    <li>Scoring system</li>
-                                    <li>Avatar can jump</li>
-                                    <li>Avatar can rush and stay for a second</li>
-                                    <li>Avatar can fire bullets</li>
-                                    <li>Objects that can be destroyed and a few that cannot be</li>
-                                    <li>Background music and sound effects mostly made by myself</li>
-                                    <li>Pause and Finish screen with retry</li>
-                                    <li>Two type of games</li>
-                                </ul>
-                            </div>
-                            <iframe width="100%" height="534"
-                                src="https://www.youtube.com/embed/Az23nfeUVNg?si=uTj8-5aZB-he_5Sj"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <a data-lang="en" href="https://github.com/sampm092/OneUnity" class="btn">Check</a>
-                            <a data-lang="id" href="https://github.com/sampm092/OneUnity" class="btn">Cek</a>
-                            <a href="https://drive.google.com/file/d/1BlqwTWR0DPb0ZniqdrnBPpEtmqdvI5YV/view?usp=sharing"
-                                class="btn">Download</a>
-                        </div>
-                    </div>
-                    <!-- pr8 -->
-                    <div id="tetrism">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr8')">
-                                    <strong class="name">
-                                        TetriSM
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle" id="pr8" onclick="projectDesc('pr8')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#unity2d</a>
-                                    <a>#gamedev</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border-in prj-background" id="dropdownContent-pr8"
-                            class="name">
-                            <div data-lang="id">
-                                <h3>TetriSM</h3>
-                                <p>Implementasi pembelajaran unity 2D kedua pada pembuatan game tetris klasik dengan
-                                    beberapa perubahan aset, musik, dan fitur.</p>
-                                <p>
-                                    Bahasa Pemrograman : C#, Shaderlab (Unity) </br> Aplikasi pembuatan musik : LMMS
-                                    </br>
-                                    Aplikasi pemrograman: Unity Lab, VS Code, GIT (Kontrol Versi)
-                                </p>
-
-                                <p>Fitur:</p>
-                                <ul>
-                                    <li>Permain tetris dengan 13 jenis tetro yang terbuka seiring bertambahnya skor
-                                    </li>
-                                    <li>Tingkatan kecepatan permainan yang bertambah sesuai dengan banyaknya baris yang
-                                        terhapus</li>
-                                    <li>Menu Utama</li>
-                                    <li>Menu Pause</li>
-                                    <li>Sistem skor</li>
-                                    <li>Sistem skor tertinggi hingga 4 tertinggi</li>
-                                    <li>Penghapusan skor tertinggi</li>
-                                    <li>Musik latar dan efek suara</li>
-                                    <li>Menu Pengaturan di menu utama dan di menu pause yang berisi: pengubahan rasio
-                                        layar dan volume</li>
-                                </ul>
-                                <p>Rencana fitur yang akan ditambah:</p>
-                                <ul>
-                                    <li>Pengubahan bahasa</li>
-                                    <li>Penambahan efek suara penambahan tingkatan dan penghapusan skor</li>
-                                </ul>
-                            </div>
-                            <div data-lang="en">
-                                <h3>TetriSM</h3>
-                                <p>Implementation of my second Unity 2D project: creating a classic Tetris game with
-                                    some changes in assets, BGM, and a few additional features.</p>
-                                <p>
-                                    Programming Language : C#, Shaderlab (Unity) </br> Music making application :
-                                    LMMS</br>
-                                    Programming tools: Unity Lab, VS Code, GIT (Version Control)
-                                </p>
-
-                                <p>Feature:</p>
-                                <ul>
-                                    <li>Standard Tetris gameplay with 13 types of tetrominoes that can be unlocked as
-                                        the score increases.
-                                    </li>
-                                    <li>The game speed increases based on how many lines are cleared..</li>
-                                    <li>Main Menu</li>
-                                    <li>Pause Menu</li>
-                                    <li>Scoring System</li>
-                                    <li>Four highest highscore</li>
-                                    <li>Reset score</li>
-                                    <li>Background music and sound effects</li>
-                                    <li>Add Settings to Main Menu and Pause Menu, which cover: Screen ratio and Sound
-                                        volume</li>
-                                </ul>
-                                <p>Future feature plan:</p>
-                                <ul>
-                                    <li>Language changer</li>
-                                    <li>Sound effects for level up and reset score</li>
-                                </ul>
-                            </div>
-                            <iframe width="100%" height="534"
-                                src="https://www.youtube.com/embed/-da_wOE5oto?si=vTcW3347aJVXYZ8l"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <a data-lang="en" href="https://github.com/sampm092/Tetrisam" class="btn">Check</a>
-                            <a data-lang="id" href="https://github.com/sampm092/Tetrisam" class="btn">Cek</a>
-                            <a href="https://drive.google.com/file/d/1aO8HWRk4tJIkMs7lxXG-ZGNNY0j6Eotq/view?usp=sharing"
-                                class="btn">Download</a>
-                        </div>
-                    </div>
-                    <!-- pr6 -->
-                    <div id="textgame">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr6')">
-                                    <strong class="name" data-lang="en">
-                                        Text Based Adventure Game
-                                    </strong>
-                                    <strong class="name" data-lang="id">
-                                        Game Petualangan menggunakan Teks
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle open" id="pr6" onclick="projectDesc('pr6')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#csharp</a>
-                                    <a>#dotnet</a>
-                                    <a>#gamedev</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border-in prj-background shows" id="dropdownContent-pr6"
-                            class="name">
-                            <div data-lang="id">
-                                <h3>Kabur !</h3>
-                                <p>Cerita ditulis dalam Bahasa Indonesia.</p>
-                                <p>
-                                    Bahasa Pemrograman : C#, .NET 9.0 </br> Aplikasi pembuatan musik : LMMS </br>
-                                    Aplikasi pemrograman: VS Code, GIT
-                                </p>
-
-                                <p>Fitur:</p>
-                                <ul>
-                                    <li>Save/Load</li>
-                                    <li>Sistem pertarungan sederhana yaitu serang, bertahan, lari, dan potion</li>
-                                    <li>Shop untuk meningkatkan status menggunakan koin yang didapat dari lawan</li>
-                                    <li>Sistem Job/Kelas (3 Kelas)</li>
-                                    <li>Sistem kenaikan level/exp</li>
-                                    <li>Stage dan ruangan dengan jumlah 12 ruangan</li>
-                                    <li>Boss di akhir permainan</li>
-                                </ul>
-                            </div>
-                            <div data-lang="en">
-                                <h3>Kabur !</h3>
-                                <p>Story written in Bahasa Indonesia.</p>
-                                <p>
-                                    Programming language : C#, .NET 9.0 </br> Game soundtrack tools : LMMS </br>
-                                    Programming tools: VS Code, GIT
-                                </p>
-
-                                <p>Feature:</p>
-                                <ul>
-                                    <li>Save/Load</li>
-                                    <li>Simple battle system with attack, defense, run, and potion</li>
-                                    <li>Shop to increase stats using coins obtained from enemies</li>
-                                    <li>Job/Class system (3 Jobs)</li>
-                                    <li>Leveling/Exp system</li>
-                                    <li>Stage and room with total of 12 Rooms</li>
-                                    <li>Boss at the end of game</li>
-                                </ul>
-                            </div>
-                            <iframe class="bor-rad" width="100%" height="534"
-                                src="https://www.youtube.com/embed/RNvMdppeQ7Q?si=xxHMnk4kUcM8LfrO"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            <a data-lang="en" href="https://github.com/sampm092/TextBasedAdv" class="btn">Check</a>
-                            <a data-lang="id" href="https://github.com/sampm092/TextBasedAdv" class="btn">Cek</a>
-                            <a href="https://github.com/user-attachments/files/20896907/Kabur.zip"
-                                class="btn">Download</a>
-                        </div>
-                    </div>
-                    <!-- pr4 -->
-                    <div id="mybooklist">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr4')">
-                                    <strong class="name">
-                                        MyBookList
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle" id="pr4" onclick="projectDesc('pr4')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#web</a>
-                                    <a>#laravel</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border-in prj-background" id="dropdownContent-pr4"
-                            class="name">
-                            <h3>MyBookList</h3>
-                            <p data-lang="en">This program is a simple application that I developed as an implementation
-                                of my study
-                                of the Laravel framework. The program features user login and registration, where
-                                created accounts can be used to manually record a list of books read by the user. The
-                                project could be improved by retrieving book data using API.</p>
-                            <p data-lang="en">Features:</p>
-                            <ul data-lang="en">
-                                <li>About</li>
-                                <li>Homepage</li>
-                                <li>Book Input</li>
-                                <li>Book Details</li>
-                                <li>User Login and Registration</li>
-                                <li>The account homepage displays the books that have been entered</li>
-                                <li>Account Settings: Change name, profile photo, delete account, and account details
-                                </li>
-                                <li>Admin Page: Check the user list, delete users, change user passwords, and add admins
-                                </li>
-                            </ul>
-                            <p data-lang="id">Program ini merupakan aplikasi sederhana yang dikembangkan sebagai
-                                bagian
-                                dari
-                                implementasi pembelajaran saya tentang framework Laravel. Aplikasi ini dilengkapi
-                                dengan
-                                fitur autentikasi pengguna, yaitu login dan registrasi, yang memungkinkan pengguna
-                                untuk
-                                mencatat dan mengelola daftar buku yang telah dibaca. Projek dapat ditingkatkan jika
-                                mengambil data buku menggunakan API.</p>
-                            <p data-lang="id">Fitur:</p>
-                            <ul data-lang="id">
-                                <li>About</li>
-                                <li>Homepage</li>
-                                <li>Input buku</li>
-                                <li>Detail buku</li>
-                                <li>Login dan Registrasi pengguna</li>
-                                <li>Beranda akun menampilkan buku-buku yang telah di-input</li>
-                                <li>Pengaturan akun: ubah nama, foto profil, hapus akun, dan detail akun</li>
-                                <li>Halaman admin: cek daftar user, hapus user, ganti password user, dan menambah admin
-                                </li>
-                            </ul>
-                            <div class="flex fwrap gap1r gambar plcont-center">
-                                <img src="image/image.png" alt="image.png" onclick="openPreview('image/image 14.png')">
-                                <img src="image/image 14.png" alt="image 14.png"
-                                    onclick="openPreview('image/image 14.png')">
-                                <img src="image/image-1.png" alt="image-1.png"
-                                    onclick="openPreview('image/image-1.png')">
-                                <img src="image/image-2.png" alt="image-2.png"
-                                    onclick="openPreview('image/image-2.png')">
-                                <img src="image/image-3.png" alt="image-3.png"
-                                    onclick="openPreview('image/image-3.png')">
-                                <img src="image/image-4.png" alt="image-4.png"
-                                    onclick="openPreview('image/image-4.png')">
-                                <img src="image/image-5.png" alt="image-5.png"
-                                    onclick="openPreview('image/image-5.png')">
-                                <img src="image/image-6.png" alt="image-6.png"
-                                    onclick="openPreview('image/image-6.png')">
-                                <img src="image/image 17.png" alt="image 17.png"
-                                    onclick="openPreview('image/image 17.png')">
-                                <img src="image/image 16.png" alt="image 16.png"
-                                    onclick="openPreview('image/image 16.png')">
-                            </div>
-                            <div class="preview flex" id="preview">
-                                <span class="close al-an-c" onclick="closePreview()">&times;</span>
-                                <img class="preview-content" id="img01">
-                            </div>
-                            <a data-lang="en" href="https://github.com/sampm092/laravLearn/tree/main/three"
-                                class="btn">Check</a>
-                            <a data-lang="id" href="https://github.com/sampm092/laravLearn/tree/main/three"
-                                class="btn">Cek</a>
-                        </div>
-                    </div>
-                    <!-- pr3 -->
-                    <div id="newf">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr3')">
-                                    <strong class="name">
-                                        New Fantasy Game
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle" id="pr3" onclick="projectDesc('pr3')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#rpgmaker</a>
-                                    <a>#gamedev</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="dropdown-content prj-border-in prj-background" id="dropdownContent-pr3"
-                            class="name">
-                            <div data-lang="en">
-                                <h3>New Fantasy</h3>
-                                <p>A simple adaptation from a novel I made and developed using RPG Maker VX. This game
-                                    consists of one chapter of my novel, which is translated from Indonesia to English,
-                                    with around fifteen minutes of gameplay. Most of the game assets are from the
-                                    original RPG Maker. The rest of the assets are made with AI and edited with
-                                    Photoshop, especially the monster and weapon.</p>
-                                <p>
-                                    Tools: RPG Maker VX Ace, Adobe Photoshop
-                                </p>
-                            </div>
-                            <div data-lang="id">
-                                <h3>New Fantasy</h3>
-                                <p>Game ini adalah adaptasi sederhana dari novel singkat yang saya tulis, dikembangkan
-                                    menggunakan engine RPG Maker. Game ini mencakup satu bab dari novel tersebut yang
-                                    diterjemahkan ke dalam Bahasa Inggris, dengan durasi gameplay sekitar 15 menit. Aset
-                                    game sebagian besar berasal dari RPG Maker, sedangkan sisanya dibuat menggunakan AI
-                                    dan diedit dengan Photoshop. </p>
-                                <p>
-                                    Alat: RPG Maker VX Ace, Adobe Photoshop
-                                </p>
-                            </div>
-                            <iframe class="bor-rad" width="100%" height="534"
-                                src="https://www.youtube.com/embed/sPevTPN8j50?si=Pny8ycRorfsgnY_A"
-                                title="YouTube video player" frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <!-- pr5 -->
-                    <div id="api">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr5')">
-                                    <strong class="name" data-lang="en">
-                                        RestAPI Implementation
-                                    </strong>
-                                    <strong class="name" data-lang="id">
-                                        Implementasi RestAPI
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle" id="pr5" onclick="projectDesc('pr5')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#laravel</a>
-                                    <a>#api</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border-in prj-background" id="dropdownContent-pr5"
-                            class="name">
-                            <p data-lang="en">A simple program to implement my learning on RestAPI which using a book
-                                data that can be fetch and also can be post</p>
-                            <p data-lang="id">Sebuah program sederhana yang ditujukan untuk mengimplementasikan hasil
-                                pembelajaran RestAPI dimana data buku dapat diterima dan juga dikirim</p>
-                            <div class="flex" style="gap: 5px">
-                                <a href="https://github.com/sampm092/laravLearn/tree/main/fetchAPI"
-                                    class="btn">FetchAPI</a>
-                                <a href="https://github.com/sampm092/myNovelAPI" class="btn">PostAPI</a>
-                                <a href="https://github.com/sampm092/laravLearn/tree/main/APIJWT" class="btn">API with
-                                    JWT</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- pr2 -->
-                    <!-- Simple Project -->
-                    <div id="mynovel">
-                        <div class="flex p-3 mb-3 w-80 prj-border">
-                            <div class="flex ml-3">
-                                <div class="pointer" onclick="projectDesc('pr2')">
-                                    <strong class="name" data-lang="en">
-                                        Simple Code
-                                    </strong>
-                                    <strong class="name" data-lang="id">
-                                        Kode Sederhana
-                                    </strong>
-                                </div>
-                                <div class="dropdown c-black">
-                                    <button class="dropdown-toggle" id="pr2" onclick="projectDesc('pr2')">
-                                        <span class="icon">▼</span>
-                                    </button>
-                                </div>
-                                <div class="tag">
-                                    <a>#html</a>
-                                    <a>#javascript</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="dropdown-content prj-border-in prj-background" id="dropdownContent-pr2"
-                            class="name">
-                            <p data-lang="en">Programs that usually used as feature</p>
-                            <p data-lang="id">Program yang biasanya digunakan sebagai fitur.</p>
-
-                            <a href="projects/vowtext.html">
-                                <p data-lang="en">> Vowel Changer
-                                </p>
-                                <p data-lang="id">> Pengubah Huruf Vokal
-                                </p>
-                            </a>
-                            <a href="projects/chatbotv1.html">
-                                <p>> Chat Bot</p>
-                            </a>
-                            <a href="projects/counter.html">
-                                <p>> Counter and Step</p>
-                            </a>
-
-                            <div style="margin-top: 1rem;">
-                                <a data-lang="en" href="https://github.com/sampm092/simple_code" class="btn">Check</a>
-                                <a data-lang="id" href="https://github.com/sampm092/laravLearn/simple_code"
-                                    class="btn">Cek</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-        </section>
-
-        <section id="social" class="social-section">
-            <div class="container">
-                <h2 data-aos="flip-right">- - - </h2>
-                <h2 data-lang="en">Social</h2>
-                <h2 data-lang="id">Sosial</h2>
-                <div class="flex p-3 mb-3 w-80 bg-swhite" style="border: 3px solid #fff;border-radius: 10px;">
-                    <div class="flex ml-3">
-                        <div>
-                            <a class="click" onclick="showAccount('git-a')">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="40" height="40"
-                                    fill="currentColor" class="bi bi-github" viewBox="0 0 16 16" style="color: #fff;">
-                                    <path
-                                        d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
-                                </svg>
-                            </a>
-                        </div>
-                        <div>
-                            <a class="click" onclick="showAccount('git-a')">
-                                <strong style="color: #fff;">
-                                    Github <a href="https://github.com/sampm092" id="git-a" class="acc">
-                                        | sampm092
-                                    </a>
-                                </strong>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex-md-order-1 flex-order-2 mr-0-auto">
-                        <a href="https://github.com/sampm092" class="btn btn-git">Check</a>
-                    </div>
-                </div>
-                <div class="flex p-3 mb-3 bg-swhite" style="border: 3px solid #0d67c2;border-radius: 10px;">
-                    <div class="flex ml-3">
-                        <div>
-                            <a class="click" onclick="showAccount('ln-a')">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="40" height="40"
-                                    fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16"
-                                    style="color: #0d67c2;">
-                                    <path
-                                        d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
-                                </svg>
-                            </a>
-                        </div>
-                        <div>
-                            <a class="click" onclick="showAccount('ln-a')">
-                                <strong style="color: #0d67c2;">
-                                    Linkedin <a href="https://www.linkedin.com/in/samuel-parlindungan-malau/" id="ln-a"
-                                        class="acc">
-                                        | Samuel Parlindungan Malau
-                                    </a>
-                                </strong>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex-md-order-1 flex-order-2 mr-0-auto">
-                        <a href="https://www.linkedin.com/in/samuel-parlindungan-malau/" class="btn btn-li">Check</a>
-                    </div>
-                </div>
-                <div class="flex p-3 mb-3 w-80 bg-swhite" style="border: 3px solid #fc0077;border-radius: 10px;">
-                    <div class="flex ml-3">
-                        <div>
-                            <a class="click" onclick="showAccount('ig-a')">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="40" height="40"
-                                    fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16"
-                                    style="color:#fc0077;">
-                                    <path
-                                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
-                                </svg>
-                            </a>
-                        </div>
-                        <div>
-                            <a class="click" onclick="showAccount('ig-a')">
-                                <strong style="color: #fc0077;">
-                                    Instagram <a href="https://www.instagram.com/samuel_p_malau/" id="ig-a" class="acc">
-                                        | samuel_p_malau</a>
-                                </strong>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex-md-order-1 flex-order-2 mr-0-auto">
-                        <a href="https://www.instagram.com/samuel_p_malau/" class="btn btn-ig">Check</a>
-                    </div>
-                </div>
-                <div class="flex p-3 mb-3 bg-swhite" style="border: 3px solid #ff0000;border-radius: 10px;">
-                    <div class="flex ml-3">
-                        <div>
-                            <a class="click" onclick="showAccount('yt-a')">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-                                    class="bi bi-youtube mr-3" viewBox="0 0 16 16" style="color: #ff0000;">
-                                    <path
-                                        d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
-                                </svg>
-                            </a>
-                        </div>
-                        <div>
-                            <a class="click" onclick="showAccount('yt-a')">
-                                <strong style="color: #ff0000;">
-                                    Youtube <a href="https://youtube.com/@samuelpm2579?si=Nwl4AkGYbLeTuhX1" id="yt-a"
-                                        class="acc">
-                                        | Samuel PM
-                                    </a>
-                                </strong>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="flex-md-order-1 flex-order-2 mr-0-auto">
-                        <a href="https://github.com/sampm092" class="btn btn-yt">Check</a>
+                    <div class="self-center">
+                        <a href="#about" class="font-bold self-center" data-aos="fade-up" data-aos-offset="100"
+                            data-aos-delay="450" data-aos-duration="1000" data-aos-mirror="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="currentColor"
+                                class="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67" />
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="contact" class="contact-section">
-            <div class="container name mt-0">
-                <h2 data-aos="flip-right"> - - - </h2>
-                <h2 data-lang="en">Contact</h2>
-                <h2 data-lang="id">Kontak</h2>
-                <div class="grid2">
-                    <a href="https://wa.link/xqc45y[fake]" id="wa-a" class="btn">
-                    </a>
-                    <a id="gma-a" class="btn" onclick="confirmDelete('text')">
-                    </a>
-                    <a id="dc-a" class="btn" href="https://discord(.)com/users/608464045229735936"></a>
-                    <a id="tl-a" class="btn" href="t(.)me/S0daOda"></a>
+        <section id="about"
+            class="bg-greenText bg-linear-180 from-[#71e479] to-greenText text-greenBG mx-auto p-4 px-16 min-h-[80vh] sm:min-h-[95vh]">
+            <div id="non-bio" class="container m-auto p-20 px-28">
+                <p class="text-black font-bold mb-4">Hello, my name is</p>
+                <h2 class="text-6xl sm:text-[80px]/20 text-left font-extrabold w-11/12 font-border text-black"
+                    data-lang="en">Samuel P. Malau
+                </h2>
+                <h2 class="text-6xl sm:text-[65px]/15 text-left font-extrabold w-11/12" data-lang="en">I craft
+                    experiences for web and games.</h2>
+                <p class="m-0 mt-5 w-[550px] text-[18px]/6" data-lang="en">I’m a programmer with a strong interest in
+                    building clean and functional applications. I enjoy learning new things every day, and I hope my
+                    work can contribute meaningfully to today’s technology landscape.</p>
+                <a href="#projects"
+                    class="btn justify-center gap-x-1.5 p-3 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-greenBG bg-greenBG text-white border-2 mt-8">Check
+                    for more <span class="text-sm">▼</span></a>
+            </div>
+
+        </section>
+
+        <section id="projects"
+            class="bg-linear-180 from-greenText to-greensec text-greenBG mx-auto p-4 px-16 min-h-[80vh] sm:min-h-[95vh] ">
+            <div class="container mt-0 p-12 mx-auto">
+                <h2 class=" text-6xl font-extrabold text-center" data-aos="fade-up" data-aos-offset="100"
+                    data-aos-delay="50" data-aos-duration="1000"> - </h2>
+                <div class="flex content-center justify-center items-center gap-4 mt-8 mb-16">
+                    <div class="text-end w-full">
+                        <h3 class=" text-6xl font-extrabold" data-aos="fade-up" data-aos-offset="100"
+                            data-aos-delay="50" data-aos-duration="1000">Projects
+                        </h3>
+                    </div>
+                    <div class="w-full text-left text-foreground mt-auto mb-0 flex flex-col">
+                        <p class="border-b w-fit" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000">Selected Works</p>
+                        <p class="border-b w-fit" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
+                            data-aos-duration="1000">Showcasing Skills and Experience. </p>
+                    </div>
                 </div>
+                <div class="grid grid-cols-2 gap-4 my-8">
+                    <!-- Top Left  -->
+                    <div class="w-full h-full p-8 bg-black text-greenText rounded-4xl" data-aos="fade-up"
+                        data-aos-offset="100" data-aos-duration="1000">
+                        <img src="image/citridx.webp" alt=""
+                            class="h-[275px] w-full rounded-xs border-2 border-greenText">
+                        <div class="flex m-auto mt-8">
+                            <div class="tag my-3 ">
+                                <h2 class="font-bold text-xl my-2 text-greenText">Citridx</h2>
+                                <div>
+                                    <a class="content-center">#mobile</a>
+                                    <a class="content-center">#kotlin</a>
+                                </div>
+                            </div>
+                            <div
+                                class="mr-0 m-auto px-4 py-2 sm:px-4 sm:py-2  bg-background text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                                <a href="https://github.com/sampm092/Citrus" target="_blank" class="">Check</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Top Right  -->
+                    <div class="w-full h-full p-8 bg-black rounded-4xl text-greenText" data-aos="fade-up"
+                        data-aos-offset="100" data-aos-duration="1000">
+                        <img src="image/TETRISM.webp" alt=""
+                            class="h-[275px] w-full rounded-xs border-2 border-greenText ">
+                        <div class="flex m-auto mt-8">
+                            <div class="tag my-3 ">
+                                <h2 class="font-bold text-xl my-2">TetriSM</h2>
+                                <div>
+                                    <a class="content-center">#unity2d</a>
+                                    <a class="content-center">#gamedev</a>
+                                </div>
+                            </div>
+                            <div
+                                class="mr-0 m-auto px-4 py-2 sm:px-4 sm:py-2  bg-background text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                                <a href="" target="_blank" class="">Check</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bottom Left  -->
+                    <div class="w-full h-full p-8 bg-black rounded-4xl text-greenText" data-aos="fade-up"
+                        data-aos-offset="100" data-aos-duration="1000">
+                        <img src="image/mybook.webp" alt=""
+                            class="h-[275px] w-full rounded-xs border-2 border-greenText ">
+                        <div class="flex m-auto mt-8">
+                            <div class="tag my-3 ">
+                                <h2 class="font-bold text-xl my-2">MyBookList</h2>
+                                <div>
+                                    <a class="content-center">#web</a>
+                                    <a class="content-center">#laravel</a>
+                                </div>
+                            </div>
+                            <div
+                                class="mr-0 m-auto px-4 py-2 sm:px-4 sm:py-2  bg-background text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                                <a href="" target="_blank" class="">Check</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Bottom Right  -->
+                    <div class="w-full h-full p-8 bg-black rounded-4xl text-greenText" data-aos="fade-up"
+                        data-aos-offset="100" data-aos-duration="1000">
+                        <img src="image/ufolappy.webp" alt=""
+                            class="h-[275px] w-full rounded-xs border-2 border-greenText ">
+                        <div class="flex m-auto mt-8">
+                            <div class="tag my-3 ">
+                                <h2 class="font-bold text-xl my-2">UFO-lappy</h2>
+                                <div>
+                                    <a class="content-center">#unity2d</a>
+                                    <a class="content-center">#gamedev</a>
+                                </div>
+                            </div>
+                            <div
+                                class="mr-0 m-auto px-4 py-2 sm:px-4 sm:py-2  bg-background text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                                <a href="" target="_blank" class="">Check</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pb-10 text-greenBG font-bold text-end" data-aos="fade-right" data-aos-offset="10"
+                    data-aos-duration="1000">
+                    <a href="projects.html" class="text-xl">See more »</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="border-t-2 mx-auto p-4 bg-greenBG">
+            <div class="container mt-0 m-auto p-12 ">
+                <p class="text-center font-bold text-white">Check me out and </p>
+                <div class="flex w-full m-auto justify-center gap-2">
+                    <h3 class="text-right text-6xl font-extrabold text-greenText ">Contact Me
+                    </h3>
+                    <p class="text-left mb-0 mt-auto font-bold text-white">at</p>
+                </div>
+                <div class="grid grid-cols-2 m-auto mt-16">
+                    <a href="https://wa.link/xqc45y[fake]" id="wa-a" class="btn bg-greensec text-amber-400">
+                    </a>
+                    <a id="gma-a" class="btn bg-greensec text-amber-400" onclick="confirmDelete('text')">
+                    </a>
+                    <a id="dc-a" class="btn bg-greensec text-amber-400"
+                        href="https://discord(.)com/users/608464045229735936"></a>
+                    <a id="tl-a" class="btn bg-greensec text-amber-400" href="t(.)me/S0daOda"></a>
+                </div>
+        </section>
+
+        <section id="social"
+            class="bg-greensec text-[#03300F] border-t-2 mx-auto p-4 min-h-[80vh] sm:min-h-[95vh]">
+            <div class="container mt-0 p-12 mx-auto">
+                <div class="justify-self-center w-fit">
+                    <div class="flex px-1">
+                        <p class="text-left font-bold text-black ml-0 mr-auto">And also </p>
+                        <p class="text-left font-bold text-black ml-auto mr-0">check my</p>
+                    </div>
+                    <h3 class="text-left text-6xl font-extrabold text-greenBG mb-4">Social Media
+                    </h3>
+                </div>
+                <div class="mt-12">
+                    <div class="flex p-4 mb-4 w-[90%] hover:w-full ease-300 justify-self-center text-secondary border-[3px] border-secondary rounded-xl hover:bg-secondary hover:text-primary cursor-pointer"
+                        onclick="showAccount('git-a')">
+                        <div class="flex ml-4 m-auto">
+                            <div>
+                                <a class="click" onclick="showAccount('git-a')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-4" width="40" height="40"
+                                        fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="m-auto">
+                                <a class="click" onclick="showAccount('git-a')">
+                                    <strong>
+                                        Github <a href="https://github.com/sampm092" id="git-a" class="acc">
+                                            | sampm092
+                                        </a>
+                                    </strong>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-md-order-1 flex-order-2 mr-0-auto">
+                            <a href="https://github.com/sampm092" class="btn btn-git font-normal px-3 py-1.5">Check</a>
+                        </div>
+                    </div>
+                    <div class="flex p-4 mb-4 border-[3px] text-[#023d7a] border-[#023d7a] rounded-xl w-[90%] hover:w-full ease-300 justify-self-center hover:bg-[#023d7a] hover:text-primary cursor-pointer"
+                        onclick="showAccount('ln-a')">
+                        <div class="flex ml-4 m-auto">
+                            <div>
+                                <a class="click" onclick="showAccount('ln-a')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-4" width="40" height="40"
+                                        fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                        <path
+                                            d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="m-auto">
+                                <a class="click" onclick="showAccount('ln-a')">
+                                    <strong>
+                                        Linkedin <a href="https://www.linkedin.com/in/samuel-parlindungan-malau/"
+                                            id="ln-a" class="acc">
+                                            | Samuel Parlindungan Malau
+                                        </a>
+                                    </strong>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-md-order-1 flex-order-2 mr-0-auto">
+                            <a href="https://www.linkedin.com/in/samuel-parlindungan-malau/"
+                                class="btn btn-li  font-normal px-3 py-1.5">Check</a>
+                        </div>
+                    </div>
+                    <div class="flex p-4 mb-4 border-[3px] border-[#a12532] rounded-xl w-[90%] hover:w-full ease-300 justify-self-center text-[#a12532] hover:bg-[#a12532] hover:text-primary cursor-pointer"
+                        onclick="showAccount('ig-a')">
+                        <div class="flex ml-4 m-auto">
+                            <div>
+                                <a class="click" onclick="showAccount('ig-a')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-4" width="40" height="40"
+                                        fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="m-auto">
+                                <a class="click" onclick="showAccount('ig-a')">
+                                    <strong>
+                                        Instagram <a href="https://www.instagram.com/samuel_p_malau/" id="ig-a"
+                                            class="acc">
+                                            | samuel_p_malau</a>
+                                    </strong>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-md-order-1 flex-order-2 mr-0-auto">
+                            <a href="https://www.instagram.com/samuel_p_malau/"
+                                class="btn btn-ig font-normal px-3 py-1.5">Check</a>
+                        </div>
+                    </div>
+                    <div class="flex p-4 mb-4 border-[3px] border-[#ff0000] text-[#ff0000] rounded-xl w-[90%] justify-self-center hover:w-full ease-300 hover:bg-[#ff0000] hover:text-primary cursor-pointer"
+                        onclick="showAccount('yt-a')">
+                        <div class="flex ml-4 m-auto">
+                            <div>
+                                <a class="click" onclick="showAccount('yt-a')">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
+                                        class="bi bi-youtube mr-4" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="m-auto">
+                                <a class="click" onclick="showAccount('yt-a')">
+                                    <strong>
+                                        Youtube <a href="https://youtube.com/@samuelpm2579?si=Nwl4AkGYbLeTuhX1"
+                                            id="yt-a" class="acc">
+                                            | Samuel PM
+                                        </a>
+                                    </strong>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="flex-md-order-1 flex-order-2 mr-0-auto">
+                            <a href="https://youtube.com" class="btn btn-yt font-normal px-3 py-1.5">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
-    <!-- <div style="border-top: 4px dashed black; width: 95%;margin: 1rem auto;"> -->
 
-    </div>
-    <footer class="footer">
-        <div class="container m-zeroA">
+    <footer class="footer flex flex-col m-auto bg-greenBG text-greenText py-5">
+        <div class="container justify-items-center mx-auto">
             <p>&copy; 2025 samuel-parlindungan-malau. All rights reserved.</p>
             <div id="date-now"></div>
             <div id="time-now"></div>
@@ -880,8 +387,13 @@
     <!-- SWAL SCRIPT  -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- LENIS SMOOTH SCROLL  -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
     <script src="https://unpkg.com/lenis@1.3.15/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="style/index.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>

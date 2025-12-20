@@ -1,12 +1,17 @@
-let lastScrollY = window.scrollY;
+// Initialize Lenis FOR SMOOTH SCROLLL
+const lenis = new Lenis();
 let cuLang = 'en';
-const header = document.getElementById('header'); 
-const play_button = document.getElementById('play-m');
-const stop_button = document.getElementById('stop-m');
-const music = document.getElementById('back-m');
+let lastScrollY = window.scrollY;
+
+document.querySelectorAll('[data-lang="id"]').forEach(element => {
+    element.style.display = 'none';
+});
 
 window.addEventListener('scroll', () => { //menghilangkan header ketika scroll
     const currentScrollY = window.scrollY;
+    const about = document.getElementById('about');
+    const sectionTop = about.offsetTop;
+    const sectionHeight = about.offsetHeight;
 
     if (currentScrollY > lastScrollY) {
         // Scrolling up
@@ -17,10 +22,15 @@ window.addEventListener('scroll', () => { //menghilangkan header ketika scroll
     }
 
     lastScrollY = currentScrollY;
-});
 
-// Initialize Lenis FOR SMOOTH SCROLLL
-const lenis = new Lenis();
+    if (scrollY >= sectionTop && scrollY) {
+        header.classList.remove('text-greenText')
+        header.classList.add('text-greenBG');
+    } else {
+        header.classList.remove('text-greenBG');
+        header.classList.add('text-greenText');
+    }
+});
 
 // Use requestAnimationFrame to continuously update the scroll
 function raf(time) {
@@ -29,36 +39,6 @@ function raf(time) {
 }
 
 requestAnimationFrame(raf);
-
-// Function to open the modal and display the clicked image
-function openPreview(imageSrc) {
-    var modal = document.getElementById("preview");
-    var modalImg = document.getElementById("img01");
-
-    modal.style.display = "block";
-    modalImg.src = imageSrc;
-
-    document.addEventListener("keydown", handleEscapeKey);
-}
-
-// Function to close the modal
-function closePreview() {
-    var modal = document.getElementById("preview");
-    modal.style.display = "none";
-
-    document.removeEventListener("keydown", handleEscapeKey);
-}
-
-function handleEscapeKey(event) { //menutup section dengan key 'esc'
-    if (event.key === "Escape" || event.keyCode === 27) {
-        closePreview();
-    }
-}
-
-function showAccount(elementId) {
-    const social = document.getElementById(elementId);
-    social.classList.toggle('visible'); // hide/show the class to show the box
-}
 
 function projectDesc(elementId) {
     const dropdownButton = document.getElementById(elementId);
@@ -70,9 +50,10 @@ function projectDesc(elementId) {
     }
 }
 
-document.querySelectorAll('[data-lang="id"]').forEach(element => {
-    element.style.display = 'none';
-});
+function showAccount(elementId) {
+    const social = document.getElementById(elementId);
+    social.classList.toggle('visible'); // hide/show the class to show the box
+}
 
 function toggleTheme() {
     const toggle = document.querySelector('.toggle-container');
@@ -111,40 +92,8 @@ function toggleTheme() {
     }
 }
 
-function confirmDelete() {
-    Swal.fire({
-        title: "You sure?",
-        text: "Proceed to gmail?",
-        icon: "question",
-        confirmButtonText: '<a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlLWRkCnGkQzgpwngjTLVqBXHWVrLsrGTwRDkQnqfRxwKtrvZzVtjLMbRVrzhRPfvtzDFL" target="_blank">OK</a>'
-    });
-}
 
-function toBio() {
-    const bio = document.getElementById('biodata');
-    const nonbio = document.getElementById('non-bio');
 
-    bio.classList.toggle('none');
-    nonbio.classList.toggle('none');
-}
-
-function scrollToTop(duration) { // duration in ms
-    const start = window.scrollY;
-    const startTime = performance.now();
-
-    function animateScroll(currentTime) {
-        const elapsed = currentTime - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 4); // Ease-out effect
-        window.scrollTo(0, start * (1 - ease));
-
-        if (progress < 1) {
-            requestAnimationFrame(animateScroll);
-        }
-    }
-
-    requestAnimationFrame(animateScroll);
-}
 
 function timeNow1() {
     const timeNow = document.getElementById("date-now");
@@ -169,16 +118,3 @@ function timeNow() {
 }
 
 timeNow(); // Start ticking
-
-function playMusic() {
-    music.play();
-    play_button.classList.add("none");
-    stop_button.classList.remove("none");
-}
-
-function stopMusic() {
-    music.pause();
-    stop_button.classList.add("none");
-    play_button.classList.remove("none");
-}
-
