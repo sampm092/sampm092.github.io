@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game History</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="general.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/general.css">
     <!-- INTER FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
 
 <body>
     <a id="back" class="btn back" href="../index.html">↞</a>
-    <a class="tttop" onclick="scrollToTop(50)">↑</a>
+    <a class="tttop" onclick="a(50)">↑</a>
     <section id="social" class="social-section flex-column">
         <div class="container nameG">
             <h3 class="nameG">Find me on</h3>
@@ -214,7 +214,7 @@
         </div>
     </footer>
 
-    <script src="../style/index.js"></script>
+    <script src="style/index.js"></script>
     <script>
         function loadAndDisplay(filename, target) {
             fetch(filename)
@@ -280,10 +280,10 @@
         }
 
 
-        loadAndDisplay('novelist.txt', 'novel');
-        loadAndDisplay('gamelist.txt', 'game');
-        loadAndDisplay('movielist.txt', 'movie')
-        loadAndDisplay('tvlist.txt', 'tv')
+        loadAndDisplay('projects/novelist.txt', 'novel');
+        loadAndDisplay('projects/gamelist.txt', 'game');
+        loadAndDisplay('projects/movielist.txt', 'movie')
+        loadAndDisplay('projects/tvlist.txt', 'tv')
     </script>
 </body>
 

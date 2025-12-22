@@ -92,6 +92,24 @@ function toggleTheme() {
     }
 }
 
+function a(duration) { // duration in ms
+    const start = window.scrollY;
+    const startTime = performance.now();
+
+    function animateScroll(currentTime) {
+        const elapsed = currentTime - startTime;
+        const progress = Math.min(elapsed / duration, 1);
+        const ease = 1 - Math.pow(1 - progress, 4); // Ease-out effect
+        window.scrollTo(0, start * (1 - ease));
+
+        if (progress < 1) {
+            requestAnimationFrame(animateScroll);
+        }
+    }
+
+    requestAnimationFrame(animateScroll);
+}
+
 function openNavigation() {
     const navDiv = document.querySelectorAll('#navi div');
     const open = document.getElementById('open-b');
@@ -133,3 +151,4 @@ function timeNow() {
 }
 
 timeNow(); // Start ticking
+
