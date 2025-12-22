@@ -79,6 +79,11 @@ footer::selection {
   display: none;
 }
 
+header nav a:hover {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 a {
   cursor: pointer;
 }
@@ -250,7 +255,7 @@ header {
   opacity: 1;
 }
 
-.none{
+.none {
   display: none;
 }
 
@@ -381,7 +386,6 @@ header {
   margin-left: 10px;
 }
 
-
 /* MEDIA QUERRY */
 @media only screen and (max-width: 650px) {
   header {
@@ -437,7 +441,7 @@ header {
     display: block;
   }
 
-  #projects .erase{
+  #projects .erase {
     display: none;
   }
 }
