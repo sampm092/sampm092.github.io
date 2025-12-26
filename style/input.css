@@ -385,6 +385,17 @@ header {
   margin-left: 10px;
 }
 
+#projects h3 {
+  min-height: 40px;
+  align-content: center;
+  text-weight: bold;
+  font-size: 20px;
+}
+
+#projects iframe{
+  margin-top: 1rem;
+}
+
 /* MEDIA QUERRY */
 @media only screen and (max-width: 650px) {
   header {
