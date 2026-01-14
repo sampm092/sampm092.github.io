@@ -87,6 +87,7 @@
         const picture = document.getElementById("picture");
         const bodee = document.body;
 
+        // SFX \\
         const clickSounds = Array.from({ length: 5 }, () => {
             const audio = new Audio("../files/punch.mp3");
             audio.preload = "auto";
@@ -102,7 +103,6 @@
             sound.play();
             soundIndex = (soundIndex + 1) % clickSounds.length;
         };
-
 
         let pict1 = "../image/ufo.png";
         let pict2 = "../image/goblin.jpg"
@@ -129,14 +129,20 @@
             localStorage.setItem("savedNum", 0);
         }
 
+        // Color Theme \\
+        const COLORS = ["white", "black"];
+
+        function setColor(color) {
+            bodee.classList.remove(...COLORS);
+            bodee.classList.add(color);
+        }
+
         function toBlack() {
-            bodee.classList.add("black");
-            bodee.classList.remove("white");
+            setColor("black");
         }
 
         function toWhite() {
-            bodee.classList.add("white");
-            bodee.classList.remove("black");
+            setColor("white");
         }
     </script>
 </body>
