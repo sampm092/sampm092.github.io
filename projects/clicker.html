@@ -21,7 +21,6 @@
         body {
             font-family: sans-serif;
             text-align: center;
-            background-color: gainsboro;
         }
 
         .main {
@@ -38,13 +37,26 @@
             font-size: 25vh;
         }
 
-        #picture{
+        #picture {
             max-height: 400px;
+        }
+
+        .reset{
+            position: absolute;
+            right: 1rem;
+            color: red;
+            font-weight: bolder;
+            border: 1px solid red;
+            background-color: white;
+            padding: 10px 12px;
+            border-radius: 30%;
+            cursor: pointer;
         }
     </style>
 </head>
 
 <body>
+    <div class="reset" onclick="reset()">X</div>
     <div class="main" onclick="inc()">
         <div class="picture">
             <img id="picture" src="" alt="">
@@ -53,24 +65,31 @@
     </div>
 
     <script>
-        let mainNum = document.getElementById("mainNum");
-        let pict1 = "../image/ufo.png"
+        const display = document.getElementById("mainNum");
+        const picture = document.getElementById("picture");
 
-        let MNum = 0;
+        let pict1 = "../image/ufo.png";
+
+        // Load saved value OR 0
+        let MNum = Number(localStorage.getItem("savedNum")) || 0;
         let SNum = 1;
 
-        mainNum.innerHTML = MNum;
+        // Show initial value
+        display.textContent = MNum;
 
-        document.getElementById("picture").src = pict1;
+        // Set image
+        picture.src = pict1;
 
         function inc() {
-            let stepClass = SNum;
-            let step = parseInt(stepClass);
-            MNum += step;
-            mainNum.innerHTML = MNum;
+            MNum += SNum;
+            display.textContent = MNum;
+            localStorage.setItem("savedNum", MNum);
         }
-
-
+         function reset() {
+            MNum = 0;
+            display.textContent = MNum;
+            localStorage.setItem("savedNum", 0);
+        }
     </script>
 </body>
 
