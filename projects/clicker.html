@@ -15,7 +15,7 @@
         }
 
         html {
-            background-color: white;
+            background-color: #000;
         }
 
         body {
@@ -35,19 +35,20 @@
             text-align: center;
             margin: auto;
             font-size: 25vh;
+            color: #fff;
         }
 
         #picture {
             max-height: 400px;
         }
 
-        .reset{
+        .reset {
             position: absolute;
             right: 1rem;
             color: red;
             font-weight: bolder;
             border: 1px solid red;
-            background-color: white;
+            background-color: #000;
             padding: 10px 12px;
             border-radius: 30%;
             cursor: pointer;
@@ -67,8 +68,25 @@
     <script>
         const display = document.getElementById("mainNum");
         const picture = document.getElementById("picture");
+        const clickSounds = Array.from({ length: 5 }, () => {
+            const audio = new Audio("../files/punch.mp3");
+            audio.preload = "auto";
+            audio.volume = 0.4;
+            return audio;
+        });
+
+        let soundIndex = 0;
+
+        function punchSound() {
+            const sound = clickSounds[soundIndex];
+            sound.currentTime = 0.4;
+            sound.play();
+            soundIndex = (soundIndex + 1) % clickSounds.length;
+        };
+
 
         let pict1 = "../image/ufo.png";
+        let pict2 = "../image/goblin.jpg"
 
         // Load saved value OR 0
         let MNum = Number(localStorage.getItem("savedNum")) || 0;
@@ -78,14 +96,15 @@
         display.textContent = MNum;
 
         // Set image
-        picture.src = pict1;
+        picture.src = pict2;
 
         function inc() {
+            punchSound();
             MNum += SNum;
             display.textContent = MNum;
             localStorage.setItem("savedNum", MNum);
         }
-         function reset() {
+        function reset() {
             MNum = 0;
             display.textContent = MNum;
             localStorage.setItem("savedNum", 0);
