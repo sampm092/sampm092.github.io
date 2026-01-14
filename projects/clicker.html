@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SClicker</title>
+    <style>
+        * {
+            margin: 3px;
+        }
+
+        *::selection{
+            background-color: white;
+        }
+
+        html {
+            background-color: white;
+        }
+
+        body {
+            font-family: sans-serif;
+            text-align: center;
+            background-color: gainsboro;
+        }
+
+        .main {
+            width: 90vw;
+            height: 90vh;
+            margin: auto;
+            align-content: center;
+        }
+
+        #mainNum {
+            position: relative;
+            text-align: center;
+            margin: auto;
+            font-size: 25vh;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main" onclick="inc()">
+        <div id="mainNum"></div>
+    </div>
+
+    <script>
+        let mainNum = document.getElementById("mainNum");
+
+        let MNum = 0;
+        let SNum = 1;
+
+        mainNum.innerHTML = MNum;
+
+        function inc() {
+            let stepClass = SNum;
+            let step = parseInt(stepClass);
+            MNum += step;
+            mainNum.innerHTML = MNum;
+        }
+
+        function reset() {
+            MNum = 0;
+            SNum = 1;
+            mainNum.innerHTML = MNum;
+            stepNum.value = SNum;
+        }
+    </script>
+</body>
+
+</html>
