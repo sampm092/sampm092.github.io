@@ -14,13 +14,19 @@
             background-color: #ffffff00;
         }
 
-        html {
-            background-color: #000;
-        }
-
         body {
             font-family: sans-serif;
             text-align: center;
+        }
+
+        .black {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .white {
+            background-color: #fff;
+            color: #000;
         }
 
         .main {
@@ -35,11 +41,18 @@
             text-align: center;
             margin: auto;
             font-size: 25vh;
-            color: #fff;
         }
 
         #picture {
             max-height: 400px;
+        }
+
+        .bgButton {
+            border-radius: 100%;
+            border: 1px solid red;
+            width: 10px;
+            height: 10px;
+            cursor: pointer;
         }
 
         .reset {
@@ -56,7 +69,11 @@
     </style>
 </head>
 
-<body>
+<body class="black">
+    <div style="position: absolute; left: 1rem; display: flex;">
+        <div class="bgButton black" onclick="toBlack()"></div>
+        <div class="bgButton white" onclick="toWhite()"></div>
+    </div>
     <div class="reset" onclick="reset()">X</div>
     <div class="main" onclick="inc()">
         <div class="picture">
@@ -68,6 +85,8 @@
     <script>
         const display = document.getElementById("mainNum");
         const picture = document.getElementById("picture");
+        const bodee = document.body;
+
         const clickSounds = Array.from({ length: 5 }, () => {
             const audio = new Audio("../files/punch.mp3");
             audio.preload = "auto";
@@ -108,6 +127,16 @@
             MNum = 0;
             display.textContent = MNum;
             localStorage.setItem("savedNum", 0);
+        }
+
+        function toBlack() {
+            bodee.classList.add("black");
+            bodee.classList.remove("white");
+        }
+
+        function toWhite() {
+            bodee.classList.add("white");
+            bodee.classList.remove("black");
         }
     </script>
 </body>
