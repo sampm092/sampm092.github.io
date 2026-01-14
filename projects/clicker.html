@@ -10,8 +10,8 @@
             margin: 3px;
         }
 
-        *::selection{
-            background-color: white;
+        *::selection {
+            background-color: #ffffff00;
         }
 
         html {
@@ -37,21 +37,31 @@
             margin: auto;
             font-size: 25vh;
         }
+
+        #picture{
+            max-height: 400px;
+        }
     </style>
 </head>
 
 <body>
     <div class="main" onclick="inc()">
+        <div class="picture">
+            <img id="picture" src="" alt="">
+        </div>
         <div id="mainNum"></div>
     </div>
 
     <script>
         let mainNum = document.getElementById("mainNum");
+        let pict1 = "../image/ufo.png"
 
         let MNum = 0;
         let SNum = 1;
 
         mainNum.innerHTML = MNum;
+
+        document.getElementById("picture").src = pict1;
 
         function inc() {
             let stepClass = SNum;
@@ -60,12 +70,7 @@
             mainNum.innerHTML = MNum;
         }
 
-        function reset() {
-            MNum = 0;
-            SNum = 1;
-            mainNum.innerHTML = MNum;
-            stepNum.value = SNum;
-        }
+
     </script>
 </body>
 
