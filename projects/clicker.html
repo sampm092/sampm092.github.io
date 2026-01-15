@@ -58,19 +58,27 @@
         .reset {
             position: absolute;
             right: 1rem;
+            top: 1rem;
             color: red;
             font-weight: bolder;
             border: 1px solid red;
             background-color: #000;
-            padding: 10px 12px;
-            border-radius: 30%;
+            padding: 15px 16px;
             cursor: pointer;
+            line-height: 0;
+        }
+
+        .themeSect {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            display: flex;
         }
     </style>
 </head>
 
 <body class="black">
-    <div style="position: absolute; left: 1rem; display: flex;">
+    <div class="themeSect">
         <div class="bgButton black" onclick="toBlack()"></div>
         <div class="bgButton white" onclick="toWhite()"></div>
     </div>
@@ -149,3 +157,11 @@
 
 </html>
 
+<!-- 
+> DARI CURRENT NUMBER TO LIKE RANDOMIZE NUMBER BAKAL ADA SFX
+EXAMPLE: NOW AT NUMBER 39. THEN RANDOMIZE NUMBER BETWEEN 39 TO LIKE MAYBE 90. GOT NUMBER 75.
+AT NUMBER 75, PLAY SFX. MAKE IT REPETITIVE.
+
+> ADD MORE THEME COLOR, SFX, AND PICTURE.
+> MAKE PICTURE CHANGE LIKE THEME CHANGE
+> RANDOMIZE SFX -->
