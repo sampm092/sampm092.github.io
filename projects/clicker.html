@@ -62,7 +62,7 @@
             color: red;
             font-weight: bolder;
             border: 1px solid red;
-            background-color: #000;
+            background-color: inherit;
             padding: 15px 16px;
             cursor: pointer;
             line-height: 0;
@@ -82,7 +82,7 @@
         <div class="bgButton black" onclick="toBlack()"></div>
         <div class="bgButton white" onclick="toWhite()"></div>
     </div>
-    <div class="reset" onclick="reset()">X</div>
+    <div class="reset" onclick="confirmReset()">X</div>
     <div class="main" onclick="inc()">
         <div class="picture">
             <img id="picture" src="" alt="">
@@ -90,6 +90,8 @@
         <div id="mainNum"></div>
     </div>
 
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const display = document.getElementById("mainNum");
         const picture = document.getElementById("picture");
@@ -151,6 +153,26 @@
 
         function toWhite() {
             setColor("white");
+        }
+
+
+        function confirmReset() {
+            Swal.fire({
+                title: "Click Reset",
+                text: "Proceed to reset the click point?",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonText: "Reset",
+                cancelButtonText: "Cancel",
+                // confirmButtonColor: "#7fd067",
+                // cancelButtonCOlor: "#ef4444",
+                // background: "#03300f", 
+                // color: "#fff",      
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    reset();
+                }
+            });
         }
     </script>
 </body>
