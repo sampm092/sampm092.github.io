@@ -128,6 +128,27 @@ function openNavigation() {
     close.classList.toggle('none');
 }
 
+function confirmDelete() {
+    Swal.fire({
+        title: "You sure?",
+        text: "Proceed to gmail",
+        icon: "question",
+        showCancelButton: true,
+        confirmButtonText: "Go",
+        cancelButtonText: "No",
+        confirmButtonColor: "#7fd067",
+        cancelButtonCOlor: "#ef4444",
+        background: "#03300f", // dark background
+        color: "#fff",      // text color
+    }).then((result) => {
+        if (result.isConfirmed) {
+            window.open(
+                "https://mail.google.com/mail/u/0/#inbox?compose=CllgCJlLWRkCnGkQzgpwngjTLVqBXHWVrLsrGTwRDkQnqfRxwKtrvZzVtjLMbRVrzhRPfvtzDFL", "_blank"
+            );
+        }
+    });
+}
+
 function timeNow1() {
     const timeNow = document.getElementById("date-now");
     const now1 = new Date();
