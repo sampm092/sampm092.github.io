@@ -90,7 +90,7 @@
         <div id="mainNum"></div>
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         const display = document.getElementById("mainNum");
@@ -105,6 +105,13 @@
             return audio;
         });
 
+        // const randomSounds = Array.from({ length: 5 }, () => {
+        const randaudio = new Audio("../files/bass.wav");
+        //     audio.preload = "auto";
+        //     audio.volume = 0;
+        //     return audio;
+        // });
+
         let soundIndex = 0;
 
         function punchSound() {
@@ -112,6 +119,11 @@
             sound.currentTime = 0.4;
             sound.play();
             soundIndex = (soundIndex + 1) % clickSounds.length;
+        };
+
+        function randomSound() {
+            randaudio.currentTime = 0;
+            randaudio.play();
         };
 
         let pict1 = "../image/ufo.png";
@@ -128,8 +140,12 @@
         picture.src = pict1;
 
         function inc() {
-            punchSound();
             MNum += SNum;
+            if (MNum % 15 === 0) {
+                randomSound();
+            } else {
+                punchSound();
+            }
             display.textContent = MNum;
             localStorage.setItem("savedNum", MNum);
         }
@@ -164,10 +180,10 @@
                 showCancelButton: true,
                 confirmButtonText: "Reset",
                 cancelButtonText: "Cancel",
-                // confirmButtonColor: "#7fd067",
+                confirmButtonColor: "#ff0000",
                 // cancelButtonCOlor: "#ef4444",
                 // background: "#03300f", 
-                // color: "#fff",      
+                color: "#ff0000"
             }).then((result) => {
                 if (result.isConfirmed) {
                     reset();
