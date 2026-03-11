@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: gainsboro;
+        }
+
+        input,
+        select,
+        button,
+        textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+            min-height: 18px;
+        }
+
+        select,
+        button {
+            cursor: pointer;
+        }
+
+        input,
+        textarea {
+            max-width: 576px;
+            min-width: 576px;
+        }
+
+        .prm-btn {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        button:hover {
+            opacity: 80%;
+        }
+
+        h1,
+        h4 {
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            overflow-x: hidden;
+        }
+
+        .main {
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            transition: margin 0.3s ease-in-out;
+        }
+
+        .log {
+            margin: auto;
+            display: none;
+            transform: translateX(150%);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .logShow {
+            position: fixed;
+            right: 1.25rem;
+            cursor: pointer;
+            background: #fff;
+        }
+
+        .delete {
+            background-color: inherit;
+            color: #ff0000;
+            width: fit-content;
+            margin: auto 0 auto auto;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="logShow" onclick="toggleLog()">
+        <!-- icon  -->
+        log
+    </div>
+    <section class="container">
+        <div class="main">
+            <h1>Calc</h1>
+            <h4>is short for calculator</h4>
+
+            <input type="number" id="input1" placeholder="Insert number here..."></input>
+            <input type="number" id="input2" placeholder="Insert number here..."></input>
+
+            <label for="ops">Operation:</label>
+            <select id="ops">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+                <option value="%">%</option>
+            </select>
+
+            <button id="calcBtn" class="prm-btn" onclick="calculate()">Generate</button>
+
+            <h3>Output:</h3>
+            <textarea id="outputText" readonly></textarea>
+        </div>
+        <div class="log" id="logSect">
+            <div style="display: flex;">
+                <h2>Log:</h2>
+                <button class="delete" onclick="clearLog()">Clear</button>
+            </div>
+            <textarea name="" id="log" rows="25" wrap="off" readonly></textarea>
+        </div>
+    </section>
+
+    <script>
+        let logrecord = [];
+        const logText = document.getElementById('log');
+        const logSect = document.getElementById('logSect');
+
+        function toggleLog() {
+            if (logSect.style.display === "none" || logSect.style.display === "") {
+
+                logSect.style.display = "block";
+
+                setTimeout(() => {
+                    logSect.style.transform = "translateX(0)";
+                }, 10);
+
+            } else {
+
+                logSect.style.transform = "translateX(150%)";
+
+                setTimeout(() => {
+                    logSect.style.display = "none";
+                }, 300);
+            }
+        }
+
+        function clearLog() {
+            Swal.fire({
+                title: "You sure?",
+                text: "Clear log record",
+                icon: "question",
+                showCancelButton: true,
+                confirmButtonText: "Delete",
+                cancelButtonText: "Back",
+                confirmButtonColor: "#007bff",
+                // cancelButtonCOlor: "#ef4444",
+                // background: "#03300f", // dark background
+                // color: "#fff",      // text color
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    logrecord = [];
+                    logText.value = logrecord;
+                }
+            });
+        }
+
+        function calculate() {
+            // input type number still take string, so parse it into integer first with:
+            const in1 = +document.getElementById('input1').value;
+            const in2 = parseInt(document.getElementById('input2').value);
+            // or
+            // const in = Number(document.getElementById('input').value);
+            const chosenOps = document.getElementById('ops').value;
+            const output = document.getElementById('outputText');
+
+            if (!isNaN(in1) && !isNaN(in2)) { //prevent null value
+                switch (chosenOps) {
+                    case '+':
+                        result = in1 + in2;
+                        break;
+                    case '-':
+                        result = in1 - in2;
+                        break;
+                    case '*':
+                        result = in1 * in2;
+                        break;
+                    case '/':
+                        result = in1 / in2;
+                        break;
+                    case '%':
+                        result = in1 % in2;
+                        break;
+
+                    default:
+                        break;
+                }
+            } else {
+                Swal.fire({
+                    title: "Alert!",
+                    text: "No Number!",
+                    icon: "warning",
+                    confirmButtonText: 'Back',
+                    allowEnterKey: false
+                });
+            }
+            output.value = result;
+            logrecord += (`${in1} ${chosenOps} ${in2} = ${result}\n`);
+            logText.value = logrecord;
+        }
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "Enter") {
+                calculate();
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
