@@ -8,7 +8,7 @@
     <style>
         body {
             font-family: sans-serif;
-            background-color: gainsboro;
+            background-color: #d2ebff;
         }
 
         input,
@@ -148,11 +148,11 @@
             Swal.fire({
                 title: "You sure?",
                 text: "Clear log record",
-                icon: "question",
+                icon: "error",
                 showCancelButton: true,
                 confirmButtonText: "Delete",
                 cancelButtonText: "Back",
-                confirmButtonColor: "#007bff",
+                confirmButtonColor: "#f44336",
                 // cancelButtonCOlor: "#ef4444",
                 // background: "#03300f", // dark background
                 // color: "#fff",      // text color
@@ -204,7 +204,7 @@
                 });
             }
             output.value = result;
-            logrecord += (`${in1} ${chosenOps} ${in2} = ${result}\n`);
+            logrecord += (`> ${in1} ${chosenOps} ${in2} = ${result}\n`);
             logText.value = logrecord;
         }
 
