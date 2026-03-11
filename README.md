@@ -19,6 +19,6 @@ Mobile Addition:
 - Remove header menu except image
 
 For tailwind testing local:
-npx tailwindcss -i style/input.css -o style/style.css --watch
+npx tailwindcss -i style/input.css -o style/output.css --watch
 
 https://sampm092.github.io/
