@@ -41,10 +41,20 @@
         .none {
             display: none;
         }
+
+        .black{
+            background-color: black;
+            color: white;
+        }
+
+        .white{
+            background-color: white;
+            color: blue;
+        }
     </style>
 </head>
 
-<body>
+<body class="black">
 
     <input id="display" type="text" readonly>
 
@@ -111,6 +121,7 @@
         </div>
 
         <div class="func-key">
+            <button id="theme" onclick="toggleTheme()">Theme</button>
             <button id="space">Space</button>
             <button id="backspace">⌫</button>
             <button id="capslock"> CapsLock</button>
@@ -122,6 +133,7 @@
         const keysCaps = document.querySelectorAll(".keyCaps");
         const key1 = document.getElementById("container-key1");
         const key2 = document.getElementById("container-key2");
+        const body = document.body;
 
         keysCaps.forEach(key => {
             key.addEventListener("click", () => {
@@ -141,6 +153,12 @@
             key1.classList.toggle("none");
             key2.classList.toggle("none");
         });
+
+        function toggleTheme() {
+            body.classList.toggle("black");
+            body.classList.toggle("white");
+        }
+
     </script>
 
 </body>
