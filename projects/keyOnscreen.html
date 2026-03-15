@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        #display {
+            width: 300px;
+            height: 35px;
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        #container-key1,
+        #container-key2{
+            grid-template-columns: repeat(10, 40px);
+            gap: 5px;
+            justify-content: center;
+        }
+
+        .func-key {
+            margin: auto;
+            padding: 5px;
+        }
+
+        .key {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .none {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <input id="display" type="text" readonly>
+
+    <div class="keyboard">
+        <div id="container-key1" class="grid">
+            <button class="keyCaps">Q</button>
+            <button class="keyCaps">W</button>
+            <button class="keyCaps">E</button>
+            <button class="keyCaps">R</button>
+            <button class="keyCaps">T</button>
+            <button class="keyCaps">Y</button>
+            <button class="keyCaps">U</button>
+            <button class="keyCaps">I</button>
+            <button class="keyCaps">O</button>
+            <button class="keyCaps">P</button>
+
+            <button class="keyCaps">A</button>
+            <button class="keyCaps">S</button>
+            <button class="keyCaps">D</button>
+            <button class="keyCaps">F</button>
+            <button class="keyCaps">G</button>
+            <button class="keyCaps">H</button>
+            <button class="keyCaps">J</button>
+            <button class="keyCaps">K</button>
+            <button class="keyCaps">L</button>
+
+            <button class="keyCaps">Z</button>
+            <button class="keyCaps">X</button>
+            <button class="keyCaps">C</button>
+            <button class="keyCaps">V</button>
+            <button class="keyCaps">B</button>
+            <button class="keyCaps">N</button>
+            <button class="keyCaps">M</button>
+        </div>
+        <div id="container-key2" class="none grid">
+            <button class="keyCaps">q</button>
+            <button class="keyCaps">w</button>
+            <button class="keyCaps">e</button>
+            <button class="keyCaps">r</button>
+            <button class="keyCaps">t</button>
+            <button class="keyCaps">y</button>
+            <button class="keyCaps">u</button>
+            <button class="keyCaps">i</button>
+            <button class="keyCaps">o</button>
+            <button class="keyCaps">p</button>
+
+            <button class="keyCaps">a</button>
+            <button class="keyCaps">s</button>
+            <button class="keyCaps">d</button>
+            <button class="keyCaps">f</button>
+            <button class="keyCaps">g</button>
+            <button class="keyCaps">h</button>
+            <button class="keyCaps">j</button>
+            <button class="keyCaps">k</button>
+            <button class="keyCaps">l</button>
+
+            <button class="keyCaps">z</button>
+            <button class="keyCaps">x</button>
+            <button class="keyCaps">c</button>
+            <button class="keyCaps">v</button>
+            <button class="keyCaps">b</button>
+            <button class="keyCaps">n</button>
+            <button class="keyCaps">m</button>
+        </div>
+
+        <div class="func-key">
+            <button id="space">Space</button>
+            <button id="backspace">⌫</button>
+            <button id="capslock"> CapsLock</button>
+        </div>
+    </div>
+
+    <script>
+        const display = document.getElementById("display");
+        const keysCaps = document.querySelectorAll(".keyCaps");
+        const key1 = document.getElementById("container-key1");
+        const key2 = document.getElementById("container-key2");
+
+        keysCaps.forEach(key => {
+            key.addEventListener("click", () => {
+                display.value += key.textContent;
+            });
+        });
+
+        document.getElementById("space").addEventListener("click", () => {
+            display.value += " ";
+        });
+
+        document.getElementById("backspace").addEventListener("click", () => {
+            display.value = display.value.slice(0, -1);
+        });
+
+        document.getElementById("capslock").addEventListener("click", () => {
+            key1.classList.toggle("none");
+            key2.classList.toggle("none");
+        });
+    </script>
+
+</body>
+
+</html>
