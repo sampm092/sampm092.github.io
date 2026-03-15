@@ -9,22 +9,46 @@
             margin-top: 40px;
         }
 
+        #copyNotification {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        #copyNotification.show {
+            opacity: 1;
+        }
+
         #display {
             width: 300px;
-            height: 35px;
+            height: 34px;
             font-size: 18px;
-            margin-bottom: 20px;
+        }
+
+        #copy {
+            height: 40px;
+            font-size: 18px;
+            align-self: center;
         }
 
         #container-key1,
-        #container-key2{
-            grid-template-columns: repeat(10, 40px);
+        #container-key2 {
+            grid-template-columns: repeat(10, 50px);
             gap: 5px;
             justify-content: center;
         }
 
         .func-key {
-            margin: auto;
+            margin-top: 15px;
             padding: 5px;
         }
 
@@ -42,21 +66,29 @@
             display: none;
         }
 
-        .black{
+        .black {
             background-color: black;
             color: white;
         }
 
-        .white{
+        .white {
             background-color: white;
             color: blue;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
         }
     </style>
 </head>
 
 <body class="black">
-
-    <input id="display" type="text" readonly>
+    <div id="copyNotification">Copied!</div>
+    <div class="flex" style="margin: auto;margin-bottom: 20px;">
+        <input id="display" type="text" readonly>
+        <button id="copy" onclick="copy()">Copy</button>
+    </div>
 
     <div class="keyboard">
         <div id="container-key1" class="grid">
@@ -157,6 +189,17 @@
         function toggleTheme() {
             body.classList.toggle("black");
             body.classList.toggle("white");
+        }
+
+        async function copy() {
+            const textOutput = document.getElementById("display").value;
+            navigator.clipboard.writeText(textOutput).then(() => {
+                const notification = document.getElementById("copyNotification");
+                notification.classList.add("show");
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                }, 2000); // 2 seconds
+            });
         }
 
     </script>
