@@ -30,7 +30,7 @@
         input,
         textarea {
             max-width: 576px;
-            min-width: 576px;
+            width: 576px;
         }
 
         .prm-btn {
@@ -41,6 +41,17 @@
 
         button:hover {
             opacity: 80%;
+        }
+
+        .flex {
+            display: flex;
+            width: 600px;
+        }
+
+        .flex button {
+            font-size: 18px;
+            align-self: center;
+            width: fit-content;
         }
 
         h1,
@@ -94,8 +105,14 @@
             <h1>Calc</h1>
             <h4>is short for calculator</h4>
 
-            <input type="number" id="input1" placeholder="Insert number here..."></input>
-            <input type="number" id="input2" placeholder="Insert number here..."></input>
+            <div class="flex">
+                <input type="number" id="input1" placeholder="Insert number here..."></input>
+                <button onclick="clearInp('input1')">X</button>
+            </div>
+            <div class="flex">
+                <input type="number" id="input2" placeholder="Insert number here..."></input>
+                <button onclick="clearInp('input2')">X</button>
+            </div>
 
             <label for="ops">Operation:</label>
             <select id="ops">
@@ -124,6 +141,8 @@
         let logrecord = [];
         const logText = document.getElementById('log');
         const logSect = document.getElementById('logSect');
+        const in1 = +document.getElementById('input1').value;
+        const in2 = parseInt(document.getElementById('input2').value);
 
         function toggleLog() {
             if (logSect.style.display === "none" || logSect.style.display === "") {
@@ -164,9 +183,13 @@
             });
         }
 
+        function clearInp(input) {
+            document.getElementById(input).value = '';
+        }
+
         function calculate() {
             // input type number still take string, so parse it into integer first with:
-            const in1 = +document.getElementById('input1').value;
+            const in1 = parseInt(document.getElementById('input1').value);
             const in2 = parseInt(document.getElementById('input2').value);
             // or
             // const in = Number(document.getElementById('input').value);
@@ -193,7 +216,11 @@
 
                     default:
                         break;
+
                 }
+                output.value = result;
+                logrecord += (`> ${in1} ${chosenOps} ${in2} = ${result}\n`);
+                logText.value = logrecord;
             } else {
                 Swal.fire({
                     title: "Alert!",
@@ -203,9 +230,7 @@
                     allowEnterKey: false
                 });
             }
-            output.value = result;
-            logrecord += (`> ${in1} ${chosenOps} ${in2} = ${result}\n`);
-            logText.value = logrecord;
+
         }
 
         document.addEventListener("keydown", function (e) {
@@ -216,4 +241,5 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
+
 </html>
