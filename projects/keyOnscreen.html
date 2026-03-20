@@ -3,9 +3,11 @@
 
 <head>
     <style>
-        :root{
+        :root {
             --col-size: 50px;
+            --key-height: 20px;
         }
+
         body {
             font-family: Arial;
             text-align: center;
@@ -72,6 +74,10 @@
             padding: 10px;
             font-size: 16px;
             cursor: pointer;
+        }
+
+        .keyboard button {
+            height: var(--key-height);
         }
 
         .grid {
@@ -190,6 +196,7 @@
         const key2 = document.getElementById("container-key2");
         const body = document.body;
         let colsize = 50;
+        let keySize = 20;
 
         keysCaps.forEach(key => {
             key.addEventListener("click", () => {
@@ -216,8 +223,23 @@
         }
 
         function size(value) {
-            colsize += (value === 'up') ? 10 : -10;
+            if (value === 'up') {
+                colsize += 10;
+                keySize += 4;
+            } else {
+                colsize -= 10;
+                keySize -= 4;
+            }
+
+            if (colsize < 10) {
+                colSize = 10;
+            }
+            if (keySize < 4) {
+                keySize = 4;
+            }
+
             document.documentElement.style.setProperty('--col-size', colsize + 'px');
+            document.documentElement.style.setProperty('--key-height', keySize + 'px');
         }
 
         async function copy() {
