@@ -62,6 +62,10 @@
             padding: 5px;
         }
 
+        .func-key button {
+            width: calc(var(--base-width) + var(--increase, 0px));
+        }
+
         .size {
             display: flex;
             flex-direction: column;
@@ -108,7 +112,7 @@
 <body class="black">
     <div id="copyNotification">Copied!</div>
     <div class="size">
-        <p>Size</p>
+        <p style="border: 1px solid black;" class="black">Size</p>
         <button onclick="size('up')">+</button>
         <button onclick="size('down')">-</button>
     </div>
@@ -181,10 +185,10 @@
             </div>
 
             <div class="func-key">
-                <button id="theme" onclick="toggleTheme()">Theme</button>
-                <button id="space">Space</button>
-                <button id="backspace">⌫</button>
-                <button id="capslock"> CapsLock</button>
+                <button id="theme" onclick="toggleTheme()" style="--base-width: 60px">Theme</button>
+                <button id="space" style="--base-width: 55px">Space</button>
+                <button id="backspace" style="--base-width: 30px">⌫</button>
+                <button id="capslock" style="--base-width: 80px"> CapsLock</button>
             </div>
         </div>
     </main>
@@ -197,6 +201,7 @@
         const body = document.body;
         let colsize = 50;
         let keysize = 20;
+        let increase = 0;
 
         keysCaps.forEach(key => {
             key.addEventListener("click", () => {
@@ -224,12 +229,15 @@
 
         function size(value) {
             const delta = (value === 'up') ? 1 : -1;
-            
+            increase += (value === 'up') ? 10 : -10;
+            increase = Math.max(increase, 0);
+
             colsize = Math.max(colsize + 10 * delta, 10);
             keysize = Math.max(keysize + 4 * delta, 4);
 
             document.documentElement.style.setProperty('--col-size', colsize + 'px');
             document.documentElement.style.setProperty('--key-height', keysize + 'px');
+            document.documentElement.style.setProperty('--increase', increase + 'px');
         }
 
         async function copy() {
