@@ -3,6 +3,9 @@
 
 <head>
     <style>
+        :root{
+            --col-size: 50px;
+        }
         body {
             font-family: Arial;
             text-align: center;
@@ -49,7 +52,7 @@
         #container-key2 {
             gap: 5px;
             justify-content: center;
-            grid-template-columns: repeat(10, 50px);
+            grid-template-columns: repeat(10, var(--col-size));
         }
 
         .func-key {
@@ -100,15 +103,14 @@
     <div id="copyNotification">Copied!</div>
     <div class="size">
         <p>Size</p>
-        <button>+</button>
-        <button>-</button>
+        <button onclick="size('up')">+</button>
+        <button onclick="size('down')">-</button>
     </div>
     <main>
         <div class="flex" style="margin: auto;margin-bottom: 20px;">
             <input id="display" type="text" readonly>
             <button id="copy" onclick="copy()">Copy</button>
         </div>
-
 
         <div class="keyboard">
             <div id="container-key1" class="grid">
@@ -187,6 +189,7 @@
         const key1 = document.getElementById("container-key1");
         const key2 = document.getElementById("container-key2");
         const body = document.body;
+        let colsize = 50;
 
         keysCaps.forEach(key => {
             key.addEventListener("click", () => {
@@ -210,6 +213,11 @@
         function toggleTheme() {
             body.classList.toggle("black");
             body.classList.toggle("white");
+        }
+
+        function size(value) {
+            colsize += (value === 'up') ? 10 : -10;
+            document.documentElement.style.setProperty('--col-size', colsize + 'px');
         }
 
         async function copy() {
