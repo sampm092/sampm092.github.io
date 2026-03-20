@@ -196,7 +196,7 @@
         const key2 = document.getElementById("container-key2");
         const body = document.body;
         let colsize = 50;
-        let keySize = 20;
+        let keysize = 20;
 
         keysCaps.forEach(key => {
             key.addEventListener("click", () => {
@@ -223,23 +223,13 @@
         }
 
         function size(value) {
-            if (value === 'up') {
-                colsize += 10;
-                keySize += 4;
-            } else {
-                colsize -= 10;
-                keySize -= 4;
-            }
-
-            if (colsize < 10) {
-                colSize = 10;
-            }
-            if (keySize < 4) {
-                keySize = 4;
-            }
+            const delta = (value === 'up') ? 1 : -1;
+            
+            colsize = Math.max(colsize + 10 * delta, 10);
+            keysize = Math.max(keysize + 4 * delta, 4);
 
             document.documentElement.style.setProperty('--col-size', colsize + 'px');
-            document.documentElement.style.setProperty('--key-height', keySize + 'px');
+            document.documentElement.style.setProperty('--key-height', keysize + 'px');
         }
 
         async function copy() {
