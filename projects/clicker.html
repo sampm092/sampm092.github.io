@@ -8,6 +8,7 @@
     <style>
         * {
             margin: 3px;
+            cursor: url('../image/cursor_gun.png'), auto;
         }
 
         *::selection {
@@ -152,9 +153,9 @@
             localStorage.setItem("savedNum", MNum);
         }
 
-        function randomNumber(){
+        function randomNumber() {
             rng = Math.floor(Math.random() * 30) + 3;  // randomize bazz count but not using 1 and two as divider
-            return rng; 
+            return rng;
         }
 
         function reset() {
