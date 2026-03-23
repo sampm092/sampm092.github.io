@@ -60,25 +60,37 @@
       border: 2px solid black;
     }
 
-    @media only screen and (max-width: 610px){
-      body{
+    @media only screen and (max-width: 610px) {
+      body {
         width: fit-content;
         max-width: 500px;
       }
 
-      #chatbox{
+      #chatbox {
         width: 460px;
       }
-      
+
       #inputArea {
         width: 480px;
       }
     }
 
     @keyframes bgColorChange {
-      0%   { background-color: #af5252; }   /* red */
-      50%  { background-color: #35819b; }   /* blue */
-      100% { background-color: #2fb45b; }   /* green */
+      0% {
+        background-color: #af5252;
+      }
+
+      /* red */
+      50% {
+        background-color: #35819b;
+      }
+
+      /* blue */
+      100% {
+        background-color: #2fb45b;
+      }
+
+      /* green */
     }
   </style>
 </head>
@@ -110,8 +122,8 @@
       },
       { type: 'or', keywords: ['thank', 'appreciate', 'grateful'], reply: "You're welcome!" },
       { type: 'or', keywords: ['how to', 'how can', 'how do'], reply: "Sorry, i don't have any capability to solve that" },
-      { type: 'or', keywords: ['hello','halo','hallo','alo'], reply: "Hi there! " },
-      { type: 'or', keywords: ['hi','hey'], reply: "Hello! " },
+      { type: 'or', keywords: ['hello', 'halo', 'hallo', 'alo'], reply: "Hi there! " },
+      { type: 'or', keywords: ['hi', 'hey'], reply: "Hello! " },
       { type: 'single', keywords: ['bye'], reply: "Goodbye! " },
       { type: 'single', keywords: ['help'], reply: "How can I assist you?" },
 
@@ -147,12 +159,15 @@
 
     sendBtn.addEventListener('click', () => {
       const text = userInput.value.trim();
-      if (!text) return;
-
-      addMessage(text, 'user');
-      const reply = getBotReply(text);
-      addMessage(reply, 'bot');
-      userInput.value = '';
+      // if (!text) return;
+      if (!text) { //if no input
+        alert("No input detected"); 
+      } else {
+        addMessage(text, 'user');
+        const reply = getBotReply(text);
+        addMessage(reply, 'bot');
+        userInput.value = '';
+      }
     });
 
     userInput.addEventListener('keypress', e => {
