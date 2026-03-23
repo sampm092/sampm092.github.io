@@ -165,7 +165,7 @@
 
         function inc() {
             MNum += SNum;
-            let rng = randomNumber();
+            const rng = randomNumber();
             if (MNum % rng === 0) {
                 randomSound();
                 console.log(MNum + " = Mnum and RNG = " + rng);
@@ -175,18 +175,17 @@
                 picture.classList.remove('imgMover');
             }
             display.textContent = MNum;
-            localStorage.setItem("savedNum", MNum);
+            localStorage.setItem("savedNum", MNum); // save click count to local storage
         }
 
         function randomNumber() {
-            rng = Math.floor(Math.random() * 30) + 3;  // randomize bazz count but not using 1 and two as divider
-            return rng;
+            return Math.floor(Math.random() * 30) + 3;  // randomize bazz count but not using 1 and two as divider
         }
 
         function reset() {
             MNum = 0;
             display.textContent = MNum;
-            localStorage.setItem("savedNum", 0);
+            localStorage.setItem("savedNum", 0); // reset click counter from the local storage
         }
 
         // Color Theme \\
@@ -215,8 +214,6 @@
                 confirmButtonText: "Reset",
                 cancelButtonText: "Cancel",
                 confirmButtonColor: "#ff0000",
-                // cancelButtonCOlor: "#ef4444",
-                // background: "#03300f", 
                 color: "#ff0000"
             }).then((result) => {
                 if (result.isConfirmed) {
@@ -230,10 +227,6 @@
 </html>
 
 <!-- 
-> DARI CURRENT NUMBER TO LIKE RANDOMIZE NUMBER BAKAL ADA SFX
-EXAMPLE: NOW AT NUMBER 39. THEN RANDOMIZE NUMBER BETWEEN 39 TO LIKE MAYBE 90. GOT NUMBER 75.
-AT NUMBER 75, PLAY SFX. MAKE IT REPETITIVE.
-
 > ADD MORE THEME COLOR, SFX, AND PICTURE.
 > MAKE PICTURE CHANGE LIKE THEME CHANGE
-> RANDOMIZE SFX -->
+-->
