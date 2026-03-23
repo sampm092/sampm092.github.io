@@ -141,14 +141,22 @@
 
         function inc() {
             MNum += SNum;
-            if (MNum % 15 === 0) {
+            let rng = randomNumber();
+            if (MNum % rng === 0) {
                 randomSound();
+                console.log(MNum + " = Mnum and RNG = " + rng);
             } else {
                 punchSound();
             }
             display.textContent = MNum;
             localStorage.setItem("savedNum", MNum);
         }
+
+        function randomNumber(){
+            rng = Math.floor(Math.random() * 30) + 3;  // randomize bazz count but not using 1 and two as divider
+            return rng; 
+        }
+
         function reset() {
             MNum = 0;
             display.textContent = MNum;
