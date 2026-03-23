@@ -8,7 +8,6 @@
     <style>
         * {
             margin: 3px;
-            cursor: url('../image/cursor_gun.png'), auto;
         }
 
         *::selection {
@@ -46,6 +45,7 @@
 
         #picture {
             max-height: 400px;
+            cursor: url('../image/cursor_gun.png'), auto;
         }
 
         .bgButton {
@@ -62,7 +62,6 @@
             top: 1rem;
             color: red;
             font-weight: bolder;
-            border: 1px solid red;
             background-color: inherit;
             padding: 15px 16px;
             cursor: pointer;
@@ -74,6 +73,29 @@
             left: 1rem;
             top: 1rem;
             display: flex;
+        }
+
+        .imgMover {
+            animation-name: moveIMG;
+            animation-duration: 0.5s;
+        }
+
+        @keyframes moveIMG {
+            0% {
+                transform: translateX(0%);
+            }
+
+            25% {
+                transform: translateX(50%);
+            }
+
+            50% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0%);
+            }
         }
     </style>
 </head>
@@ -147,8 +169,10 @@
             if (MNum % rng === 0) {
                 randomSound();
                 console.log(MNum + " = Mnum and RNG = " + rng);
+                picture.classList.add('imgMover');
             } else {
                 punchSound();
+                picture.classList.remove('imgMover');
             }
             display.textContent = MNum;
             localStorage.setItem("savedNum", MNum);
