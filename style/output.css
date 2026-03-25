@@ -408,6 +408,9 @@
   .flex-col {
     flex-direction: column;
   }
+  .content-between {
+    align-content: space-between;
+  }
   .content-center {
     align-content: center;
   }
@@ -771,6 +774,9 @@
   }
   .text-white {
     color: var(--color-white);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .opacity-60 {
     opacity: 60%;
