@@ -108,6 +108,14 @@ header {
   transition: transform 0.3s ease;
 }
 
+.bgButton {
+  border-radius: 100%;
+  border: 1px solid black;
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+}
+
 .font-border {
   text-shadow:
     -0.5px -0.5px 0 #71e479,
