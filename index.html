@@ -20,7 +20,7 @@
 <body>
     <!-- <a class="tttop" onclick="scrollToTop(50)">↑</a> -->
     <header id="header"
-        class="sm:bg-[#ffffff00] bg-greenBG py-5 text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-sm text-greenText">
+        class="sm:bg-[#ffffff00] bg-colorBG py-5 text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-sm text-colorText">
         <div class="container mx-auto flex sm:max-h-15 w-11/12">
             <div id="image" class="">
                 <img src="image/logowhite1.png" class="w-full max-h-10 rounded-4xl border-primary">
@@ -43,17 +43,17 @@
                         Hiburan</a>
                 </nav>
             </div>
-            <div class="inline-block my-auto mx-1 w-fit text-xl text-greenText">
+            <div class="inline-block my-auto mx-1 w-fit text-xl text-colorText">
                 <el-dropdown teleported>
                     <button
-                        class="flex w-37.5 justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 hover:bg-greenText hover:border-greenBG hover:text-greenBG cursor-pointer border-greenText border-2 rounded-lg">
+                        class="flex w-37.5 justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 hover:bg-colorText hover:border-colorBG hover:text-colorBG cursor-pointer border-colorText border-2 rounded-lg">
                         <span class="">
                             Docs
                         </span>
                     </button>
 
                     <el-menu anchor="bottom end" popover
-                        class="w-50 origin-top-right divide-y divide-black/10 rounded-md bg-black/20 outline-1 -outline-offset-1 outline-black/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in text-greenText text-sm border">
+                        class="w-50 origin-top-right divide-y divide-black/10 rounded-md bg-black/20 outline-1 -outline-offset-1 outline-black/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in text-colorText text-sm border">
                         <div class="py-1">
                             <div class="flex px-4 py-2 border-b">
                                 <h4 class="text-left">Resume</h4>
@@ -87,13 +87,13 @@
         </div>
     </header>
     <div class="fixed top-1/2 right-4 flex flex-col gap-4 z-50">
-        <div class="bgButton bg-[#94ea92]" onclick="changeTheme()"></div>
-        <div class="bgButton bg-white" onclick="changeTheme()"></div>
+        <div class="bgButton bg-[#94ea92]" onclick="changeTheme('one')"></div>
+        <div class="bgButton bg-white" onclick="changeTheme('two')"></div>
     </div>
-    <section id="navi" class="fixed text-greenBG z-50 -right-1.25 bottom-6 gap-2">
+    <section id="navi" class="fixed text-colorBG z-50 -right-1.25 bottom-6 gap-2">
         <!-- top  -->
         <div id="top-b" style="transform: translateX(100%);"
-            class="bg-greenBG px-3 py-2.5 border-greenText text-greenText border rounded-s-2xl cursor-pointer">
+            class="bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer">
             <a href="#top">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-arrow-up" viewBox="0 0 16 16">
@@ -104,7 +104,7 @@
         </div>
         <!-- about sect -->
         <div id="about-b" style="transform: translateX(100%);"
-            class="bg-greenBG px-3 py-2.5 border-greenText text-greenText border rounded-s-2xl cursor-pointer">
+            class="bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer">
             <a href="#about">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-info-circle" viewBox="0 0 16 16">
@@ -116,7 +116,7 @@
         </div>
         <!-- works -->
         <div id="work-b" style="transform: translateX(100%);"
-            class="bg-greenBG px-3 py-2.5 border-greenText text-greenText border rounded-s-2xl cursor-pointer">
+            class="bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer">
             <a href="#projects">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-file-earmark-image" viewBox="0 0 16 16">
@@ -128,7 +128,7 @@
         </div>
         <!-- bottom  -->
         <div id="down-b" style="transform: translateX(100%);"
-            class="bg-greenBG px-3 py-2.5 border-greenText text-greenText border rounded-s-2xl cursor-pointer">
+            class="bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer">
             <a href="#footer">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-arrow-down" viewBox="0 0 16 16">
@@ -139,7 +139,7 @@
         </div>
 
         <!-- exit & open -->
-        <div id="eo" class="bg-greenBG px-3 py-2.5 border-greenText text-greenText border rounded-s-2xl cursor-pointer"
+        <div id="eo" class="bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer"
             onclick="openNavigation()">
             <svg id="open-b" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                 class="none bi bi-x-lg" viewBox="0 0 16 16">
@@ -154,7 +154,7 @@
         </div>
         <!-- call -->
         <div id="call-b" style="transform: translateX(100%);"
-            class="bg-greenBG px-3 py-2.5 border-greenText text-greenText border rounded-s-2xl cursor-pointer">
+            class="bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer">
             <a href="#contact">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-telephone" viewBox="0 0 16 16">
@@ -171,7 +171,7 @@
             <img src="image/logo 2.png" class="-mt-35 opacity-60" alt="3D PICTURE">
         </div>
         <section id="top"
-            class="bg-greenBG bg-linear-270 from-greenBG to-[#000c08] text-greenText m-auto mt-0 pb-10 pt-10 flex dark-select min-h-[90vh] sm:min-h-screen ">
+            class="bg-colorBG bg-linear-270 from-colorThird to-[#000c08] text-colorText m-auto mt-0 pb-10 pt-10 flex dark-select min-h-[90vh] sm:min-h-screen ">
             <div class="container w-full mx-auto content-center z-10 text-center">
                 <div class="flex flex-col gap-8">
                     <h2 class="text-6xl sm:text-[95px]/20 font-extrabold" data-aos="fade-up" data-aos-offset="100"
@@ -196,7 +196,7 @@
             </div>
         </section>
         <section id="about"
-            class="bg-greenText bg-linear-180 from-[#71e479] to-greenText text-greenBG mx-auto p-4 px-16 min-h-[80vh] sm:min-h-[95vh] flex">
+            class="bg-colorText bg-linear-180 from-colorThird to-colorText text-colorBG mx-auto p-4 px-16 min-h-[80vh] sm:min-h-[95vh] flex">
             <div id="non-bio" class="container m-auto py-10 sm:p-20 sm:pl-14">
                 <p class="text-black font-bold mb-4">Hello, my name is</p>
                 <h2 class="text-[55px]/15 sm:text-[80px]/20 text-left font-extrabold font-border text-black"
@@ -208,16 +208,16 @@
                     building clean and functional applications. I enjoy learning new things every day, and I hope my
                     work can contribute meaningfully to today’s technology landscape.</p>
                 <a href="#projects"
-                    class="btn justify-center gap-x-1.5 p-3 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-greenBG bg-greenBG text-white border-2 mt-8">Check
+                    class="btn justify-center gap-x-1.5 p-3 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-colorBG bg-colorBG text-white border-2 mt-8">Check
                     for more <span class="text-sm">▼</span></a>
             </div>
             <div class="content-center w-1/2 pr-14">
-                <img src="image/me.jpg" alt="ME.PNG" class="rounded-full border-4 border-greenBG hover:bg-[#00000050]">
+                <img src="image/me.jpg" alt="ME.PNG" class="rounded-full border-4 border-colorBG hover:bg-[#00000050]">
             </div>
         </section>
 
         <section id="projects"
-            class="bg-linear-180 from-greenText to-greensec text-greenBG mx-auto sm:p-4 sm:px-16 min-h-[80vh] sm:min-h-[95vh] ">
+            class="bg-linear-180 from-colorText to-colorSec text-colorBG mx-auto sm:p-4 sm:px-16 min-h-[80vh] sm:min-h-[95vh] ">
             <div class="container mt-0  p-8 sm:p-12 mx-auto">
                 <h2 class=" text-6xl font-extrabold text-center" data-aos="fade-up" data-aos-offset="100"
                     data-aos-delay="50" data-aos-duration="1000"> - </h2>
@@ -227,7 +227,7 @@
                             data-aos-duration="1000">Projects
                         </h3>
                     </div>
-                    <div class="w-full erase text-greenBG mt-auto mb-0 flex flex-col">
+                    <div class="w-full erase text-colorBG mt-auto mb-0 flex flex-col">
                         <p class="border-b w-fit" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                             data-aos-duration="1000">Selected Works</p>
                         <p class="border-b w-fit" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
@@ -236,29 +236,29 @@
                 </div>
                 <div class="flex flex-col sm:grid sm:grid-cols-2 gap-4 my-8">
                     <!-- Top Left  -->
-                    <div class="w-full h-full p-8 bg-black text-greenText rounded-4xl" data-aos="fade-up"
+                    <div class="w-full h-full p-8 bg-black text-colorText rounded-4xl" data-aos="fade-up"
                         data-aos-offset="100" data-aos-duration="1000">
                         <img src="image/citridx.webp" alt=""
-                            class="sm:h-68.75 w-full rounded-xs border-2 border-greenText">
+                            class="sm:h-68.75 w-full rounded-xs border-2 border-colorText">
                         <div class="block sm:flex m-auto mt-8">
                             <div class="tag my-3 ">
-                                <h2 class="font-bold text-xl my-2 text-greenText">Citridx</h2>
+                                <h2 class="font-bold text-xl my-2 text-colorText">Citridx</h2>
                                 <div>
                                     <a class="content-center">#mobile</a>
                                     <a class="content-center">#kotlin</a>
                                 </div>
                             </div>
                             <div
-                                class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2  bg-background text-[15px] sm:text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                                class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2  bg-background text-[15px] sm:text-md font-bold border-colorText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-colorText">
                                 <a href="https://github.com/sampm092/Citrus" target="_blank" class="">Check</a>
                             </div>
                         </div>
                     </div>
                     <!-- Top Right  -->
-                    <div class="w-full h-full p-8 bg-black rounded-4xl text-greenText" data-aos="fade-up"
+                    <div class="w-full h-full p-8 bg-black rounded-4xl text-colorText" data-aos="fade-up"
                         data-aos-offset="100" data-aos-duration="1000">
                         <img src="image/TETRISM.webp" alt=""
-                            class="sm:h-68.75 w-full rounded-xs border-2 border-greenText ">
+                            class="sm:h-68.75 w-full rounded-xs border-2 border-colorText ">
                         <div class="block sm:flex m-auto mt-8">
                             <div class="tag my-3 ">
                                 <h2 class="font-bold text-xl my-2">TetriSM</h2>
@@ -268,16 +268,16 @@
                                 </div>
                             </div>
                             <div
-                                class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2  bg-background text-[15px] sm:text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                                class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2  bg-background text-[15px] sm:text-md font-bold border-colorText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-colorText">
                                 <a href="https://github.com/sampm092/Tetrisam" target="_blank" class="">Check</a>
                             </div>
                         </div>
                     </div>
                     <!-- Bottom Left  -->
-                    <div class="w-full h-full p-8 bg-black rounded-4xl text-greenText" data-aos="fade-up"
+                    <div class="w-full h-full p-8 bg-black rounded-4xl text-colorText" data-aos="fade-up"
                         data-aos-offset="100" data-aos-duration="1000">
                         <img src="image/ufolappy.webp" alt=""
-                            class="sm:h-68.75 w-full rounded-xs border-2 border-greenText ">
+                            class="sm:h-68.75 w-full rounded-xs border-2 border-colorText ">
                         <div class="block sm:flex m-auto mt-8">
                             <div class="tag my-3 ">
                                 <h2 class="font-bold text-xl my-2">UFO-lappy</h2>
@@ -287,7 +287,7 @@
                                 </div>
                             </div>
                             <div
-                                class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2  bg-background text-[15px] sm:text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                                class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2  bg-background text-[15px] sm:text-md font-bold border-colorText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-colorText">
                                 <a href="https://github.com/sampm092/OneUnity" target="_blank" class="">Check</a>
                             </div>
                         </div>
@@ -295,7 +295,7 @@
                     </div>
 
                     <!-- Bottom Right  -->
-                    <div class="w-full h-full p-8 bg-black rounded-4xl text-greenText content-between"
+                    <div class="w-full h-full p-8 bg-black rounded-4xl text-colorText content-between"
                         data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000">
                         <div class="block sm:flex m-auto">
                             <div class="tag my-3 ">
@@ -328,39 +328,39 @@
                             </a>
                         </div>
                         <div
-                            class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2 mt-8 bg-background text-[15px] sm:text-md font-bold border-greenText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-greenText">
+                            class="mr-0 m-auto px-2 py-1 sm:px-4 sm:py-2 mt-8 bg-background text-[15px] sm:text-md font-bold border-colorText border text-foreground rounded-xs w-fit content-center text-end bg-secondary text-colorText">
                             <a data-lang="en" href="https://github.com/sampm092/simple_code">Check</a>
                         </div>
 
                     </div>
                 </div>
-                <div class="pb-10 text-greenBG font-bold text-end" data-aos="fade-right" data-aos-offset="10"
+                <div class="pb-10 text-colorBG font-bold text-end" data-aos="fade-right" data-aos-offset="10"
                     data-aos-duration="1000">
                     <a href="projects.html" class="text-xl">See more »</a>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="border-t-2 mx-auto p-4 bg-greenBG">
+        <section id="contact" class="border-t-2 mx-auto p-4 bg-colorBG">
             <div class="container mt-0 m-auto p-8 sm:p-12" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                 data-aos-duration="1000">
                 <p class="text-center font-bold text-white">Check me out and </p>
                 <div class="block sm:flex w-full m-auto justify-center gap-2">
-                    <h3 class="text-center sm:text-right text-6xl font-extrabold text-greenText ">Contact Me</h3>
+                    <h3 class="text-center sm:text-right text-6xl font-extrabold text-colorText ">Contact Me</h3>
                     <p class="hidden sm:block sm:text-left mb-0 mt-auto font-bold text-white">at</p>
                 </div>
                 <div class="grid sm:grid-cols-2 m-auto mt-16">
-                    <a href="https://wa.link/xqc45y[fake]" id="wa-a" class="btn bg-greensec text-amber-400">
+                    <a href="https://wa.link/xqc45y[fake]" id="wa-a" class="btn bg-colorSec text-amber-400">
                     </a>
-                    <a id="gma-a" class="btn bg-greensec text-amber-400" onclick="confirmDelete('text')">
+                    <a id="gma-a" class="btn bg-colorSec text-amber-400" onclick="confirmDelete('text')">
                     </a>
-                    <a id="dc-a" class="btn bg-greensec text-amber-400"
+                    <a id="dc-a" class="btn bg-colorSec text-amber-400"
                         href="https://discord(.)com/users/608464045229735936"></a>
-                    <a id="tl-a" class="btn bg-greensec text-amber-400" href="t(.)me/S0daOda"></a>
+                    <a id="tl-a" class="btn bg-colorSec text-amber-400" href="t(.)me/S0daOda"></a>
                 </div>
         </section>
 
-        <section id="social" class="bg-greensec text-[#03300F] border-t-2 mx-auto p-4 min-h-[80vh] sm:min-h-[95vh]">
+        <section id="social" class="bg-colorSec text-[#03300F] border-t-2 mx-auto p-4 min-h-[80vh] sm:min-h-[95vh]">
             <div class="container mt-0 p-8 sm:p-12 mx-auto">
                 <div class="justify-self-center w-fit" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
                     data-aos-duration="1000">
@@ -368,7 +368,7 @@
                         <p class="sm:text-left font-bold text-black text-center sm:ml-0 sm:mr-auto">And also </p>
                         <p class="sm:text-left font-bold text-black text-center sm:ml-auto sm:mr-0">check my</p>
                     </div>
-                    <h3 class="text-center sm:text-left text-6xl font-extrabold text-greenBG mb-4">Social Media
+                    <h3 class="text-center sm:text-left text-6xl font-extrabold text-colorBG mb-4">Social Media
                     </h3>
                 </div>
                 <div class="mt-12" data-aos="fade-up" data-aos-offset="100" data-aos-delay="50"
@@ -488,7 +488,7 @@
         </section>
     </main>
 
-    <footer id="footer" class="footer flex flex-col m-auto bg-greenBG text-greenText py-5">
+    <footer id="footer" class="footer flex flex-col m-auto bg-colorBG text-colorText py-5">
         <div class="container justify-items-center mx-auto text-center">
             <p>&copy; 2026 samuel-parlindungan-malau. All rights reserved.</p>
             <div id="date-now"></div>

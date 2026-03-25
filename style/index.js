@@ -55,41 +55,26 @@ function showAccount(elementId) {
     social.classList.toggle('visible'); // hide/show the class to show the box
 }
 
-function toggleTheme() {
-    const toggle = document.querySelector('.toggle-container');
-    const knob = document.querySelector('.toggle-knob');
-    const bgdark = document.querySelectorAll('[class*="bg130"]')
-    const nava = document.querySelectorAll('.nav a, header')
-    toggle.classList.toggle('dark');
-    knob.classList.toggle('darknob');
+function changeTheme(value) {
+    switch (value) {
+        case 'one':
+            document.documentElement.style.setProperty('--colorText', '#94ea92');
+            document.documentElement.style.setProperty('--colorBG', '#03300f');
+            document.documentElement.style.setProperty('--colorSec', '#7fd067');
+            document.documentElement.style.setProperty('--colorThird', '#71e479');
+            break;
 
-    cuLang = cuLang === 'en' ? 'id' : 'en';
+        case 'two':
+            document.documentElement.style.setProperty('--colorText', '#fff');
+            document.documentElement.style.setProperty('--colorBG', '#000');
+            document.documentElement.style.setProperty('--colorSec', '#fff');
+            document.documentElement.style.setProperty('--colorThird', '#adadad');
+            break;
 
-    document.querySelectorAll('[data-lang]').forEach(element => {
-        if (element.classList.contains('btn')) { //handle button
-            element.style.display = element.getAttribute('data-lang') === cuLang ? 'inline-block' : 'none';
-        } else {
-            element.style.display = element.getAttribute('data-lang') === cuLang ? 'block' : 'none';
-        }
-    });
-
-
-    if (cuLang == 'id') {
-        bgdark.forEach(element => {
-            element.style.backgroundColor = '#fff';
-        });
-        nava.forEach(element => {
-            element.style.color = '#000';
-        });
-
-    } else {
-        bgdark.forEach(element => {
-            element.style.backgroundColor = '#000';
-        });
-        nava.forEach(element => {
-            element.style.color = '#fff';
-        });
+        default:
+            break;
     }
+
 }
 
 function a(duration) { // duration in ms

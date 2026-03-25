@@ -4,18 +4,20 @@
   --primary: #fff;
   --secondary: #000;
   --shade: #ffffff40;
-  --greenText: #94ea92;
-  --greenBG: #03300f;
-  --greensec: #7fd067;
+  --colorText: #94ea92;
+  --colorBG: #03300f;
+  --colorSec: #7fd067;
+  --colorThird: #71e479;
 }
 
 @theme inline {
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
   --color-shade: var(--shade);
-  --color-greenBG: var(--greenBG);
-  --color-greenText: var(--greenText);
-  --color-greensec: var(--greensec);
+  --color-colorBG: var(--colorBG);
+  --color-colorText: var(--colorText);
+  --color-colorSec: var(--colorSec);
+  --color-colorThird: var(--colorThird);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --breakpoint-sm: 650px;
@@ -44,7 +46,7 @@ body {
 }
 
 body {
-  background: var(--color-greenBG);
+  background: var(--color-colorBG);
   color: var(--secondary);
   font-family: "Plus Jakarta Sans", sans-serif, BGrotesque, monospace;
 }
@@ -64,15 +66,15 @@ a {
 #header::selection,
 #contact::selection,
 footer::selection {
-  background-color: var(--color-greenText);
-  color: var(--color-greenBG);
+  background-color: var(--color-colorText);
+  color: var(--color-colorBG);
 }
 
 #about::selection,
 #projects::selection,
 #social::selection {
-  color: var(--color-greenText);
-  background-color: var(--color-greenBG);
+  color: var(--color-colorText);
+  background-color: var(--color-colorBG);
 }
 
 #navi {
@@ -110,9 +112,9 @@ header {
 
 .bgButton {
   border-radius: 100%;
-  border: 1px solid black;
   width: 1rem;
   height: 1rem;
+  border: 1px solid var(--colorBG);
   cursor: pointer;
 }
 
@@ -332,7 +334,7 @@ header {
 /* contact  */
 #contact a {
   place-self: center;
-  color: --var(---color-greenBG);
+  color: --var(---color-colorBG);
   margin: 5px auto;
   font-weight: bold;
   padding: 12px;
