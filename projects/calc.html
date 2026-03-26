@@ -92,6 +92,30 @@
             margin: auto 0 auto auto;
             border: 0;
         }
+
+        @media only screen and (max-width: 650px) {
+
+            input,
+            textarea,
+            .flex {
+                max-width: 576px;
+                width: fit-content;
+            }
+
+            .logShow{
+                display: none;
+            }
+
+            .log{
+                display: block;
+                transform: translateX(0);
+            }
+
+            .container{
+                display: flex;
+                flex-direction: column;
+            }
+        }
     </style>
 </head>
 

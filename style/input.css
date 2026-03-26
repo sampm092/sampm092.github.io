@@ -125,10 +125,10 @@ header {
 
 .font-border {
   text-shadow:
-    -0.5px -0.5px 0 #71e479,
-    0.5px -0.5px 0 #71e479,
-    -0.5px 0.5px 0 #71e479,
-    0.5px 0.5px 0 #71e479;
+    -0.5px -0.5px 0 var(--color-colorThird),
+    0.5px -0.5px 0 var(--color-colorThird),
+    -0.5px 0.5px 0 var(--color-colorThird),
+    0.5px 0.5px 0 var(--color-colorThird);
 }
 
 .show {

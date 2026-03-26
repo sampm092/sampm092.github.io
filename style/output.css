@@ -42,6 +42,7 @@
     --default-mono-font-family: var(--font-geist-mono);
     --color-colorBG: var(--colorBG);
     --color-colorText: var(--colorText);
+    --color-colorThird: var(--colorThird);
   }
 }
 @layer base {
@@ -1201,7 +1202,7 @@ header {
   cursor: pointer;
 }
 .font-border {
-  text-shadow: -0.5px -0.5px 0 #71e479, 0.5px -0.5px 0 #71e479, -0.5px 0.5px 0 #71e479, 0.5px 0.5px 0 #71e479;
+  text-shadow: -0.5px -0.5px 0 var(--color-colorThird), 0.5px -0.5px 0 var(--color-colorThird), -0.5px 0.5px 0 var(--color-colorThird), 0.5px 0.5px 0 var(--color-colorThird);
 }
 .show {
   display: block !important;
