@@ -997,6 +997,11 @@
       display: grid;
     }
   }
+  .sm\:hidden {
+    @media (width >= 650px) {
+      display: none;
+    }
+  }
   .sm\:inline {
     @media (width >= 650px) {
       display: inline;
