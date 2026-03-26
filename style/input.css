@@ -81,6 +81,11 @@ footer::selection {
   display: none;
 }
 
+#theme {
+  display: flex;
+  flex-direction: column;
+}
+
 header nav a:hover {
   font-weight: bold;
   text-decoration: underline;
@@ -106,7 +111,7 @@ header {
   transition: transform 0.3s ease-in-out;
 }
 
-#navi div:not([id*="eo"]) {
+#navi div:not([id*="eo"]), #tema {
   transition: transform 0.3s ease;
 }
 
@@ -447,6 +452,10 @@ header {
   #navi {
     display: flex;
     flex-direction: column;
+  }
+
+  #theme {
+    display: none;
   }
 
   .dropdown-content {

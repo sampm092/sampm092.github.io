@@ -113,6 +113,20 @@ function openNavigation() {
     close.classList.toggle('none');
 }
 
+function openTheme() {
+    const tema = document.getElementById('tema');
+    const iconTema = document.querySelectorAll('#tema svg');
+
+    tema.style.transform =
+                tema.style.transform == 'translateX(60%)'
+                    ? 'translateX(0)'
+                    : 'translateX(60%)';
+    
+    iconTema.forEach(element => {
+        element.classList.toggle('none');
+    })
+}
+
 function confirmDelete() {
     Swal.fire({
         title: "You sure?",

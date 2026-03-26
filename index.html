@@ -86,11 +86,11 @@
             </div>
         </div>
     </header>
-    <div class="fixed top-1/2 right-4 flex flex-col gap-4 z-50">
+    <div id="theme" class="fixed top-1/2 right-4 gap-4 z-50">
         <div class="bgButton bg-[#94ea92]" onclick="changeTheme('one')"></div>
         <div class="bgButton bg-white" onclick="changeTheme('two')"></div>
     </div>
-    <section id="navi" class="fixed text-colorBG z-50 -right-1.25 bottom-6 gap-2">
+    <section id="navi" class="fixed text-colorBG z-50 -right-1.25 bottom-20 gap-2">
         <!-- top  -->
         <div id="top-b" style="transform: translateX(100%);"
             class="bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer">
@@ -163,8 +163,33 @@
                 </svg>
             </a>
         </div>
-
     </section>
+    <div id="tema"
+        class="fixed z-50 -right-1.25 bottom-4 bg-colorBG px-3 py-2.5 border-colorText text-colorText border rounded-s-2xl cursor-pointer"
+        style="transform: translateX(60%);">
+        <div id="colorNav" class="cursor-pointer flex gap-8">
+            <div onclick="openTheme()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-double-left" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M8.354 1.646a.5.5 0 0 1 0 .708L2.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                    <path fill-rule="evenodd"
+                        d="M12.354 1.646a.5.5 0 0 1 0 .708L6.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-chevron-double-right none" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M3.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L9.293 8 3.646 2.354a.5.5 0 0 1 0-.708" />
+                    <path fill-rule="evenodd"
+                        d="M7.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L13.293 8 7.646 2.354a.5.5 0 0 1 0-.708" />
+                </svg>
+            </div>
+            <div class="gap-4 flex z-50">
+                <div class="bgButton bg-[#94ea92] m-auto" onclick="changeTheme('one')"></div>
+                <div class="bgButton bg-white m-auto" onclick="changeTheme('two')"></div>
+            </div>
+        </div>
+    </div>
     <main>
         <div class="absolute w-full h-full overflow-hidden min-h-[80vh] sm:min-h-screen content-center"
             data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000">

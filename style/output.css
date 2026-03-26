@@ -214,8 +214,11 @@
   .right-4 {
     right: calc(var(--spacing) * 4);
   }
-  .bottom-6 {
-    bottom: calc(var(--spacing) * 6);
+  .bottom-4 {
+    bottom: calc(var(--spacing) * 4);
+  }
+  .bottom-20 {
+    bottom: calc(var(--spacing) * 20);
   }
   .left-0 {
     left: calc(var(--spacing) * 0);
@@ -1164,6 +1167,10 @@ body, h2, h3, h4, p, a {
 #navi {
   display: none;
 }
+#theme {
+  display: flex;
+  flex-direction: column;
+}
 header nav a:hover {
   font-weight: bold;
   text-decoration: underline;
@@ -1183,7 +1190,7 @@ svg {
 header {
   transition: transform 0.3s ease-in-out;
 }
-#navi div:not([id*="eo"]) {
+#navi div:not([id*="eo"]), #tema {
   transition: transform 0.3s ease;
 }
 .bgButton {
@@ -1449,6 +1456,9 @@ header {
   #navi {
     display: flex;
     flex-direction: column;
+  }
+  #theme {
+    display: none;
   }
   .dropdown-content {
     max-height: 0;
