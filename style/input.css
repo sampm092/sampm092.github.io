@@ -4,10 +4,10 @@
   --primary: #fff;
   --secondary: #000;
   --shade: #ffffff40;
-  --colorText: #94ea92;
-  --colorBG: #03300f;
-  --colorSec: #7fd067;
-  --colorThird: #71e479;
+  --colorText: #fff;
+  --colorBG: #000;
+  --colorSec: #fff;
+  --colorThird: #adadad;
 }
 
 @theme inline {
