@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeyOnScreen</title>
     <style>
         :root {
             --col-size: 50px;
@@ -15,8 +18,13 @@
             display: flex;
         }
 
-        main {
+        .main,
+        h1 {
             margin: auto;
+        }
+
+        .title {
+            padding: 3rem;
         }
 
         #copyNotification {
@@ -116,7 +124,11 @@
         <button onclick="size('up')">+</button>
         <button onclick="size('down')">-</button>
     </div>
-    <main>
+    <div class="main">
+        <div class="title">
+            <h1>For Desktop</h1>
+            <p>If you lose some keyboard key</p>
+        </div>
         <div class="flex" style="margin: auto;margin-bottom: 20px;">
             <input id="display" type="text" readonly>
             <button id="copy" onclick="copy()">Copy</button>
@@ -191,7 +203,7 @@
                 <button id="capslock" style="--base-width: 80px"> CapsLock</button>
             </div>
         </div>
-    </main>
+    </div>
 
     <script>
         const display = document.getElementById("display");
