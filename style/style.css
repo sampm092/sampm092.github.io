@@ -320,24 +320,24 @@ section{
 
 #movie {
 background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../image/mvbg.png);
-  color: #95873e;
+  color: #594f1a;
 }
 
 
 #movie .lineA::after {
-  background: #95873e;
+  background: #594f1a;
 }
 
 #movieSect .content-items div {
-    border: 2px solid #95873e;
-    color: #95873e;
+    border: 2px solid #594f1a;
+    color: #594f1a;
     
 }
 
 #movieSect .content-items div:hover{
     color: #ffffff;
-    border: 2px solid #95873e;
-    background-color: #95873e;
+    border: 2px solid #594f1a;
+    background-color: #594f1a;
 }
 
 #movieitems div{
@@ -354,20 +354,20 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 }
 
 #tvSect .content-items div {
-    border: 2px solid #95873e;
+    border: 2px solid #594f1a;
     color: #ffffffff;
     
 }
 
 #tvSect .content-items div:hover{
-    color: #95873e;
-    border: 2px solid #95873e;
+    color: #594f1a;
+    border: 2px solid #594f1a;
     background-color: #ffffff;
 }
 
 #tvitems div{
     padding: 12px;
-    background: #95873e;
+    background: #594f1a;
     border-radius: 4px;
     width: 95%;
     text-align: start;
@@ -379,35 +379,35 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 }
 
 #movieSect .page-link{
-    border: 1px solid #95873e;
-    color: #95873e;
+    border: 1px solid #594f1a;
+    color: #594f1a;
 }
 
 #tvSect .page-link{
-    border: 1px solid #95873e;
+    border: 1px solid #594f1a;
     color: #ffffffff;
-    background-color: #95873e;
+    background-color: #594f1a;
 }
 
 #movieSect .page-link.active, #tvSect .page-link.active{
-      color: #95873e;
+      color: #594f1a;
       border-color: #ffffff;
       background: #ffffff;
 }
 #movieSect .page-link.active:hover, #tvSect .page-link.active:hover{
        background: #ffffff;
-      color: #95873e;
-      border: 1px dashed #95873e;
+      color: #594f1a;
+      border: 1px dashed #594f1a;
 }
 #movieSect .page-link:hover{
-  background: #95873e;
+  background: #594f1a;
       color: #ffffff;
 }
 
 #tvSect .page-link:hover{
   background: #ffffff;
-      color: #95873e;
-      border: 1px solid #95873e;
+      color: #594f1a;
+      border: 1px solid #594f1a;
 }
 
 .c-header_theme-switcher {
@@ -421,7 +421,7 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 .c-header_theme-swatch {
     background-color: #fff;
     cursor: pointer;
-    border: 2px solid #95873e;
+    border: 2px solid #594f1a;
     border-radius: 50%;
     width: 1rem;
     height: 1rem;
@@ -430,9 +430,9 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 }
 
 .c-header_theme-active{
-    background-color: #95873e;
+    background-color: #594f1a;
     cursor: pointer;
-    border: 2px solid #95873e;
+    border: 2px solid #594f1a;
 }
 
 #TheContainer {
