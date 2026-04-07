@@ -111,7 +111,8 @@ header {
   transition: transform 0.3s ease-in-out;
 }
 
-#navi div:not([id*="eo"]), #tema {
+#navi div:not([id*="eo"]),
+#tema {
   transition: transform 0.3s ease;
 }
 
@@ -428,8 +429,14 @@ header {
   header .container {
     max-height: 1200px !important;
     height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2px 2rem;
+  }
+
+  header .container div:nth-of-type(4) {
     display: block;
-    justify-items: center;
   }
 
   header .container div {
