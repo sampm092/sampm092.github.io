@@ -118,13 +118,52 @@ function openTheme() {
     const iconTema = document.querySelectorAll('#tema svg');
 
     tema.style.transform =
-                tema.style.transform == 'translateX(60%)'
-                    ? 'translateX(0)'
-                    : 'translateX(60%)';
-    
+        tema.style.transform == 'translateX(60%)'
+            ? 'translateX(0)'
+            : 'translateX(60%)';
+
     iconTema.forEach(element => {
         element.classList.toggle('none');
     })
+}
+
+function openDocs() {
+    Swal.fire({
+        title: "<strong>Check on my documents<strong>",
+        icon: "info",
+        html: `<div class="py-1">
+                            <div class="flex px-4 py-2 border-b">
+                                <h4 class="text-left">Resume</h4>
+                                <div class="flex m-auto mr-0 gap-2">
+                                    <a href="files/ResumeEN.pdf" target="_blank"
+                                        style="text-decoration: underline;">EN</a>
+                                    <a href="files/Resume.pdf" target="_blank"
+                                        style="text-decoration: underline;">ID</a>
+                                </div>
+                            </div>
+                            <div class="flex px-4 py-2 border-b">
+                                <h4 class="text-left">Portfolio</h4>
+                                <div class="flex m-auto mr-0 gap-2">
+                                    <a href="files/portfolio.pdf" target="_blank"
+                                        style="text-decoration: underline;">EN</a>
+                                    <a href="files/portofolio.pdf" target="_blank"
+                                        style="text-decoration: underline;">ID</a>
+                                </div>
+                            </div>
+                            <div class="flex px-4 py-2">
+                                <h4 class="text-left">Curriculum Vitae</h4>
+                                <div class="flex m-auto mr-0 gap-2">
+                                    <a href="files/EN CV.pdf" target="_blank" style="text-decoration: underline;">EN</a>
+                                    <a href="files/CV.pdf" target="_blank" style="text-decoration: underline;">ID</a>
+                                </div>
+                            </div>
+                 </div>
+  `,
+        showCloseButton: true,
+        showCancelButton: false,
+        showConfirmButton: false,
+        focusConfirm: false,
+    });
 }
 
 function confirmDelete() {
