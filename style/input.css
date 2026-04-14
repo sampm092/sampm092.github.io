@@ -86,6 +86,14 @@ footer::selection {
   flex-direction: column;
 }
 
+#theme div{
+  opacity: 20%;
+}
+
+#theme div:hover{
+  opacity: 100%;
+}
+
 header nav a:hover {
   font-weight: bold;
   text-decoration: underline;
