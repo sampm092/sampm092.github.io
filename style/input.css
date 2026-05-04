@@ -451,6 +451,10 @@ header {
     display: none;
   }
 
+  #about{
+    flex-direction: column-reverse;
+  }
+
   #image {
     width: fit-content;
     display: block;
