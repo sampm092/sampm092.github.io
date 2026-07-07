@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Replacer</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            text-align: center;
+            background-color: gainsboro;
+        }
+
+        input,
+        select,
+        button,
+        textarea {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        select,
+        button {
+            cursor: pointer;
+        }
+
+        textarea {
+            height: 20px;
+            max-width: 576px;
+            min-width: 576px;
+        }
+
+        .prm-btn {
+            color: #fff;
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        button:hover {
+            opacity: 80%;
+        }
+
+        #outputText {
+            height: 160px;
+        }
+
+        #copyNotification {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        #copyNotification.show {
+            opacity: 1;
+        }
+
+        .main label {
+            text-align: start;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h1>Letter Maker</h1>
+        <label for="perusahaanInput">Perusahaan :</label>
+        <textarea id="perusahaanInput" placeholder="Type your text here..."></textarea>
+        <label for="jabatanInput">Jabatan :</label>
+        <textarea id="jabatanInput" placeholder="Type your text here..."></textarea>
+        <label for="sumberInput">Sumber :</label>
+        <textarea id="sumberInput" placeholder="Type your text here..."></textarea>
+    </div>
+
+    <label for="option">Choose your letter type:</label>
+    <select id="option">
+        <option value="lamaran">Surat Lamaran</option>
+        <option value="isiSurat">Isi Surat</option>
+        <option value="reminder">Surat Reminder</option>
+    </select>
+
+    <button class="prm-btn" onclick="replaceVowels()">Generate</button>
+
+    <h3>Output:</h3>
+    <textarea id="outputText" readonly></textarea>
+    <button onclick="copText()" style="margin-bottom: 3rem;">Copy</button>
+    <div id="copyNotification">Copied!</div>
+
+    <script>
+        function replaceVowels() {
+            const perusahaan = document.getElementById('perusahaanInput').value;
+            const sumber = document.getElementById('sumberInput').value;
+            const jabatan = document.getElementById('jabatanInput').value;
+            const option = document.getElementById('option').value;
+            const now = new Date();
+            const months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
+            const day = now.getDate();
+            const month = months[now.getMonth()];
+            const year = now.getFullYear();
+
+            const formattedDate = `${day} ${month} ${year}`;
+
+            let replaced = '';
+
+            if (perusahaan.trim() !== '' && jabatan.trim() !== '') {
+                if (option == 'lamaran') {
+                    let text =
+                        `Hal : Lamaran Pekerjaan
+            
+Yth. HRD / Personalia PERUSAHAAN
+di tempat
+
+Dengan hormat,
+Berdasarkan informasi lowongan kerja yang saya dapatkan melalui SUMBER pada tanggal TIME, dengan ini saya bermaksud mengajukan diri untuk mengisi posisi JABATAN di PERUSAHAAN.
+
+Berikut adalah data singkat mengenai diri saya:
+    Nama                    		: Samuel Parlindungan Malau
+    Tempat, Tanggal Lahir   	: Tarutung, 29 Januari 2002
+    Pendidikan Terakhir     	: S1 Teknologi Informasi
+    Alamat                  		: Jl. Suralaya Dalam XII No. 1, Cipayung, Kota Jakarta Timur
+    Telepon/Whatsapp        	: 088264318369
+
+Sebagai bahan pertimbangan, saya lampirkan beberapa dokumen pendukung seperti CV dan sertifikat. Besar harapan saya untuk diberikan kesempatan menghadiri sesi wawancara, agar saya dapat menjelaskan lebih mendalam mengenai potensi dan kualifikasi yang saya miliki.
+
+Atas perhatian Bapak/Ibu, saya ucapkan terima kasih.
+
+Hormat Saya,
+
+Samuel Parlindungan Malau
+
+`;
+                    replaced = text.replace('JABATAN', jabatan);
+                    replaced = replaced.replaceAll('PERUSAHAAN', perusahaan);
+                    replaced = replaced.replace('TIME', formattedDate);
+                    replaced = replaced.replace('SUMBER', sumber);
+                    document.getElementById('outputText').value = replaced;
+                } else if (option == 'reminder') {
+
+                } else if (option == 'isiSurat') {
+                    let text =
+                        `Kepada,
+HRD / PERSONALIA
+PERUSAHAAN
+
+Perkenalkan nama saya Samuel Malau, seorang Fresh Graduate yang memiliki skill dan kemampuan dalam X sesuai dengan ilmu dan pengetahuan saya pada saat sekolah di Universitas Sumatera Utara.
+
+Saya sangat tertarik untuk bekerja sebagai posisi JABATAN di PERUSAHAAN. Besar harapan saya untuk dapat mengikuti tes seleksi dan wawancara. Sebagai bahan pertimbangan, saya lampirkan CV, surat lamaran, dan berkas pendukung lainnya.
+
+Hormat Saya,
+Samuel Malau
+(+62) 882 6431 8369
+malaus4294@gmail.com`;
+                    replaced = text.replace('JABATAN', jabatan);
+                    replaced = replaced.replaceAll('PERUSAHAAN', perusahaan);
+                    replaced = replaced.replace('TIME', formattedDate);
+                    replaced = replaced.replace('SUMBER', sumber);
+                    document.getElementById('outputText').value = replaced;
+                }
+            } else {
+                Swal.fire({
+                    title: "Alert!",
+                    text: "No Texts!",
+                    icon: "warning",
+                    confirmButtonText: 'OK'
+                });
+            }
+        }
+
+        async function copText() {
+            const textOutput = document.getElementById("outputText").value;
+            navigator.clipboard.writeText(textOutput).then(() => {
+                const notification = document.getElementById("copyNotification");
+                notification.classList.add("show");
+                setTimeout(() => {
+                    notification.classList.remove("show");
+                }, 2000); // 2 seconds
+            });
+        }
+
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
