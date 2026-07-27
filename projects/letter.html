@@ -90,6 +90,7 @@
     <select id="option">
         <option value="lamaran">Surat Lamaran</option>
         <option value="isiSurat">Isi Surat</option>
+        <option value="magang">Surat Magang</option>
         <option value="reminder">Surat Reminder</option>
     </select>
 
@@ -132,16 +133,12 @@ Berikut adalah data singkat mengenai diri saya:
     Nama                    		: Samuel Parlindungan Malau
     Tempat, Tanggal Lahir   	: Tarutung, 29 Januari 2002
     Pendidikan Terakhir     	: S1 Teknologi Informasi
-    Alamat                  		: Jl. Suralaya Dalam XII No. 1, Cipayung, Kota Jakarta Timur
+    Alamat                  		: Jl. Suralaya Dalam XII No. 1, Cipayung, Jakarta Timur
     Telepon/Whatsapp        	: 088264318369
 
 Sebagai bahan pertimbangan, saya lampirkan beberapa dokumen pendukung seperti CV dan sertifikat. Besar harapan saya untuk diberikan kesempatan menghadiri sesi wawancara, agar saya dapat menjelaskan lebih mendalam mengenai potensi dan kualifikasi yang saya miliki.
 
 Atas perhatian Bapak/Ibu, saya ucapkan terima kasih.
-
-Hormat Saya,
-
-Samuel Parlindungan Malau
 
 `;
                     replaced = text.replace('JABATAN', jabatan);
@@ -171,6 +168,24 @@ malaus4294@gmail.com`;
                     replaced = replaced.replace('SUMBER', sumber);
                     document.getElementById('outputText').value = replaced;
                 }
+            } else if (option == 'magang') {
+                let text =
+                    `Kepada,
+HRD / PERSONALIA
+PERUSAHAAN
+
+Perkenalkan nama saya Samuel Malau, seorang lulusan Universitas Sumatera Utara jurusan Teknologi Informasi ingin mengajukan lamaran untuk posisi JABATAN di PERUSAHAAN yang saya lihat di SUMBER.
+
+Saya tertarik untuk mendapatkan pengalaman langsung dalam memahami dunia kerja yang profesional, meningkatkan kerja sama tim, dan juga beradaptasi dengan lingkungan kerja, dan saya yakin bahwa keterampilan saya akan berguna di PERUSAHAAN sebagai JABATAN. Saya siap untuk bekerja dengan dedikasi dan belajar sebanyak mungkin selama program magang ini.
+
+Terima kasih atas perhatian dan kesempatan yang diberikan. Saya sangat berharap dapat berdiskusi lebih lanjut mengenai kesempatan magang ini. Saya telah melampirkan CV dan portfolio saya untuk referensi lebih lanjut. 
+
+`;
+                replaced = text.replace('JABATAN', jabatan);
+                replaced = replaced.replaceAll('PERUSAHAAN', perusahaan);
+                replaced = replaced.replace('TIME', formattedDate);
+                replaced = replaced.replace('SUMBER', sumber);
+                document.getElementById('outputText').value = replaced;
             } else {
                 Swal.fire({
                     title: "Alert!",
