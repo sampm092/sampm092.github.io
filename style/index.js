@@ -63,7 +63,7 @@ function changeTheme(value) {
             document.documentElement.style.setProperty('--colorBG', '#03300f');
             document.documentElement.style.setProperty('--colorSec', '#7fd067');
             document.documentElement.style.setProperty('--colorThird', '#71e479');
-            imageLogo.src = 'image/logo3White.png';
+            imageLogo.src = 'image/logo3Green.png';
             break;
 
         case 'two':
