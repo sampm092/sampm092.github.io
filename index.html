@@ -22,7 +22,7 @@
         class="sm:bg-[#ffffff00] bg-colorBG bg-linear-235 from-colorBG to-colorBG text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-xl text-colorText right-0 h-16 flex items-center px-4 md:px-6">
         <div class="container mx-auto flex sm:max-h-15 w-11/12 max-w-7xl items-center justify-between">
             <div id="image" class="flex">
-                <img src="image/logo3White.png"
+                <img id="logo-image" src="image/logo3White.png"
                     class="w-full max-h-10 max-w-10 md:max-w-full rounded-4xl border-primary">
                 <span
                     class="w-22.5 text-sm font-medium text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5 uppercase text-earth-800 md:hidden content-center">
@@ -109,7 +109,8 @@
         </div>
     </header>
     <div id="theme" class="fixed top-1/2 right-4 gap-4 z-50">
-        <div class="bgButton bg-white" onclick="changeTheme('two')"></div>
+        <div class="bgButton bg-white" onclick="changeTheme('three')"></div>
+        <div class="bgButton bg-black" onclick="changeTheme('two')"></div>
         <div class="bgButton bg-[#94ea92]" onclick="changeTheme('one')"></div>
     </div>
     <section id="navi" class="fixed text-colorBG z-50 -right-1.25 bottom-20 gap-2">
@@ -235,12 +236,12 @@
                         experiences for web and games.</h2> -->
                     <p class="m-auto mt-5 max-w-2xl text-[18px]/6 text-center" data-lang="en">A Programmer with a strong interest in building clean, functional applications. Learning new things every day and hoping to contribute meaningfully to today’s tech landscape.</p>
                     <a href="#projects"
-                        class="btn justify-center gap-x-1.5 p-3 px-5 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-colorText bg-colorBG text-primary border-2 mt-8 rounded-4xl">Check
+                        class="btn justify-center gap-x-1.5 p-3 px-5 w-fit inset-ring-1 inset-ring-white/5 hover:bg-colorText hover:text-colorBG cursor-pointer border-colorText bg-colorBG text-colorText border-2 mt-8 rounded-4xl">Check
                         for more <span class="text-sm">▼</span></a>
                 </div>
             </div>
         </section>
-        <section id="top"
+        <!-- <section id="top"
             class="bg-colorBG bg-linear-270 from-colorThird to-colorBG text-colorText m-auto mt-0 pb-10 pt-10 flex dark-select min-h-[90vh] sm:min-h-screen ">
             <div class="container w-full mx-auto content-center z-10 text-center">
                 <div class="flex flex-col gap-8">
@@ -264,7 +265,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <section id="projects"

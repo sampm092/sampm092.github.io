@@ -56,12 +56,14 @@ function showAccount(elementId) {
 }
 
 function changeTheme(value) {
+    const imageLogo = document.getElementById("logo-image");
     switch (value) {
         case 'one':
             document.documentElement.style.setProperty('--colorText', '#94ea92');
             document.documentElement.style.setProperty('--colorBG', '#03300f');
             document.documentElement.style.setProperty('--colorSec', '#7fd067');
             document.documentElement.style.setProperty('--colorThird', '#71e479');
+            imageLogo.src = 'image/logo3White.png';
             break;
 
         case 'two':
@@ -69,6 +71,14 @@ function changeTheme(value) {
             document.documentElement.style.setProperty('--colorBG', '#000');
             document.documentElement.style.setProperty('--colorSec', '#fff');
             document.documentElement.style.setProperty('--colorThird', '#adadad');
+            imageLogo.src = 'image/logo3White.png';
+            break;
+        case 'three':
+            document.documentElement.style.setProperty('--colorText', '#000');
+            document.documentElement.style.setProperty('--colorBG', '#fff');
+            document.documentElement.style.setProperty('--colorSec', '#000');
+            document.documentElement.style.setProperty('--colorThird', '#adadad');
+            imageLogo.src = 'image/logo3.png';
             break;
 
         default:
