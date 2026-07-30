@@ -22,7 +22,8 @@
         class="sm:bg-[#ffffff00] bg-colorBG bg-linear-235 from-colorBG to-colorBG text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-xl text-colorText right-0 h-16 flex items-center px-4 md:px-6">
         <div class="container mx-auto flex sm:max-h-15 w-11/12 max-w-7xl items-center justify-between">
             <div id="image" class="flex">
-                <img src="image/logo3White.png" class="w-full max-h-10 max-w-10 md:max-w-full rounded-4xl border-primary">
+                <img src="image/logo3White.png"
+                    class="w-full max-h-10 max-w-10 md:max-w-full rounded-4xl border-primary">
                 <span
                     class="w-22.5 text-sm font-medium text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5 uppercase text-earth-800 md:hidden content-center">
                     Samuel PM
@@ -216,23 +217,27 @@
             <img src="image/logo 2.png" class="-mt-35 opacity-60" alt="3D PICTURE">
         </div> -->
         <section id="about"
-            class="bg-colorText bg-linear-180 from-colorThird to-colorText text-colorBG mx-auto p-4 px-16 min-h-[80vh] sm:min-h-[95vh] flex">
-            <div id="non-bio" class="container m-auto py-10 sm:p-20 sm:pl-14">
-                <p class="text-black font-bold mb-4">Hello, my name is</p>
-                <h2 class="text-[55px]/15 sm:text-[80px]/20 text-left font-extrabold font-border text-black"
-                    data-lang="en">Samuel P. Malau
-                </h2>
-                <h2 class="text-4xl sm:text-[65px]/15 text-left font-extrabold  mt-4" data-lang="en">I craft
-                    experiences for web and games.</h2>
-                <p class="m-0 mt-5 sm:w-137.5 text-[18px]/6" data-lang="en">I’m a programmer with a strong interest in
-                    building clean and functional applications. I enjoy learning new things every day, and I hope my
-                    work can contribute meaningfully to today’s technology landscape.</p>
-                <a href="#projects"
-                    class="btn justify-center gap-x-1.5 p-3 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-colorText bg-colorBG text-primary border-2 mt-8">Check
-                    for more <span class="text-sm">▼</span></a>
-            </div>
-            <div class="content-center w-full sm:w-1/2 pr-14">
-                <img src="image/me.jpg" alt="ME.PNG" class="rounded-full border-4 border-colorBG hover:bg-[#00000050]">
+            class="bg-colorBG text-colorText pt-28 mx-auto p-4 px-16 min-h-[80vh] sm:min-h-screen flex relative items-center justify-center overflow-hidden pb-8">
+            <div
+                class="content-center w-full sm:w-full relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col">
+                <div class="flex w-full justify-center flex-wrap">
+                    <div class="w-36 h-36 md:w-48 md:h-48">
+                        <img src="image/me.jpg" alt="ME.PNG"
+                            class="rounded-full border-4 border-colorBG hover:bg-[#00000050] w-full h-full object-cover">
+                    </div>
+                </div>
+                <div id="non-bio" class="container m-auto py-10 sm:p-2">
+                    <!-- <p class="text-colorText font-bold mb-4">Hello, my name is</p> -->
+                    <h2 class="text-[55px]/15 sm:text-[60px] text-center font-extrabold font-border text-colorText uppercase mt-4"
+                        data-lang="en">Samuel P. Malau
+                    </h2>
+                    <!-- <h2 class="text-4xl sm:text-[65px]/15 text-center font-extrabold  mt-4" data-lang="en">I craft
+                        experiences for web and games.</h2> -->
+                    <p class="m-auto mt-5 max-w-2xl text-[18px]/6 text-center" data-lang="en">A Programmer with a strong interest in building clean, functional applications. Learning new things every day and hoping to contribute meaningfully to today’s tech landscape.</p>
+                    <a href="#projects"
+                        class="btn justify-center gap-x-1.5 p-3 px-5 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-colorText bg-colorBG text-primary border-2 mt-8 rounded-4xl">Check
+                        for more <span class="text-sm">▼</span></a>
+                </div>
             </div>
         </section>
         <section id="top"
