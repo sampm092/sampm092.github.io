@@ -443,8 +443,8 @@ header {
     padding: 2px 2rem;
   }
 
-  header .container div:nth-of-type(4) {
-    display: block;
+  header .container div:nth-of-type(3) {
+    display: flex;
   }
 
   header .container div {
@@ -457,7 +457,7 @@ header {
 
   #image {
     width: fit-content;
-    display: block;
+    display: flex;
     justify-self: end;
     margin-right: 1rem;
   }

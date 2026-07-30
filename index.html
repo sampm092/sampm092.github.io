@@ -18,20 +18,72 @@
 </head>
 
 <body>
-    <!-- <a class="tttop" onclick="scrollToTop(50)">↑</a> -->
     <header id="header"
-        class="sm:bg-[#ffffff00] bg-colorBG bg-linear-235 from-colorBG to-colorBG py-5 text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-sm text-colorText">
-        <div class="container mx-auto flex sm:max-h-15 w-11/12">
-            <div id="image" class="">
-                <!-- <img src="image/logoGrey.png" class="w-full max-h-10 rounded-4xl border-primary"> -->
+        class="sm:bg-[#ffffff00] bg-colorBG bg-linear-235 from-colorBG to-colorBG text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-xl text-colorText right-0 h-16 flex items-center px-4 md:px-6">
+        <div class="container mx-auto flex sm:max-h-15 w-11/12 max-w-7xl items-center justify-between">
+            <div id="image" class="flex">
+                <img src="image/logo3White.png" class="w-full max-h-10 max-w-10 md:max-w-full rounded-4xl border-primary">
+                <span
+                    class="w-22.5 text-sm font-medium text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5 uppercase text-earth-800 md:hidden content-center">
+                    Samuel PM
+                </span>
+                <div class="inline-block my-auto mx-1 w-fit text-xl text-colorText">
+                    <el-dropdown teleported>
+                        <button
+                            class="flex w-30 justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 hover:underline hover:border-primary hover:text-colorSec cursor-pointer">
+                            <span
+                                class="text-sm font-medium tracking-wide text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5 md:inline uppercase text-earth-800">
+                                Samuel PM
+                            </span>
+                        </button>
+
+                        <el-menu anchor="bottom end" popover
+                            class="w-50 origin-top-right divide-y divide-black/10 rounded-md bg-black/20 outline-1 -outline-offset-1 outline-black/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in text-colorText text-sm border">
+                            <div class="py-1">
+                                <div class="flex px-4 py-2 border-b">
+                                    <h4 class="text-left">Resume</h4>
+                                    <div class="flex m-auto mr-0 gap-2">
+                                        <a href="files/ResumeEN.pdf" target="_blank"
+                                            style="text-decoration: underline;">EN</a>
+                                        <a href="files/Resume.pdf" target="_blank"
+                                            style="text-decoration: underline;">ID</a>
+                                    </div>
+                                </div>
+                                <div class="flex px-4 py-2 border-b">
+                                    <h4 class="text-left">Portfolio</h4>
+                                    <div class="flex m-auto mr-0 gap-2">
+                                        <a href="files/portfolio.pdf" target="_blank"
+                                            style="text-decoration: underline;">EN</a>
+                                        <a href="files/portofolio.pdf" target="_blank"
+                                            style="text-decoration: underline;">ID</a>
+                                    </div>
+                                </div>
+                                <div class="flex px-4 py-2">
+                                    <h4 class="text-left">Curriculum Vitae</h4>
+                                    <div class="flex m-auto mr-0 gap-2">
+                                        <a href="files/EN CV.pdf" target="_blank"
+                                            style="text-decoration: underline;">EN</a>
+                                        <a href="files/CV.pdf" target="_blank"
+                                            style="text-decoration: underline;">ID</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </el-menu>
+                    </el-dropdown>
+                </div>
             </div>
-            <div class="m-auto mr-4 w-full">
+            <div class="m-auto mr-4">
                 <nav data-lang="en" class="nav">
-                    <a href="#about" class="my-0 mx-3.5 text-lg">About</a>
-                    <a href="projects.html" class="my-0 mx-3.5 text-lg">Projects</a>
-                    <a href="#social" class="my-0 mx-3.5 text-lg">Social</a>
-                    <a href="#contact" class="my-0 mx-3.5 text-lg">Contact</a>
-                    <a href="game.html" id="entertainment" class="my-0 mx-3.5 text-lg">
+                    <a href="#about"
+                        class="text-sm font-medium tracking-wide text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5">About</a>
+                    <a href="projects.html"
+                        class="text-sm font-medium tracking-wide text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5">Projects</a>
+                    <a href="#social"
+                        class="text-sm font-medium tracking-wide text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5">Social</a>
+                    <a href="#contact"
+                        class="text-sm font-medium tracking-wide text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5">Contact</a>
+                    <a href="game.html" id="entertainment"
+                        class="text-sm font-medium tracking-wide text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5">
                         Entertainment</a>
                 </nav>
                 <nav data-lang="id" class="nav">
@@ -43,49 +95,8 @@
                         Hiburan</a>
                 </nav>
             </div>
-            <div class="inline-block my-auto mx-1 w-fit text-xl text-colorText">
-                <el-dropdown teleported>
-                    <button
-                        class="flex w-37.5 justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 hover:bg-colorText hover:border-colorBG hover:text-colorBG cursor-pointer border-colorText border-2 rounded-lg">
-                        <span class="">
-                            Docs
-                        </span>
-                    </button>
-
-                    <el-menu anchor="bottom end" popover
-                        class="w-50 origin-top-right divide-y divide-black/10 rounded-md bg-black/20 outline-1 -outline-offset-1 outline-black/10 transition transition-discrete [--anchor-gap:--spacing(2)] data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in text-colorText text-sm border">
-                        <div class="py-1">
-                            <div class="flex px-4 py-2 border-b">
-                                <h4 class="text-left">Resume</h4>
-                                <div class="flex m-auto mr-0 gap-2">
-                                    <a href="files/ResumeEN.pdf" target="_blank"
-                                        style="text-decoration: underline;">EN</a>
-                                    <a href="files/Resume.pdf" target="_blank"
-                                        style="text-decoration: underline;">ID</a>
-                                </div>
-                            </div>
-                            <div class="flex px-4 py-2 border-b">
-                                <h4 class="text-left">Portfolio</h4>
-                                <div class="flex m-auto mr-0 gap-2">
-                                    <a href="files/portfolio.pdf" target="_blank"
-                                        style="text-decoration: underline;">EN</a>
-                                    <a href="files/portofolio.pdf" target="_blank"
-                                        style="text-decoration: underline;">ID</a>
-                                </div>
-                            </div>
-                            <div class="flex px-4 py-2">
-                                <h4 class="text-left">Curriculum Vitae</h4>
-                                <div class="flex m-auto mr-0 gap-2">
-                                    <a href="files/EN CV.pdf" target="_blank" style="text-decoration: underline;">EN</a>
-                                    <a href="files/CV.pdf" target="_blank" style="text-decoration: underline;">ID</a>
-                                </div>
-                            </div>
-                        </div>
-                    </el-menu>
-                </el-dropdown>
-            </div>
-            <div
-                class="sm:hidden inline-block my-auto mx-1 w-fit text-xl text-colorText justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 hover:bg-colorText hover:border-colorBG hover:text-colorBG cursor-pointer" onclick="openDocs()">
+            <div class="sm:hidden inline-block my-auto mx-1 w-fit text-xl text-colorText justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 cursor-pointer"
+                onclick="openDocs()">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
                     class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
                     <path
@@ -200,10 +211,30 @@
         </div>
     </div>
     <main>
-        <div class="absolute w-full h-full overflow-hidden min-h-[80vh] sm:min-h-screen content-center"
+        <!-- <div class="absolute w-full h-full overflow-hidden min-h-[80vh] sm:min-h-screen content-center"
             data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000">
             <img src="image/logo 2.png" class="-mt-35 opacity-60" alt="3D PICTURE">
-        </div>
+        </div> -->
+        <section id="about"
+            class="bg-colorText bg-linear-180 from-colorThird to-colorText text-colorBG mx-auto p-4 px-16 min-h-[80vh] sm:min-h-[95vh] flex">
+            <div id="non-bio" class="container m-auto py-10 sm:p-20 sm:pl-14">
+                <p class="text-black font-bold mb-4">Hello, my name is</p>
+                <h2 class="text-[55px]/15 sm:text-[80px]/20 text-left font-extrabold font-border text-black"
+                    data-lang="en">Samuel P. Malau
+                </h2>
+                <h2 class="text-4xl sm:text-[65px]/15 text-left font-extrabold  mt-4" data-lang="en">I craft
+                    experiences for web and games.</h2>
+                <p class="m-0 mt-5 sm:w-137.5 text-[18px]/6" data-lang="en">I’m a programmer with a strong interest in
+                    building clean and functional applications. I enjoy learning new things every day, and I hope my
+                    work can contribute meaningfully to today’s technology landscape.</p>
+                <a href="#projects"
+                    class="btn justify-center gap-x-1.5 p-3 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-colorText bg-colorBG text-primary border-2 mt-8">Check
+                    for more <span class="text-sm">▼</span></a>
+            </div>
+            <div class="content-center w-full sm:w-1/2 pr-14">
+                <img src="image/me.jpg" alt="ME.PNG" class="rounded-full border-4 border-colorBG hover:bg-[#00000050]">
+            </div>
+        </section>
         <section id="top"
             class="bg-colorBG bg-linear-270 from-colorThird to-colorBG text-colorText m-auto mt-0 pb-10 pt-10 flex dark-select min-h-[90vh] sm:min-h-screen ">
             <div class="container w-full mx-auto content-center z-10 text-center">
@@ -229,26 +260,7 @@
                 </div>
             </div>
         </section>
-        <section id="about"
-            class="bg-colorText bg-linear-180 from-colorThird to-colorText text-colorBG mx-auto p-4 px-16 min-h-[80vh] sm:min-h-[95vh] flex">
-            <div id="non-bio" class="container m-auto py-10 sm:p-20 sm:pl-14">
-                <p class="text-black font-bold mb-4">Hello, my name is</p>
-                <h2 class="text-[55px]/15 sm:text-[80px]/20 text-left font-extrabold font-border text-black"
-                    data-lang="en">Samuel P. Malau
-                </h2>
-                <h2 class="text-4xl sm:text-[65px]/15 text-left font-extrabold  mt-4" data-lang="en">I craft
-                    experiences for web and games.</h2>
-                <p class="m-0 mt-5 sm:w-137.5 text-[18px]/6" data-lang="en">I’m a programmer with a strong interest in
-                    building clean and functional applications. I enjoy learning new things every day, and I hope my
-                    work can contribute meaningfully to today’s technology landscape.</p>
-                <a href="#projects"
-                    class="btn justify-center gap-x-1.5 p-3 w-fit inset-ring-1 inset-ring-white/5 hover:bg-black hover:text-white cursor-pointer border-colorText bg-colorBG text-primary border-2 mt-8">Check
-                    for more <span class="text-sm">▼</span></a>
-            </div>
-            <div class="content-center w-full sm:w-1/2 pr-14">
-                <img src="image/me.jpg" alt="ME.PNG" class="rounded-full border-4 border-colorBG hover:bg-[#00000050]">
-            </div>
-        </section>
+
 
         <section id="projects"
             class="bg-linear-180 from-colorText to-colorSec text-colorBG mx-auto sm:p-4 sm:px-16 min-h-[80vh] sm:min-h-[95vh] ">
