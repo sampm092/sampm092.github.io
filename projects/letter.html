@@ -162,15 +162,14 @@ Hormat Saya,
 Samuel Malau
 (+62) 882 6431 8369
 malaus4294@gmail.com`;
-                    replaced = text.replace('JABATAN', jabatan);
+                    replaced = text.replaceAll('JABATAN', jabatan);
                     replaced = replaced.replaceAll('PERUSAHAAN', perusahaan);
                     replaced = replaced.replace('TIME', formattedDate);
                     replaced = replaced.replace('SUMBER', sumber);
                     document.getElementById('outputText').value = replaced;
-                }
-            } else if (option == 'magang') {
-                let text =
-                    `Kepada,
+                } else if (option == 'magang') {
+                    let text =
+                        `Kepada,
 HRD / PERSONALIA
 PERUSAHAAN
 
@@ -181,18 +180,19 @@ Saya tertarik untuk mendapatkan pengalaman langsung dalam memahami dunia kerja y
 Terima kasih atas perhatian dan kesempatan yang diberikan. Saya sangat berharap dapat berdiskusi lebih lanjut mengenai kesempatan magang ini. Saya telah melampirkan CV dan portfolio saya untuk referensi lebih lanjut. 
 
 `;
-                replaced = text.replace('JABATAN', jabatan);
-                replaced = replaced.replaceAll('PERUSAHAAN', perusahaan);
-                replaced = replaced.replace('TIME', formattedDate);
-                replaced = replaced.replace('SUMBER', sumber);
-                document.getElementById('outputText').value = replaced;
-            } else {
-                Swal.fire({
-                    title: "Alert!",
-                    text: "No Texts!",
-                    icon: "warning",
-                    confirmButtonText: 'OK'
-                });
+                    replaced = text.replace('JABATAN', jabatan);
+                    replaced = replaced.replaceAll('PERUSAHAAN', perusahaan);
+                    replaced = replaced.replace('TIME', formattedDate);
+                    replaced = replaced.replace('SUMBER', sumber);
+                    document.getElementById('outputText').value = replaced;
+                } else {
+                    Swal.fire({
+                        title: "Alert!",
+                        text: "No Texts!",
+                        icon: "warning",
+                        confirmButtonText: 'OK'
+                    });
+                }
             }
         }
 
