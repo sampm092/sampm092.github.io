@@ -313,15 +313,15 @@ header {
 }
 
 .btn-git {
-  color: #fff;
-  background-color: #000;
-  border-color: #000;
+  color: var(--color-colorBG);
+  background-color: var(--color-colorText);
+  border-color: var(--color-colorText);
 }
 
 .btn-ig {
   color: #fff;
-  background-color: #a12532;
-  border-color: #a12532;
+  background-color: #e43fa6;
+  border-color: #e43fa6;
 }
 
 .btn-yt {
@@ -332,8 +332,8 @@ header {
 
 .btn-li {
   color: #fff;
-  background-color: #023d7a;
-  border-color: #023d7a;
+  background-color: #2681df;
+  border-color: #2681df;
 }
 
 .visible {
