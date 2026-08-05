@@ -20,12 +20,12 @@
 <body>
     <header id="header"
         class="sm:bg-[#ffffff00] bg-colorBG bg-linear-235 from-colorBG to-colorBG text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-xl text-colorText right-0 h-16 flex items-center px-4 md:px-6">
-        <div class="container mx-auto flex sm:max-h-15 w-11/12 max-w-7xl items-center justify-between">
+        <div class="container w-full sm:mx-auto flex sm:max-h-15 sm:w-11/12 max-w-7xl items-center justify-between">
             <div id="image" class="flex">
                 <img id="logo-image" src="image/logo3White.png"
                     class="w-full max-h-10 max-w-10 md:max-w-full rounded-4xl border-primary">
                 <span
-                    class="w-22.5 text-sm font-medium text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5 uppercase text-earth-800 md:hidden content-center">
+                    class="w-22.5 text-sm font-medium text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5 uppercase text-earth-800 sm:hidden content-center">
                     Samuel PM
                 </span>
                 <div class="inline-block my-auto mx-1 w-fit text-xl text-colorText">
@@ -98,13 +98,10 @@
             </div>
             <div class="sm:hidden inline-block my-auto mx-1 w-fit text-xl text-colorText justify-center gap-x-1.5 py-1 inset-ring-1 inset-ring-white/5 cursor-pointer"
                 onclick="openDocs()">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                    class="bi bi-file-earmark-pdf" viewBox="0 0 16 16">
-                    <path
-                        d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5z" />
-                    <path
-                        d="M4.603 14.087a.8.8 0 0 1-.438-.42c-.195-.388-.13-.776.08-1.102.198-.307.526-.568.897-.787a7.7 7.7 0 0 1 1.482-.645 20 20 0 0 0 1.062-2.227 7.3 7.3 0 0 1-.43-1.295c-.086-.4-.119-.796-.046-1.136.075-.354.274-.672.65-.823.192-.077.4-.12.602-.077a.7.7 0 0 1 .477.365c.088.164.12.356.127.538.007.188-.012.396-.047.614-.084.51-.27 1.134-.52 1.794a11 11 0 0 0 .98 1.686 5.8 5.8 0 0 1 1.334.05c.364.066.734.195.96.465.12.144.193.32.2.518.007.192-.047.382-.138.563a1.04 1.04 0 0 1-.354.416.86.86 0 0 1-.51.138c-.331-.014-.654-.196-.933-.417a5.7 5.7 0 0 1-.911-.95 11.7 11.7 0 0 0-1.997.406 11.3 11.3 0 0 1-1.02 1.51c-.292.35-.609.656-.927.787a.8.8 0 0 1-.58.029m1.379-1.901q-.25.115-.459.238c-.328.194-.541.383-.647.547-.094.145-.096.25-.04.361q.016.032.026.044l.035-.012c.137-.056.355-.235.635-.572a8 8 0 0 0 .45-.606m1.64-1.33a13 13 0 0 1 1.01-.193 12 12 0 0 1-.51-.858 21 21 0 0 1-.5 1.05zm2.446.45q.226.245.435.41c.24.19.407.253.498.256a.1.1 0 0 0 .07-.015.3.3 0 0 0 .094-.125.44.44 0 0 0 .059-.2.1.1 0 0 0-.026-.063c-.052-.062-.2-.152-.518-.209a4 4 0 0 0-.612-.053zM8.078 7.8a7 7 0 0 0 .2-.828q.046-.282.038-.465a.6.6 0 0 0-.032-.198.5.5 0 0 0-.145.04c-.087.035-.158.106-.196.283-.04.192-.03.469.046.822q.036.167.09.346z" />
-                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-chevron-double-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 6.646a.5.5 0 0 1 .708 0L8 12.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+  <path fill-rule="evenodd" d="M1.646 2.646a.5.5 0 0 1 .708 0L8 8.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"/>
+</svg>
             </div>
         </div>
     </header>
@@ -218,7 +215,7 @@
             <img src="image/logo 2.png" class="-mt-35 opacity-60" alt="3D PICTURE">
         </div> -->
         <section id="about"
-            class="bg-colorBG text-colorText pt-28 mx-auto p-4 px-16 min-h-[80vh] sm:min-h-screen flex relative items-center justify-center overflow-hidden pb-8">
+            class="bg-colorBG text-colorText pt-16 md:pt-28 mx-auto p-4 md:px-16 min-h-[80vh] sm:min-h-screen flex relative items-center justify-center overflow-hidden pb-8">
             <div
                 class="content-center w-full sm:w-full relative z-10 text-center px-6 max-w-5xl mx-auto flex flex-col">
                 <div class="flex w-full justify-center flex-wrap">
@@ -229,12 +226,12 @@
                 </div>
                 <div id="non-bio" class="container m-auto py-10 sm:p-2">
                     <!-- <p class="text-colorText font-bold mb-4">Hello, my name is</p> -->
-                    <h2 class="text-[55px]/15 sm:text-[60px] text-center font-extrabold font-border text-colorText uppercase mt-4"
+                    <h2 class="text-5xl sm:text-[60px] text-center font-extrabold font-border text-colorText uppercase mt-4"
                         data-lang="en" data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000">Samuel P. Malau
                     </h2>
                     <!-- <h2 class="text-4xl sm:text-[65px]/15 text-center font-extrabold  mt-4" data-lang="en">I craft
                         experiences for web and games.</h2> -->
-                    <p class="m-auto mt-5 max-w-2xl text-[18px]/6 text-center" data-lang="en" data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000">A Programmer with a strong interest in building clean, functional applications. Learning new things every day and hoping to contribute meaningfully to today’s tech landscape.</p>
+                    <p class="m-auto mt-5 max-w-2xl text-[15px]/6 md:text-[18px]/6 text-center" data-lang="en" data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000">A Programmer with a strong interest in building clean, functional applications. Learning new things every day and hoping to contribute meaningfully to today’s tech landscape.</p>
                     <a href="#projects"
                         class="btn justify-center gap-x-1.5 p-3 px-5 w-fit inset-ring-1 inset-ring-white/5 hover:bg-colorText hover:text-colorBG cursor-pointer border-colorText bg-colorBG text-colorText border-2 mt-8 rounded-4xl" data-aos="fade-up" data-aos-offset="0" data-aos-delay="50" data-aos-duration="1000">Check
                         for more <span class="text-sm">▼</span></a>

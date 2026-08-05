@@ -650,9 +650,6 @@
   .bg-colorSec {
     background-color: var(--colorSec);
   }
-  .bg-colorText {
-    background-color: var(--colorText);
-  }
   .bg-secondary {
     background-color: var(--secondary);
   }
@@ -718,9 +715,6 @@
   .px-6 {
     padding-inline: calc(var(--spacing) * 6);
   }
-  .px-16 {
-    padding-inline: calc(var(--spacing) * 16);
-  }
   .py-1 {
     padding-block: calc(var(--spacing) * 1);
   }
@@ -745,8 +739,8 @@
   .pt-15 {
     padding-top: calc(var(--spacing) * 15);
   }
-  .pt-28 {
-    padding-top: calc(var(--spacing) * 28);
+  .pt-16 {
+    padding-top: calc(var(--spacing) * 16);
   }
   .pb-8 {
     padding-bottom: calc(var(--spacing) * 8);
@@ -778,13 +772,9 @@
     font-size: var(--text-6xl);
     line-height: var(--tw-leading, var(--text-6xl--line-height));
   }
-  .text-\[18px\]\/6 {
-    font-size: 18px;
+  .text-\[15px\]\/6 {
+    font-size: 15px;
     line-height: calc(var(--spacing) * 6);
-  }
-  .text-\[55px\]\/15 {
-    font-size: 55px;
-    line-height: calc(var(--spacing) * 15);
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -844,9 +834,6 @@
   }
   .text-secondary {
     color: var(--secondary);
-  }
-  .text-white {
-    color: var(--color-white);
   }
   .uppercase {
     text-transform: uppercase;
@@ -1038,6 +1025,11 @@
       transition-timing-function: var(--ease-in);
     }
   }
+  .sm\:mx-auto {
+    @media (width >= 650px) {
+      margin-inline: auto;
+    }
+  }
   .sm\:mt-0 {
     @media (width >= 650px) {
       margin-top: calc(var(--spacing) * 0);
@@ -1111,6 +1103,11 @@
   .sm\:min-h-screen {
     @media (width >= 650px) {
       min-height: 100vh;
+    }
+  }
+  .sm\:w-11\/12 {
+    @media (width >= 650px) {
+      width: calc(11/12 * 100%);
     }
   }
   .sm\:w-full {
@@ -1236,6 +1233,22 @@
   .md\:px-6 {
     @media (width >= 768px) {
       padding-inline: calc(var(--spacing) * 6);
+    }
+  }
+  .md\:px-16 {
+    @media (width >= 768px) {
+      padding-inline: calc(var(--spacing) * 16);
+    }
+  }
+  .md\:pt-28 {
+    @media (width >= 768px) {
+      padding-top: calc(var(--spacing) * 28);
+    }
+  }
+  .md\:text-\[18px\]\/6 {
+    @media (width >= 768px) {
+      font-size: 18px;
+      line-height: calc(var(--spacing) * 6);
     }
   }
 }
@@ -1560,8 +1573,6 @@ header {
     height: fit-content;
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
-    padding: 2px 2rem;
   }
   header .container div:nth-of-type(3) {
     display: flex;

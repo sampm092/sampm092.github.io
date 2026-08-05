@@ -439,8 +439,7 @@ header {
     height: fit-content;
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
-    padding: 2px 2rem;
+
   }
 
   header .container div:nth-of-type(3) {
