@@ -650,6 +650,9 @@
   .bg-colorSec {
     background-color: var(--colorSec);
   }
+  .bg-colorText {
+    background-color: var(--colorText);
+  }
   .bg-secondary {
     background-color: var(--secondary);
   }
