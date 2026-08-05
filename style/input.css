@@ -128,7 +128,7 @@ header {
   border-radius: 100%;
   width: 1rem;
   height: 1rem;
-  border: 1px solid var(--colorBG);
+  border: 1px solid;
   cursor: pointer;
 }
 
