@@ -7,7 +7,7 @@
     <title>Sam PM Portfolio | Home</title>
     <link rel="stylesheet" href="style/output.css">
     <link rel="canonical" href="https://sampm092.github.io/">
-    <link rel="icon" type="image/x-icon" href="image/logo3Green.png">
+    <link rel="icon" type="image/x-icon" href="image/logo3Green.webp">
     <!-- Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,7 +22,7 @@
         class="sm:bg-[#ffffff00] bg-colorBG bg-linear-235 from-colorBG to-colorBG text-center fixed w-full z-50 top-0 left-0 sm:backdrop-blur-xl text-colorText right-0 h-16 flex items-center px-4 md:px-6">
         <div class="container w-full sm:mx-auto flex sm:max-h-15 sm:w-11/12 max-w-7xl items-center justify-between">
             <div id="image" class="flex">
-                <img id="logo-image" src="image/logo3White.png"
+                <img id="logo-image" src="image/logo3White.webp"
                     class="w-full max-h-10 max-w-10 md:max-w-full rounded-4xl border-primary">
                 <span
                     class="w-22.5 text-sm font-medium text-earth-500 hover:text-earth-800 transition-colors duration-300 mx-3.5 uppercase text-earth-800 sm:hidden content-center">
@@ -217,14 +217,14 @@
     <main>
         <svg class="flowing-line-bg" viewBox="0 0 1440 900" preserveAspectRatio="none">
             <path class="line line-1" d="M -100,900 C 300,700 400,300 800,200 C 1100,100 1300,100 1600,-100" />
-            <path class="line line-2" d="M -100,1000 C 200,600 600,400 900,150 C 1200,-50 1400,50 1600,-50" />
+            <path class="line line-2 mobile-hide" d="M -100,1000 C 200,600 600,400 900,150 C 1200,-50 1400,50 1600,-50" />
 
-            <path class="line line-3" d="M -100,400 C 400,150 500,500 1100,50 C 1350,150 1450,350 1600,100" />
+            <path class="line line-3 mobile-hide" d="M -100,400 C 400,150 500,500 1100,50 C 1350,150 1450,350 1600,100" />
 
-            <path class="line line-1" d="M -100,500 C 300,300 400,-100 800,-200 C 1100,-300 1300,-300 1600,-400" />
+            <path class="line line-1 mobile-hide" d="M -100,500 C 300,300 400,-100 800,-200 C 1100,-300 1300,-300 1600,-400" />
             <path class="line line-2" d="M -100,800 C 200,400 600,200 900,-50 C 1200,-250 1400,-150 1600,-250" />
 
-            <path class="line line-3" d="M 400,1150 1400,600" />
+            <path class="line line-3 mobile-hide" d="M 400,1150 1400,600" />
 
             <path class="line line-3" d="M 900,1600 C 900,900 1000,500 1400,300 C 1700,200 1900,200 2100,0" />
         </svg>
@@ -342,7 +342,7 @@
                 </div>
                 <div class="flex flex-col sm:grid sm:grid-cols-2 gap-4 my-8">
                     <!-- Top Left  -->
-                    <div class="w-full h-full p-8 bg-colorBG border-colorText border-2 text-colorText rounded-4xl"
+                    <div class="w-full h-full p-8 border-colorText border-2 text-colorText rounded-4xl"
                         data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000">
                         <img src="image/citridx.webp" alt=""
                             class="sm:h-68.75 w-full rounded-xs border-2 border-colorText">
@@ -361,7 +361,7 @@
                         </div>
                     </div>
                     <!-- Top Right  -->
-                    <div class="w-full h-full p-8 bg-colorBG border-colorText border-2 rounded-4xl text-colorText"
+                    <div class="w-full h-full p-8 border-colorText border-2 rounded-4xl text-colorText"
                         data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000">
                         <img src="image/TETRISM.webp" alt=""
                             class="sm:h-68.75 w-full rounded-xs border-2 border-colorText ">
@@ -380,7 +380,7 @@
                         </div>
                     </div>
                     <!-- Bottom Left  -->
-                    <div class="w-full h-full p-8 bg-colorBG border-colorText border-2 rounded-4xl text-colorText"
+                    <div class="w-full h-full p-8 border-colorText border-2 rounded-4xl text-colorText"
                         data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000">
                         <img src="image/ufolappy.webp" alt=""
                             class="sm:h-68.75 w-full rounded-xs border-2 border-colorText ">
@@ -401,7 +401,7 @@
                     </div>
 
                     <!-- Bottom Right  -->
-                    <div class="w-full h-full p-8 bg-colorBG border-colorText border-2 rounded-4xl text-colorText content-between"
+                    <div class="w-full h-full p-8 border-colorText border-2 rounded-4xl text-colorText content-between"
                         data-aos="fade-up" data-aos-offset="100" data-aos-duration="1000">
                         <div class="block sm:flex m-auto">
                             <div class="tag my-3 ">
@@ -457,13 +457,14 @@
                     <p class="hidden sm:block sm:text-left mb-0 mt-auto font-bold text-colorText">at</p>
                 </div>
                 <div class="grid sm:grid-cols-2 m-auto mt-16">
-                    <a href="https://wa.link/xqc45y[fake]" id="wa-a" class="btn bg-colorSec text-amber-400">
+                    <a href="https://wa.link/xqc45y[fake]" id="wa-a" class="btn bg-colorSec text-amber-400"
+                        target="_blank">
                     </a>
                     <a id="gma-a" class="btn bg-colorSec text-amber-400" onclick="confirmDelete('text')">
                     </a>
                     <a id="dc-a" class="btn bg-colorSec text-amber-400"
-                        href="https://discord(.)com/users/608464045229735936"></a>
-                    <a id="tl-a" class="btn bg-colorSec text-amber-400" href="t(.)me/S0daOda"></a>
+                        href="https://discord(.)com/users/608464045229735936" target="_blank"></a>
+                    <a id="tl-a" class="btn bg-colorSec text-amber-400" href="t(.)me/S0daOda" target="_blank"></a>
                 </div>
         </section>
 

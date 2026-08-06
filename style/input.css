@@ -515,6 +515,14 @@ header {
     display: none;
   }
 
+  .line {
+    filter: none !important; /* Removes glow calculations */
+  }
+
+  .mobile-hide {
+    display: none !important; /* Completely removes them from rendering */
+  }
+
   #about {
     flex-direction: column-reverse;
   }

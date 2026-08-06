@@ -63,7 +63,7 @@ function changeTheme(value) {
             document.documentElement.style.setProperty('--colorBG', '#03300f');
             document.documentElement.style.setProperty('--colorSec', '#7fd067');
             document.documentElement.style.setProperty('--colorThird', '#71e479');
-            imageLogo.src = 'image/logo3Green.png';
+            imageLogo.src = 'image/logo3Green.webp';
             break;
 
         case 'two':
@@ -71,14 +71,14 @@ function changeTheme(value) {
             document.documentElement.style.setProperty('--colorBG', '#000');
             document.documentElement.style.setProperty('--colorSec', '#fff');
             document.documentElement.style.setProperty('--colorThird', '#adadad');
-            imageLogo.src = 'image/logo3White.png';
+            imageLogo.src = 'image/logo3White.webp';
             break;
         case 'three':
             document.documentElement.style.setProperty('--colorText', '#000');
             document.documentElement.style.setProperty('--colorBG', '#fff');
             document.documentElement.style.setProperty('--colorSec', '#000');
             document.documentElement.style.setProperty('--colorThird', '#adadad');
-            imageLogo.src = 'image/logo3.png';
+            imageLogo.src = 'image/logo3.webp';
             break;
 
         default:
@@ -169,6 +169,8 @@ function openDocs() {
                             </div>
                  </div>
   `,
+        background: "var(--color-colorText)",
+        color: "var(--color-colorBG)",
         showCloseButton: true,
         showCancelButton: false,
         showConfirmButton: false,
@@ -186,7 +188,7 @@ function confirmDelete() {
         cancelButtonText: "No",
         confirmButtonColor: "#7fd067",
         cancelButtonCOlor: "#ef4444",
-        background: "#03300f", // dark background
+        background: "var(--color-colorBG)", // dark background
         color: "#fff",      // text color
     }).then((result) => {
         if (result.isConfirmed) {

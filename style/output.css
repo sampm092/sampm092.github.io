@@ -1572,6 +1572,12 @@ header {
   header .container div {
     display: none;
   }
+  .line {
+    filter: none !important;
+  }
+  .mobile-hide {
+    display: none !important;
+  }
   #about {
     flex-direction: column-reverse;
   }
