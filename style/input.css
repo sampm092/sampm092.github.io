@@ -61,6 +61,72 @@ a {
   text-decoration: none;
   box-sizing: border-box;
 }
+/* Container */
+.flowing-line-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Base styles for all lines */
+.line {
+  fill: none;
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-dasharray: 400 800;
+  animation: flow 10s linear infinite;
+  z-index: 0;
+}
+
+/* Unique properties for each line */
+.line-1 {
+  stroke: var(--color-colorText);
+  opacity: 0.2;
+  animation-duration: 7s; /* Faster */
+  filter: drop-shadow(0px 0px 6px rgba(99, 102, 241, 0.6));
+}
+
+.line-2 {
+  stroke: var(--color-colorText);
+  opacity: 0.2;
+  animation-duration: 12s; /* Slower */
+  animation-delay: -3s; /* Offsets starting point */
+  filter: drop-shadow(0px 0px 6px rgba(6, 182, 212, 0.4));
+}
+
+.line-3 {
+  stroke: var(--color-colorText);
+  opacity: 0.2;
+  stroke-width: 1.5px;
+  animation-duration: 16s; /* Very slow */
+  animation-delay: -6s;
+}
+
+/* Keyframe for continuous flow */
+@keyframes flow {
+  from {
+    stroke-dashoffset: 1200;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .line {
+    animation: none;
+    stroke-dasharray: none;
+  }
+}
+
+section div {
+  z-index: 2;
+}
 
 #top::selection,
 #header::selection,
@@ -86,11 +152,11 @@ footer::selection {
   flex-direction: column;
 }
 
-#theme div{
+#theme div {
   opacity: 50%;
 }
 
-#theme div:hover{
+#theme div:hover {
   opacity: 100%;
 }
 
@@ -439,7 +505,6 @@ header {
     height: fit-content;
     display: flex;
     justify-content: space-between;
-
   }
 
   header .container div:nth-of-type(3) {
@@ -450,7 +515,7 @@ header {
     display: none;
   }
 
-  #about{
+  #about {
     flex-direction: column-reverse;
   }
 
