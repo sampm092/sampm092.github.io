@@ -22,6 +22,7 @@ Castlevania: Harmony of Dissonance (⌛)
 Chrono Cross
 Counter:Side
 Counter-Strike
+Counter-Strike: Source
 Counter-Strike: Global Offensive
 Crash Bandicoot (⌛)
 Crisis Core: Final Fantasy VII
@@ -45,7 +46,7 @@ Empire Earth
 Euro Truck Simulator 2
 Eversoul
 Fall Guys
-Fallout: New Vegas
+Fallout: New Vegas (⌛)
 Fate/Grand Order
 Feeding Frenzy
 Feeding Frenzy 2
@@ -67,6 +68,7 @@ Final Fantasy Tactic Advance 2
 Final Fantasy Type-0 (⌛)
 Final Fantasy: Dissidia 13 Duodecim
 Fire Emblem: The Blazing Blade
+Gems of War
 Genshin Impact
 Girls' Frontline
 Gods Eater Burst
@@ -90,8 +92,7 @@ Kao the Kangaroo: Round 2
 Kingdom Hearts: Birth by Sleep
 Kingdom Hearts: Chain of Memory (⌛)
 Mido and Di
-Minecraft 
-Mobile game
+Minecraft
 Mobile Legends: Bang Bang
 Mount & Blade: Warband 
 Mount & Blade: With Fire & Sword (⌛)
@@ -110,7 +111,7 @@ Ragnarok Tactics
 Rampage 2 - Universal Tour
 Samurai Warriors 5
 SINoALICE
-Stardew Valley
+Stardew Valley (⌛)
 Stella Sora
 Story of Season: Friends of Mineral Town (⌛)
 Stronghold: Crusader
@@ -130,6 +131,7 @@ Tales of the World: Radiant Mythology
 Tales of Zestiria
 TaskBar Hero
 Tekken 3
+Terraria (⌛)
 The Elder Scrolls V: Skyrim
 The Legend of Zelda (NES)
 Titan Quest Anniversary Edition (⌛)
@@ -137,6 +139,7 @@ Titan Souls (⌛)
 Tower of Fantasy
 Twisted Metal Small Brawl
 Uma Musume: Pretty Derby
+Valorant
 Warcraft III: Reign of Chaos
 Warcraft III: The Frozen Throne
 Warriors Orochi
