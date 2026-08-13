@@ -1,114 +1,122 @@
-html{
-    font-family:  "Plus Jakarta Sans", monospace,Raleway, Inter, Arial, sans-serif;
-    background-color: #000;
+html {
+  font-family:
+    "Plus Jakarta Sans", monospace, Raleway, Inter, Arial, sans-serif;
+  background-color: #000;
 }
 
-section{
-    padding: 50px 0;
-    background-color: transparent;
-    font-size: 3rem;
-    min-height: 85vh;
+section {
+  padding: 50px 0;
+  background-color: transparent;
+  font-size: 3rem;
+  min-height: 85vh;
+}
+
+.bg-black {
+  background-color: #1f1f1f;;
 }
 
 .big-btn {
-    display: inline-block;
-    font-weight: 400;
-    text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    border: 1px solid black;
-    padding: .375rem .75rem;
-    font-size: 1rem;
-    width: 400px;
-    line-height: 1.5;
-    border-radius: .25rem;
-    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid black;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  width: 400px;
+  line-height: 1.5;
+  border-radius: 0.25rem;
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
 }
 
-.fz-3r{
-    font-size: 3rem;
+.fz-3r {
+  font-size: 3rem;
 }
 
-.jright{
-    justify-self: right;
+.jright {
+  justify-self: right;
 }
 
-.m-a-0{
-    margin: auto 0;
+.m-a-0 {
+  margin: auto 0;
 }
 
-.flex-column{
-    display: flex;
-    flex-direction: column;
+.flex-column {
+  display: flex;
+  flex-direction: column;
 }
 
 .nameG {
-    color: #fff;
+  color: #fff;
 }
 
-.items div{
-    padding: 12px;
-    background: transparent;
-    border-radius: 4px;
-    width: 95%;
-    text-align: start;
-    font-weight: 600;
-    height: 25px;
-    align-content: center;
-    overflow: overlay;
-    line-height: 2;
+.items div {
+  padding: 12px;
+  background: transparent;
+  border-radius: 4px;
+  width: 95%;
+  text-align: start;
+  font-weight: 600;
+  height: 25px;
+  align-content: center;
+  overflow: overlay;
+  line-height: 2;
 }
 
-
-#back{
-    min-width: 100px;
-    background-color: #000;
-    color: #ffffff;
-    position: absolute;
-    left: 15px;
-    top: 15px;
-    border: 1px solid #ffffff;
-    transition: background-color 0.6s, color 0.6s;
+#back {
+  min-width: 100px;
+  background-color: #000;
+  color: #ffffff;
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  border: 1px solid #ffffff;
+  transition:
+    background-color 0.6s,
+    color 0.6s;
 }
 
-#back:hover{
-    background-color: #ffffff;
-    color: #000;
+#back:hover {
+  background-color: #ffffff;
+  color: #000;
 }
 
-
-.lineA, .lineB{
-    display: flex;
-    align-items: center;
+.lineA,
+.lineB {
+  display: flex;
+  align-items: center;
 }
 
 .lineA::after {
-    content: "";
-    flex: 1;
-    height: 4px;
-    margin-left: 10px;
-  }
+  content: "";
+  flex: 1;
+  height: 4px;
+  margin-left: 10px;
+}
 
 .lineB::before {
-    content: "";
-    flex: 1;
-    height: 4px;
-    margin-left: 10px;
-  }
+  content: "";
+  flex: 1;
+  height: 4px;
+  margin-left: 10px;
+}
 
-  
 .items {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Two equal columns */
-      gap: 10px;
-      font-size: 1rem;
-      margin: 1.5rem;
-    }
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 10px;
+  font-size: 1rem;
+  margin: 1.5rem;
+}
 
 .items div::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
@@ -116,52 +124,56 @@ section{
 
 /* For Social  */
 
-.social-section{
-    text-align: center;
+.social-section {
+  text-align: center;
+}
+
+.text-center {
+  text-align: center;
 }
 
 #steam::after {
-    content: "Steam";
-    color: #39529d;
-    font-weight: bold;
+  content: "Steam";
+  color: #39529d;
+  font-weight: bold;
 }
 
 #steam:hover::after {
-    content: "Drecken";
+  content: "Drecken";
 }
 
 #ytb::after {
-    content: "Youtube";
-    color: #ff0000;
-    font-weight: bold;
+  content: "Youtube";
+  color: #ff0000;
+  font-weight: bold;
 }
 
 #ytb:hover::after {
-    content: "ODA Oda";
+  content: "ODA Oda";
 }
 
 #spotify::after {
-    content: "Spotify";
-    color: #1ed760;
-    font-weight: bold;
+  content: "Spotify";
+  color: #1ed760;
+  font-weight: bold;
 }
 
 #spotify:hover::after {
-    content: "Fraux Oda";
+  content: "Fraux Oda";
 }
 
-.TopSocial{
-    display: flex;
-    gap: 4rem;
+.TopSocial {
+  display: flex;
+  gap: 4rem;
 }
 
-.SocialGrid{
-     display: grid;
-      grid-template-columns: repeat(2, 1fr); 
+.SocialGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 
-#social a{
-    font-weight: bold;
+#social a {
+  font-weight: bold;
 }
 
 /* Shared base styles */
@@ -209,12 +221,13 @@ section{
   min-width: 2%;
 }
 
-
 /* Section-specific styles */
 
 /* === Game === */
 #game {
-  background: linear-gradient(rgba(0, 35, 141, 0.9), rgba(0, 35, 141, 0.9)), url('../image/gameb.png');
+  background:
+    linear-gradient(rgba(0, 35, 141, 0.9), rgba(0, 35, 141, 0.9)),
+    url("../image/gameb.png");
   color: #ffefca;
 }
 
@@ -229,210 +242,214 @@ section{
 }
 
 #game .page-link {
-    border: 1px solid #ffefca;
-    border-radius: 4px;
-    color: #ffefca;
+  border: 1px solid #ffefca;
+  border-radius: 4px;
+  color: #ffefca;
 }
 
-#game .page-link:hover{
-   background-color: #ffefca;
+#game .page-link:hover {
+  background-color: #ffefca;
   color: #39529d;
   border-color: #ffefca;
 }
 
 #game .content-items div:hover {
-    color: #39529d;
-    border: 2px solid #ffefca;
-    background-color: #ffefca;
+  color: #39529d;
+  border: 2px solid #ffefca;
+  background-color: #ffefca;
 }
 
 #game .content-items div {
-    border: 2px solid #ffefca;
-    color: #ffefca;
-    
+  border: 2px solid #ffefca;
+  color: #ffefca;
 }
 
 /* === Novel === */
 #novel {
-  background: linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)), url('../image/bgame.png');
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.6)),
+    url("../image/bgame.png");
   color: #ff0000;
 }
 
-#novel .content-items div:hover{
-    color: #ffffff;
-    border: 2px solid #ff0000;
-    background-color: #ff0000;
+#novel .content-items div:hover {
+  color: #ffffff;
+  border: 2px solid #ff0000;
+  background-color: #ff0000;
 }
 
 #novel .content-items div {
-    border: 2px solid #ff0000;
-    color: #ff0000;
-    
+  border: 2px solid #ff0000;
+  color: #ff0000;
 }
 
 #novel .lineA::after {
   background: #ff0000;
 }
 
-#novel .page-link{
-    border: 1px solid #ff0000;
-    color: #ff0000;
+#novel .page-link {
+  border: 1px solid #ff0000;
+  color: #ff0000;
 }
 
 #novel .page-link.active {
   background-color: #ffffff;
-      color: #ff0000;
-      border-color: #ffffff;
+  color: #ff0000;
+  border-color: #ffffff;
 }
 
-#novel .page-link:hover{
+#novel .page-link:hover {
   background: #ff0000;
-      color: #ffffff;
+  color: #ffffff;
 }
 
 /* === Movies === */
-.mcontainer{
-    padding: 1rem;
+.mcontainer {
+  padding: 1rem;
 }
 
-.slider::-webkit-scrollbar{
-    display: none;
+.slider::-webkit-scrollbar {
+  display: none;
 }
 
-.slider-wrapper{
-    position: relative;
-    max-width: 100%;
-    margin: 0 auto;
+.slider-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
-.slider{
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
+.slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
 }
 
-.slider .containment{
-    flex: 1 0 100%;
-    /* scroll-snap-align: start; */
-    margin: 0 auto;
+.slider .containment {
+  flex: 1 0 100%;
+  /* scroll-snap-align: start; */
+  margin: 0 auto;
 }
 
 #movie {
-background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url(../image/mvbg.png);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url(../image/mvbg.png);
   color: #594f1a;
 }
-
 
 #movie .lineA::after {
   background: #594f1a;
 }
 
 #movieSect .content-items div {
-    border: 2px solid #594f1a;
-    color: #594f1a;
-    
+  border: 2px solid #594f1a;
+  color: #594f1a;
 }
 
-#movieSect .content-items div:hover{
-    color: #ffffff;
-    border: 2px solid #594f1a;
-    background-color: #594f1a;
+#movieSect .content-items div:hover {
+  color: #ffffff;
+  border: 2px solid #594f1a;
+  background-color: #594f1a;
 }
 
-#movieitems div{
-    padding: 12px;
-    background: transparent;
-    border-radius: 4px;
-    width: 95%;
-    text-align: start;
-    font-weight: 600;
-    height: 25px;
-    align-content: center;
-    overflow: overlay;
-    line-height: 2;
+#movieitems div {
+  padding: 12px;
+  background: transparent;
+  border-radius: 4px;
+  width: 95%;
+  text-align: start;
+  font-weight: 600;
+  height: 25px;
+  align-content: center;
+  overflow: overlay;
+  line-height: 2;
 }
 
 #tvSect .content-items div {
-    border: 2px solid #594f1a;
-    color: #ffffffff;
-    
+  border: 2px solid #594f1a;
+  color: #ffffffff;
 }
 
-#tvSect .content-items div:hover{
-    color: #594f1a;
-    border: 2px solid #594f1a;
-    background-color: #ffffff;
+#tvSect .content-items div:hover {
+  color: #594f1a;
+  border: 2px solid #594f1a;
+  background-color: #ffffff;
 }
 
-#tvitems div{
-    padding: 12px;
-    background: #594f1a;
-    border-radius: 4px;
-    width: 95%;
-    text-align: start;
-    font-weight: 600;
-    height: 25px;
-    align-content: center;
-    overflow: overlay;
-    line-height: 2;
-}
-
-#movieSect .page-link{
-    border: 1px solid #594f1a;
-    color: #594f1a;
-}
-
-#tvSect .page-link{
-    border: 1px solid #594f1a;
-    color: #ffffffff;
-    background-color: #594f1a;
-}
-
-#movieSect .page-link.active, #tvSect .page-link.active{
-      color: #594f1a;
-      border-color: #ffffff;
-      background: #ffffff;
-}
-#movieSect .page-link.active:hover, #tvSect .page-link.active:hover{
-       background: #ffffff;
-      color: #594f1a;
-      border: 1px dashed #594f1a;
-}
-#movieSect .page-link:hover{
+#tvitems div {
+  padding: 12px;
   background: #594f1a;
-      color: #ffffff;
+  border-radius: 4px;
+  width: 95%;
+  text-align: start;
+  font-weight: 600;
+  height: 25px;
+  align-content: center;
+  overflow: overlay;
+  line-height: 2;
 }
 
-#tvSect .page-link:hover{
+#movieSect .page-link {
+  border: 1px solid #594f1a;
+  color: #594f1a;
+}
+
+#tvSect .page-link {
+  border: 1px solid #594f1a;
+  color: #ffffffff;
+  background-color: #594f1a;
+}
+
+#movieSect .page-link.active,
+#tvSect .page-link.active {
+  color: #594f1a;
+  border-color: #ffffff;
   background: #ffffff;
-      color: #594f1a;
-      border: 1px solid #594f1a;
+}
+#movieSect .page-link.active:hover,
+#tvSect .page-link.active:hover {
+  background: #ffffff;
+  color: #594f1a;
+  border: 1px dashed #594f1a;
+}
+#movieSect .page-link:hover {
+  background: #594f1a;
+  color: #ffffff;
+}
+
+#tvSect .page-link:hover {
+  background: #ffffff;
+  color: #594f1a;
+  border: 1px solid #594f1a;
 }
 
 .c-header_theme-switcher {
-    justify-self: end;
-    gap: .5rem;
-    display: flex;
-    justify-content: space-evenly;
-    margin-right: 0;
+  justify-self: end;
+  gap: 0.5rem;
+  display: flex;
+  justify-content: space-evenly;
+  margin-right: 0;
 }
 
 .c-header_theme-swatch {
-    background-color: #fff;
-    cursor: pointer;
-    border: 2px solid #594f1a;
-    border-radius: 50%;
-    width: 1rem;
-    height: 1rem;
-    transition: width .4s cubic-bezier(.23,1,.32,1), height .4s cubic-bezier(.23,1,.32,1), border-color .4s cubic-bezier(.23,1,.32,1);
-    position: relative;
+  background-color: #fff;
+  cursor: pointer;
+  border: 2px solid #594f1a;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  transition:
+    width 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    height 0.4s cubic-bezier(0.23, 1, 0.32, 1),
+    border-color 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
 }
 
-.c-header_theme-active{
-    background-color: #594f1a;
-    cursor: pointer;
-    border: 2px solid #594f1a;
+.c-header_theme-active {
+  background-color: #594f1a;
+  cursor: pointer;
+  border: 2px solid #594f1a;
 }
 
 #TheContainer {
@@ -442,36 +459,37 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 }
 
 .wrapper {
-            overflow: hidden;
-            width: 100%;
-            position: relative;
-        }
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
 
 #TheContainer .containment {
-            width: 100%;
-            flex-shrink: 0;
-            max-width: 1200px;
-            margin: 0 10% auto auto;
-        }
+  width: 100%;
+  flex-shrink: 0;
+  max-width: 1200px;
+  margin: 0 10% auto auto;
+}
 
+#animeSect img {
+  border-radius: 30px;
+  max-width: 60rem;
+  margin: auto;
+  width: 100%;
+}
 
-#animeSect img{
-    border-radius: 30px;
-    max-width: 60rem;
-    margin: auto;
-    width: 100%;
-}        
-
-#animeSect div{
-    display: grid;
-    gap: 10px;
-    font-size: 1rem;
-    margin: 1.5rem;
+#animeSect div {
+  display: grid;
+  gap: 10px;
+  font-size: 1rem;
+  margin: 1.5rem;
 }
 
 /* === Songs === */
 #song {
-  background: linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.5)), url('../image/spobg.png');
+  background:
+    linear-gradient(rgba(13, 13, 13, 0.5), rgba(13, 13, 13, 0.5)),
+    url("../image/spobg.png");
   color: #ffffff;
 }
 
@@ -481,43 +499,42 @@ background: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
 
 @media only screen and (max-width: 1010px) {
   .TopSocial {
-      flex-wrap: wrap;
-      gap: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   .items div {
-      line-height: 1;
-      width: auto;
+    line-height: 1;
+    width: auto;
   }
 
   #novelitems,
   #gameitems,
   #movieitems,
   #tvitems {
-      grid-template-columns: repeat(1, 1fr);
-      /* Two equal columns */
+    grid-template-columns: repeat(1, 1fr);
+    /* Two equal columns */
   }
 
-  #movieitems{
+  #movieitems {
     margin: 0;
   }
 
   .social-section a {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .SocialGrid {
-      display: grid;
-      grid-template-columns: repeat(1, 1fr);
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
   }
 
   .back {
-      min-width: 50px;
+    min-width: 50px;
   }
 
   #TheContainer .containment {
-      margin: 0 auto auto auto;
-      max-width: 300px;
+    margin: 0 auto auto auto;
+    max-width: 300px;
   }
 }
-

@@ -45,6 +45,20 @@ body {
   overflow-x: hidden;
 }
 
+html::-webkit-scrollbar {
+  border: 1px solid;
+  width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+  background-color: var(--color-colorBG);
+}
+
+html::-webkit-scrollbar-thumb {
+  border-right: 1px solid var(--color-colorText);
+  background-color: var(--color-colorBG);
+}
+
 body {
   background: var(--color-colorBG);
   color: var(--secondary);
